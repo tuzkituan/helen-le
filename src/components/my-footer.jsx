@@ -56,7 +56,12 @@ const MyFooter = () => {
   return (
     <Flex
       gap={12}
-      paddingInline="104px"
+      paddingInline={{
+        md: "104px",
+        sm: "24px",
+        lg: "104px",
+        xl: "230px",
+      }}
       paddingBlock="72px"
       alignItems="flex-start"
       bgColor="#141414"

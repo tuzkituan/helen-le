@@ -40,10 +40,10 @@ const MyWork = () => {
       <Box key={id} bgColor={color} p="64px" borderRadius="8px">
         <Flex w="100%" justifyContent="space-between" gap={4}>
           <Flex
-            w="fit-content"
             flexDirection="column"
             gap="32px"
             justifyContent="center"
+            w="40%"
           >
             <Text
               w="fit-content"
@@ -72,7 +72,9 @@ const MyWork = () => {
           </Flex>
           <Flex gap={8} justifyContent="space-evenly">
             {images.map((x) => (
-              <Image src={x} key={x} />
+              <Box key={x}>
+                <Image src={x} w="100%" h="100%" />
+              </Box>
             ))}
           </Flex>
         </Flex>

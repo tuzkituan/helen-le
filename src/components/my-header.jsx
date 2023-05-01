@@ -1,10 +1,16 @@
 import { Flex, Link, Spacer, Text } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
+
 const MyHeader = () => {
   return (
     <Flex
       gap={12}
-      paddingInline="104px"
+      paddingInline={{
+        md: "104px",
+        sm: "24px",
+        lg: "104px",
+        xl: "230px",
+      }}
       paddingBlock="36px"
       alignItems="center"
       // bgColor="gray.100"
@@ -16,7 +22,15 @@ const MyHeader = () => {
         textTransform="uppercase"
         display="block"
       >
-        HELEN LE
+        <Link
+          as={ReactRouterLink}
+          to="/"
+          _hover={{
+            textDecoration: "none",
+          }}
+        >
+          HELEN LE
+        </Link>
       </Text>
       <Spacer />
       <Flex gap={12}>

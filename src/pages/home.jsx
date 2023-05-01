@@ -3,8 +3,17 @@ import MyWork from "./my-work";
 
 const Home = () => {
   return (
-    <Box paddingInline="104px" paddingBlock="72px" w="100%">
-      <Flex flexDirection="column" gap={8}>
+    <Box
+      paddingInline={{
+        md: "104px",
+        sm: "24px",
+        lg: "104px",
+        xl: "230px",
+      }}
+      paddingBlock="72px"
+      w="100%"
+    >
+      <Flex flexDirection="column" gap={8} alignItems="center">
         <Text
           fontSize="72px"
           fontWeight={700}
@@ -18,6 +27,7 @@ const Home = () => {
           fontWeight={400}
           lineHeight="28px"
           textAlign="center"
+          maxW="40vw"
         >
           Hi, I&apos;m Helen Le, a UX/UI designer dedicated to creating designs
           that have a positive impact on people&apos;s lives.
