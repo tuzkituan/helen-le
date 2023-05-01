@@ -61,6 +61,7 @@ const MyFooter = () => {
         sm: "24px",
         lg: "104px",
         xl: "230px",
+        base: "24px",
       }}
       paddingBlock="72px"
       alignItems="flex-start"
@@ -71,7 +72,14 @@ const MyFooter = () => {
       fontSize="20px"
       lineHeight="28px"
     >
-      <Stack direction="row" spacing={16} w="100%">
+      <Stack
+        direction={{
+          base: "column",
+          md: "row",
+        }}
+        spacing={8}
+        w="100%"
+      >
         {blocks.map((x) => _renderBlock(x))}
       </Stack>
       <Divider bgColor="#C7C7C7" />

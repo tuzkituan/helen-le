@@ -10,6 +10,7 @@ const MyHeader = () => {
         sm: "24px",
         lg: "104px",
         xl: "230px",
+        base: "24px",
       }}
       paddingBlock="36px"
       alignItems="center"

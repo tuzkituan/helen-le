@@ -9,13 +9,21 @@ const Home = () => {
         sm: "24px",
         lg: "104px",
         xl: "230px",
+        base: "24px",
       }}
-      paddingBlock="72px"
+      paddingTop={{
+        base: "24px",
+        md: "60px",
+      }}
+      paddingBottom="48px"
       w="100%"
     >
       <Flex flexDirection="column" gap={8} alignItems="center">
         <Text
-          fontSize="72px"
+          fontSize={{
+            base: "56px",
+            md: "72px",
+          }}
           fontWeight={700}
           textAlign="center"
           lineHeight="130%"
@@ -27,7 +35,10 @@ const Home = () => {
           fontWeight={400}
           lineHeight="28px"
           textAlign="center"
-          maxW="40vw"
+          maxW={{
+            base: "80vw",
+            md: "40vw",
+          }}
         >
           Hi, I&apos;m Helen Le, a UX/UI designer dedicated to creating designs
           that have a positive impact on people&apos;s lives.

@@ -38,12 +38,23 @@ const MyWork = () => {
   }) => {
     return (
       <Box key={id} bgColor={color} p="64px" borderRadius="8px">
-        <Flex w="100%" justifyContent="space-between" gap={4}>
+        <Flex
+          w="100%"
+          justifyContent="space-between"
+          gap={12}
+          flexDirection={{
+            base: "column",
+            lg: "row",
+          }}
+        >
           <Flex
             flexDirection="column"
-            gap="32px"
+            gap="16px"
             justifyContent="center"
-            w="40%"
+            w={{
+              base: "100%",
+              lg: "40%",
+            }}
           >
             <Text
               w="fit-content"
