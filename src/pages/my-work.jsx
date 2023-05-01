@@ -1,33 +1,6 @@
 import { Box, Button, Flex, Image, Spacer, Text } from "@chakra-ui/react";
-
+import data from "../projects.json";
 const MyWork = () => {
-  const cards = [
-    {
-      id: 1,
-      description: "Healthy recipe planner & delivery app.",
-      title: "Nurix",
-      link: "#",
-      images: ["images/nurix_1.png", "images/nurix_2.png"],
-      color: "#EDF4D7",
-    },
-    {
-      id: 2,
-      description: "Improve the parking experience.",
-      title: "Navo",
-      link: "#",
-      images: ["images/navo_1.png", "images/navo_2.png"],
-      color: "#D5E6FB",
-    },
-    {
-      id: 3,
-      description: "Enhances farm operations for Vietnamese farmers.",
-      title: "Farmate",
-      link: "#",
-      images: ["images/farmate_1.png"],
-      color: "#CCDDD9",
-    },
-  ];
-
   const _renderCard = ({
     id,
     title,
@@ -114,7 +87,7 @@ const MyWork = () => {
       </Text>
       <Spacer h={4} />
       <Flex w="100%" gap="32px" flexDirection="column">
-        {cards.map((x) => _renderCard(x))}
+        {data.map((x) => _renderCard(x))}
       </Flex>
     </Box>
   );

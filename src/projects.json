@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "description": "Healthy recipe planner & delivery app.",
+        "title": "Nurix",
+        "link": "#",
+        "images": [
+            "images/nurix_1.png",
+            "images/nurix_2.png"
+        ],
+        "color": "#EDF4D7"
+    },
+    {
+        "id": 2,
+        "description": "Improve the parking experience.",
+        "title": "Navo",
+        "link": "#",
+        "images": [
+            "images/navo_1.png",
+            "images/navo_2.png"
+        ],
+        "color": "#D5E6FB"
+    },
+    {
+        "id": 3,
+        "description": "Enhances farm operations for Vietnamese farmers.",
+        "title": "Farmate",
+        "link": "#",
+        "images": [
+            "images/farmate_1.png"
+        ],
+        "color": "#CCDDD9"
+    }
+]
