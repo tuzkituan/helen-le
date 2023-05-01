@@ -36,10 +36,7 @@ const MyHeader = () => {
       <Link
         as={ReactRouterLink}
         to={x.link}
-        fontSize={{
-          base: "16px",
-          lg: "20px",
-        }}
+        fontSize="20px"
         fontWeight={500}
         key={x.label}
         onClick={onClose}
@@ -72,10 +69,7 @@ const MyHeader = () => {
           }}
         >
           <Text
-            fontSize={{
-              base: "18px",
-              lg: "24px",
-            }}
+            fontSize="24px"
             lineHeight="32px"
             textTransform="uppercase"
             display="block"
@@ -90,7 +84,7 @@ const MyHeader = () => {
           ) : (
             <Link className="icon" onClick={onOpen}>
               <Flex alignItems="center">
-                <HamburgerIcon />
+                <HamburgerIcon fontSize={24} />
               </Flex>
             </Link>
           )}
