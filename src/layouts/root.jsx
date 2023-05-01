@@ -1,12 +1,14 @@
 import { Box } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Loading from "../components/loading";
 import MyFooter from "../components/my-footer";
 import MyHeader from "../components/my-header";
+import { motion } from "framer-motion";
 
 export default function Root() {
   const [isMounting, setIsMounting] = React.useState(true);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     // Simulate a delay before loading the content
@@ -14,6 +16,24 @@ export default function Root() {
       setIsMounting(false);
     }, 2000);
   }, []);
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+    },
+    in: {
+      opacity: 1,
+    },
+    out: {
+      opacity: 0,
+    },
+  };
+
+  const pageTransition = {
+    type: "tween",
+    ease: "linear",
+    duration: 0.8,
+  };
 
   return (
     <Loading spinning={isMounting}>
@@ -33,7 +53,15 @@ export default function Root() {
           }}
           paddingBottom="104px"
         >
-          <Outlet />
+          <motion.div
+            key={pathname}
+            initial="initial"
+            animate="in"
+            variants={pageVariants}
+            transition={pageTransition}
+          >
+            <Outlet />
+          </motion.div>
         </Box>
         <MyFooter />
       </Box>
