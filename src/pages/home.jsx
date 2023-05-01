@@ -13,6 +13,10 @@ const Home = () => {
           fontWeight={700}
           textAlign="center"
           lineHeight="130%"
+          maxW={{
+            base: "100%",
+            md: "80vw",
+          }}
         >
           UX/UI Designer with impactful design for Social Change
         </Text>

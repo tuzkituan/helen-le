@@ -14,7 +14,12 @@ const About = () => {
   return (
     <Box>
       <Stack spacing="32px" divider={<Divider />}>
-        <Alert status="warning" borderRadius="8px" w="fit-content">
+        <Alert
+          status="warning"
+          borderRadius="8px"
+          w="fit-content"
+          fontSize="20px"
+        >
           <AlertIcon />
           Everything will be OK. Try your best, my bé Cam ♥️
         </Alert>

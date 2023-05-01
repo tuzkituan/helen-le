@@ -13,12 +13,20 @@ import {
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ReactRouterLink, useLocation } from "react-router-dom";
 import { APP_NAME } from "../appConstants";
+import { useLayoutEffect } from "react";
 
 const MyHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isSmallerThan540] = useMediaQuery("(max-width: 540px)");
+  const location = useLocation();
+
+  useLayoutEffect(() => {
+    if (isOpen) {
+      onClose();
+    }
+  }, [location]);
 
   const menuItems = [
     {
@@ -32,6 +40,7 @@ const MyHeader = () => {
   ];
 
   const _renderLinks = (arr) => {
+    const current = location.pathname;
     return arr.map((x) => (
       <Link
         as={ReactRouterLink}
@@ -39,7 +48,7 @@ const MyHeader = () => {
         fontSize="20px"
         fontWeight={500}
         key={x.label}
-        onClick={onClose}
+        textDecoration={current === x.link ? "underline" : "none"}
       >
         {x.label}
       </Link>

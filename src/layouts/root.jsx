@@ -31,7 +31,7 @@ export default function Root() {
             base: "24px",
             md: "40px",
           }}
-          paddingBottom="48px"
+          paddingBottom="104px"
         >
           <Outlet />
         </Box>
