@@ -14,6 +14,7 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
+import { APP_NAME } from "../appConstants";
 
 const MyHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -78,9 +79,9 @@ const MyHeader = () => {
             lineHeight="32px"
             textTransform="uppercase"
             display="block"
-            fontWeight="700"
+            fontWeight={500}
           >
-            HELEN LE
+            {APP_NAME}
           </Text>
         </Link>
         <Flex alignItems="center" gap={16}>
