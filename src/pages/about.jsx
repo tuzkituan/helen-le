@@ -1,7 +1,5 @@
-import React from "react";
-
 const About = () => {
-  return <div>About</div>;
+  return <div>Everything will be OK. Try your best, my bé Cam ♥️</div>;
 };
 
 export default About;

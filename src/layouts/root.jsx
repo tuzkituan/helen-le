@@ -1,14 +1,28 @@
+import { Box } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
-import MyHeader from "../components/my-header";
 import MyFooter from "../components/my-footer";
+import MyHeader from "../components/my-header";
 
 export default function Root() {
   return (
     <div>
       <MyHeader />
-      <div id="content">
+      <Box
+        paddingInline={{
+          md: "104px",
+          sm: "24px",
+          lg: "104px",
+          xl: "230px",
+          base: "24px",
+        }}
+        paddingTop={{
+          base: "24px",
+          md: "60px",
+        }}
+        paddingBottom="48px"
+      >
         <Outlet />
-      </div>
+      </Box>
       <MyFooter />
     </div>
   );

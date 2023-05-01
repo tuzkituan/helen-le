@@ -3,25 +3,11 @@ import MyWork from "./my-work";
 
 const Home = () => {
   return (
-    <Box
-      paddingInline={{
-        md: "104px",
-        sm: "24px",
-        lg: "104px",
-        xl: "230px",
-        base: "24px",
-      }}
-      paddingTop={{
-        base: "24px",
-        md: "60px",
-      }}
-      paddingBottom="48px"
-      w="100%"
-    >
+    <Box w="100%">
       <Flex flexDirection="column" gap={8} alignItems="center">
         <Text
           fontSize={{
-            base: "56px",
+            base: "42px",
             md: "72px",
           }}
           fontWeight={700}
@@ -31,7 +17,10 @@ const Home = () => {
           UX/UI Designer with impactful design for Social Change
         </Text>
         <Text
-          fontSize={20}
+          fontSize={{
+            base: "16px",
+            md: "20px",
+          }}
           fontWeight={400}
           lineHeight="28px"
           textAlign="center"

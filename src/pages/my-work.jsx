@@ -37,7 +37,15 @@ const MyWork = () => {
     color,
   }) => {
     return (
-      <Box key={id} bgColor={color} p="64px" borderRadius="8px">
+      <Box
+        key={id}
+        bgColor={color}
+        p={{
+          base: "24px",
+          lg: "64px",
+        }}
+        borderRadius="8px"
+      >
         <Flex
           w="100%"
           justifyContent="space-between"
@@ -58,8 +66,14 @@ const MyWork = () => {
           >
             <Text
               w="fit-content"
-              fontSize="38px"
-              lineHeight="46px"
+              fontSize={{
+                base: "28px",
+                lg: "38px",
+              }}
+              lineHeight={{
+                base: "38px",
+                lg: "46px",
+              }}
               fontWeight={400}
             >
               {description}

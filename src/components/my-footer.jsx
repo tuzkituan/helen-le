@@ -69,7 +69,10 @@ const MyFooter = () => {
       color="#FAFAFA"
       flexDirection="column"
       fontWeight="400px"
-      fontSize="20px"
+      fontSize={{
+        base: "18px",
+        lg: "20px",
+      }}
       lineHeight="28px"
     >
       <Stack
