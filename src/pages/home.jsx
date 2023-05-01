@@ -7,7 +7,7 @@ const Home = () => {
       <Flex flexDirection="column" gap={8} alignItems="center">
         <Text
           fontSize={{
-            base: "42px",
+            base: "48px",
             md: "72px",
           }}
           fontWeight={700}
@@ -16,6 +16,7 @@ const Home = () => {
           maxW={{
             base: "100%",
             md: "80vw",
+            lg: "60vw",
           }}
         >
           UX/UI Designer with impactful design for Social Change
