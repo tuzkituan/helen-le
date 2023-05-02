@@ -4,7 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import Root from "./layouts/root";
-import ErrorPage from "./error-page";
+import ErrorPage from "./error_page";
 import Home from "./pages/home";
 import About from "./pages/about";
 

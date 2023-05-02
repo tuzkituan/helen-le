@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Image, Spacer, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Spacer,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import data from "../projects.json";
 const MyWork = () => {
   const _renderCard = ({
@@ -12,7 +20,7 @@ const MyWork = () => {
     return (
       <Box
         key={id}
-        bgColor={color}
+        bgColor={useColorModeValue(color, "blackAlpha.600")}
         p={{
           base: "24px",
           lg: "64px",

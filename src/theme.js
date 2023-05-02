@@ -1,4 +1,5 @@
 import { extendTheme, theme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 import "@fontsource/inter"; // yarn add @fontsource/inter
 
@@ -12,22 +13,22 @@ const overrides = {
     Button: {
       // 1. We can update the base styles
       baseStyle: {
-        fontWeight: 700, // Normally, it is "semibold"
+        // fontWeight: 700, // Normally, it is "semibold"
         borderRadius: "8px",
       },
       // 3. We can add a new visual variant
       variants: {
         // 4. We can override existing variants
-        solid: (props) => ({
-          bg: props.colorMode === "dark" ? "#fff" : "gray.900",
-          color: props.colorMode === "dark" ? "gray.900" : "#fff",
+        solid: () => ({
+          bg: "gray.900",
+          color:  "#fff",
           _hover: {
-            bg: props.colorMode === "dark" ? "#fff" : "gray.900",
-            color: props.colorMode === "dark" ? "gray.900" : "#fff",
+            bg: "gray.900",
+            color: "#fff",
           },
           _active: {
-            bg: props.colorMode === "dark" ? "#fff" : "gray.900",
-            color: props.colorMode === "dark" ? "gray.900" : "#fff",
+            bg: "gray.900",
+            color: "#fff",
           },
         }),
       },
@@ -35,7 +36,7 @@ const overrides = {
       defaultProps: {
         size: "lg", // default is md
         variant: "solid", // default is solid
-        colorScheme: "orange", // default is gray,
+        // colorScheme: "gray", // default is gray,
       },
     },
     Divider: {
@@ -47,6 +48,16 @@ const overrides = {
   config: {
     initialColorMode: "light",
     useSystemColorMode: false,
+  },
+  styles: {
+    global: (props) => ({
+      body: {
+        fontFamily: 'body',
+        color: mode('#141414', 'whiteAlpha.900')(props),
+        bg: mode('white', 'gray.800')(props),
+        lineHeight: 'base',
+      },
+    }),
   },
 };
 

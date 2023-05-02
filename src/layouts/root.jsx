@@ -2,9 +2,10 @@ import { Box } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Loading from "../components/loading";
-import MyFooter from "../components/my-footer";
-import MyHeader from "../components/my-header";
+import MyFooter from "../components/my_footer";
+import MyHeader from "../components/my_header";
 import { motion } from "framer-motion";
+import ScrollToTop from "../components/scroll_to_top";
 
 export default function Root() {
   const [isMounting, setIsMounting] = React.useState(true);
@@ -37,7 +38,7 @@ export default function Root() {
 
   return (
     <Loading spinning={isMounting}>
-      <Box bgColor="white" w="100%">
+      <Box w="100%">
         <MyHeader />
         <Box
           paddingInline={{
@@ -66,6 +67,7 @@ export default function Root() {
           </motion.div>
         </Box>
         <MyFooter />
+        <ScrollToTop />
       </Box>
     </Loading>
   );

@@ -1,5 +1,5 @@
 import { Box, Flex, Spacer, Text } from "@chakra-ui/react";
-import MyWork from "./my-work";
+import MyWork from "./my_work";
 
 const Home = () => {
   return (

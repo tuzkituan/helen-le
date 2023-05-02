@@ -1,27 +1,29 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Box,
-  CloseButton,
   Drawer,
   DrawerBody,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
   Flex,
+  IconButton,
   Link,
   Stack,
   Text,
+  useColorMode,
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
+import { useLayoutEffect } from "react";
 import { Link as ReactRouterLink, useLocation } from "react-router-dom";
 import { APP_NAME } from "../appConstants";
-import { useLayoutEffect } from "react";
 
 const MyHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isSmallerThan540] = useMediaQuery("(max-width: 540px)");
   const location = useLocation();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   useLayoutEffect(() => {
     if (isOpen) {
@@ -54,6 +56,16 @@ const MyHeader = () => {
         {x.label}
       </Link>
     ));
+  };
+
+  const _renderToggleThemeButton = () => {
+    return (
+      <IconButton
+        variant="ghost"
+        icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        onClick={toggleColorMode}
+      />
+    );
   };
 
   return (
@@ -95,7 +107,10 @@ const MyHeader = () => {
           </Link>
           <Flex alignItems="center" gap={16}>
             {!isSmallerThan540 ? (
-              _renderLinks(menuItems)
+              <>
+                {_renderLinks(menuItems)}
+                {_renderToggleThemeButton()}
+              </>
             ) : (
               <Link className="icon" onClick={onOpen}>
                 <Flex alignItems="center">
@@ -119,7 +134,15 @@ const MyHeader = () => {
           <DrawerHeader borderBottomWidth="1px">
             <Flex justifyContent="space-between" alignItems="center">
               <Text mb={0}>Menu</Text>
-              <CloseButton onClick={onClose} />
+              <Flex alignItems="center" gap={2}>
+                {_renderToggleThemeButton()}
+                <IconButton
+                  icon={<CloseIcon />}
+                  variant="ghost"
+                  onClick={onClose}
+                  fontSize={14}
+                />
+              </Flex>
             </Flex>
           </DrawerHeader>
           <DrawerBody paddingBlock={8}>
