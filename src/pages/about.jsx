@@ -12,7 +12,7 @@ import {
 
 const About = () => {
   return (
-    <Box>
+    <Box w="100%">
       <Stack spacing="32px" divider={<Divider />}>
         <Alert
           status="warning"
@@ -50,11 +50,11 @@ const About = () => {
             gap="32px"
             flex={2}
           >
-            <Stack h="100%">
+            <Stack h="100%" spacing="24px">
               <Text fontSize="46px" lineHeight="54px" fontWeight={400}>
                 Hi there!
               </Text>
-              <Text fontSize="20px" lineHeight="28px" fontWeight={400}>
+              <Text fontSize="20px" lineHeight="38px" fontWeight={400}>
                 I&apos;m Helen, a UX/UI designer dedicated to creating designs
                 that have a positive impact on people&apos;s lives. I constantly
                 strive for improvement and always ask myself, &apos;How can this
@@ -84,7 +84,7 @@ const About = () => {
             <Text
               fontWeight={400}
               fontSize="20px"
-              lineHeight="28px"
+              lineHeight="38px"
               color="#6D6D6D"
             >
               How I continue to stay inspired and motivated?
@@ -92,7 +92,7 @@ const About = () => {
           </Box>
 
           <Box flex={2}>
-            <Text fontWeight={400} fontSize="20px" lineHeight="28px">
+            <Text fontWeight={400} fontSize="20px" lineHeight="38px">
               I&apos;m passionate about observing people&apos;s behaviors and
               interactions with the world around them. I draw inspiration from
               the challenges my friends and family face in their daily lives and
@@ -118,7 +118,7 @@ const About = () => {
           <Text
             fontWeight={400}
             fontSize="20px"
-            lineHeight="28px"
+            lineHeight="38px"
             color="#6D6D6D"
             flex={1}
           >
@@ -137,7 +137,7 @@ const About = () => {
               <Text
                 fontWeight={400}
                 fontSize="20px"
-                lineHeight="28px"
+                lineHeight="38px"
                 textAlign="left"
               >
                 iLotusLand JSC
@@ -145,7 +145,7 @@ const About = () => {
               <Text
                 fontWeight={400}
                 fontSize="20px"
-                lineHeight="28px"
+                lineHeight="38px"
                 color="#6D6D6D"
               >
                 UX/UI Designer
@@ -155,7 +155,7 @@ const About = () => {
             <Text
               fontWeight={400}
               fontSize="20px"
-              lineHeight="28px"
+              lineHeight="38px"
               flex={1}
               textAlign={{
                 base: "left",

@@ -54,8 +54,7 @@ const MyFooter = () => {
     );
   };
   return (
-    <Flex
-      gap={12}
+    <Box
       paddingInline={{
         md: "104px",
         sm: "24px",
@@ -63,33 +62,40 @@ const MyFooter = () => {
         xl: "230px",
         base: "24px",
       }}
-      paddingBlock="72px"
-      alignItems="flex-start"
       bgColor="#141414"
-      color="#FAFAFA"
-      flexDirection="column"
-      fontWeight="400px"
-      fontSize={{
-        base: "18px",
-        lg: "20px",
-      }}
-      lineHeight="28px"
+      paddingBlock="72px"
     >
-      <Stack
-        direction={{
-          base: "column",
-          md: "row",
+      <Flex
+        gap={12}
+        alignItems="flex-start"
+        color="#FAFAFA"
+        flexDirection="column"
+        fontWeight="400px"
+        fontSize={{
+          base: "18px",
+          lg: "20px",
         }}
-        spacing={8}
+        lineHeight="28px"
+        maxW="1200px"
         w="100%"
+        margin="0 auto"
       >
-        {blocks.map((x) => _renderBlock(x))}
-      </Stack>
-      <Divider bgColor="#C7C7C7" />
-      <Text>
-        Written, designed by Helen Le and built by Lewis Nguyen © 2023
-      </Text>
-    </Flex>
+        <Stack
+          direction={{
+            base: "column",
+            md: "row",
+          }}
+          spacing={8}
+          w="100%"
+        >
+          {blocks.map((x) => _renderBlock(x))}
+        </Stack>
+        <Divider bgColor="#C7C7C7" />
+        <Text>
+          Written, designed by Helen Le and built by Lewis Nguyen © 2023
+        </Text>
+      </Flex>
+    </Box>
   );
 };
 

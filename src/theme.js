@@ -38,6 +38,11 @@ const overrides = {
         colorScheme: "orange", // default is gray,
       },
     },
+    Divider: {
+      baseStyle: {
+        borderColor: '#C7C7C7'
+      }
+    }
   },
   config: {
     initialColorMode: "light",

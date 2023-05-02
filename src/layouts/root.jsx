@@ -37,7 +37,7 @@ export default function Root() {
 
   return (
     <Loading spinning={isMounting}>
-      <Box bgColor="white">
+      <Box bgColor="white" w="100%">
         <MyHeader />
         <Box
           paddingInline={{
@@ -60,7 +60,9 @@ export default function Root() {
             variants={pageVariants}
             transition={pageTransition}
           >
-            <Outlet />
+            <Box maxW="1200px" w="100%" margin="0 auto">
+              <Outlet />
+            </Box>
           </motion.div>
         </Box>
         <MyFooter />

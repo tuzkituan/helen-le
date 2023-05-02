@@ -1,5 +1,6 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
+  Box,
   CloseButton,
   Drawer,
   DrawerBody,
@@ -56,9 +57,8 @@ const MyHeader = () => {
   };
 
   return (
-    <>
-      <Flex
-        gap={12}
+    <Box w="100%">
+      <Box
         paddingInline={{
           md: "104px",
           sm: "24px",
@@ -67,38 +67,45 @@ const MyHeader = () => {
           base: "24px",
         }}
         paddingBlock="36px"
-        alignItems="center"
-        justifyContent="space-between"
       >
-        <Link
-          as={ReactRouterLink}
-          to="/"
-          _hover={{
-            textDecoration: "none",
-          }}
+        <Flex
+          gap={12}
+          alignItems="center"
+          justifyContent="space-between"
+          maxW="1200px"
+          w="100%"
+          margin="0 auto"
         >
-          <Text
-            fontSize="24px"
-            lineHeight="32px"
-            textTransform="uppercase"
-            display="block"
-            fontWeight={500}
+          <Link
+            as={ReactRouterLink}
+            to="/"
+            _hover={{
+              textDecoration: "none",
+            }}
           >
-            {APP_NAME}
-          </Text>
-        </Link>
-        <Flex alignItems="center" gap={16}>
-          {!isSmallerThan540 ? (
-            _renderLinks(menuItems)
-          ) : (
-            <Link className="icon" onClick={onOpen}>
-              <Flex alignItems="center">
-                <HamburgerIcon fontSize={24} />
-              </Flex>
-            </Link>
-          )}
+            <Text
+              fontSize="24px"
+              lineHeight="32px"
+              textTransform="uppercase"
+              display="block"
+              fontWeight={500}
+            >
+              {APP_NAME}
+            </Text>
+          </Link>
+          <Flex alignItems="center" gap={16}>
+            {!isSmallerThan540 ? (
+              _renderLinks(menuItems)
+            ) : (
+              <Link className="icon" onClick={onOpen}>
+                <Flex alignItems="center">
+                  <HamburgerIcon fontSize={24} />
+                </Flex>
+              </Link>
+            )}
+          </Flex>
         </Flex>
-      </Flex>
+      </Box>
       <Drawer
         placement="right"
         onClose={onClose}
@@ -122,7 +129,7 @@ const MyHeader = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </>
+    </Box>
   );
 };
 
