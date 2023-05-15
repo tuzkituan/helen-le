@@ -19,26 +19,28 @@ const Home = () => {
             lg: "60vw",
           }}
         >
-          UX/UI Designer with impactful design for Social Change
+          UX/UI Designer
         </Text>
         <Text
           fontSize={{
             base: "16px",
-            md: "20px",
+            md: "32px",
           }}
           fontWeight={400}
-          lineHeight="28px"
+          lineHeight={{
+            base: "28px",
+            md: "44px",
+          }}
           textAlign="center"
           maxW={{
             base: "80vw",
             md: "40vw",
           }}
         >
-          Hi, I&apos;m Helen Le, a UX/UI designer dedicated to creating designs
-          that have a positive impact on people&apos;s lives.
+          Hi, I&apos;m Helen Le, a UX/UI designer from Vietnam.
         </Text>
       </Flex>
-      <Spacer height={20} />
+      <Spacer height={16} />
       <MyWork />
     </Box>
   );

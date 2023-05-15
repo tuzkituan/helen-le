@@ -14,7 +14,7 @@ const About = () => {
   return (
     <Box w="100%">
       <Stack spacing="32px" divider={<Divider />}>
-        <Alert
+        {/* <Alert
           status="warning"
           borderRadius="8px"
           w="fit-content"
@@ -22,7 +22,7 @@ const About = () => {
         >
           <AlertIcon />
           Everything will be OK. Try your best, my bé Cam ♥️
-        </Alert>
+        </Alert> */}
 
         <Flex
           gap={{

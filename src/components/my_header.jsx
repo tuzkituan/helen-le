@@ -1,34 +1,42 @@
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { CloseIcon } from "@chakra-ui/icons";
 import {
   Box,
+  Button,
+  DarkMode,
   Drawer,
   DrawerBody,
   DrawerContent,
+  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   Flex,
   IconButton,
   Link,
+  Spacer,
   Stack,
   Text,
-  useColorMode,
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
 import { useLayoutEffect } from "react";
 import { Link as ReactRouterLink, useLocation } from "react-router-dom";
 import { APP_NAME } from "../appConstants";
+import { useScrollDirection } from "../utils/hooks";
 
 const MyHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isSmallerThan540] = useMediaQuery("(max-width: 540px)");
+  const [isSmallerThan480] = useMediaQuery("(max-width: 480px)");
   const location = useLocation();
-  const { colorMode, toggleColorMode } = useColorMode();
+  const scrollDirection = useScrollDirection();
 
   useLayoutEffect(() => {
     if (isOpen) {
       onClose();
     }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, [location]);
 
   const menuItems = [
@@ -42,34 +50,37 @@ const MyHeader = () => {
     },
   ];
 
-  const _renderLinks = (arr) => {
+  const _renderLinks = (arr, isInDrawer = false) => {
     const current = location.pathname;
     return arr.map((x) => (
-      <Link
+      <Button
+        variant={isInDrawer ? "link" : "ghost"}
         as={ReactRouterLink}
         to={x.link}
         fontSize="20px"
-        fontWeight={500}
+        fontWeight={isInDrawer ? 700 : 500}
         key={x.label}
         textDecoration={current === x.link ? "underline" : "none"}
       >
         {x.label}
-      </Link>
+      </Button>
     ));
   };
 
-  const _renderToggleThemeButton = () => {
-    return (
-      <IconButton
-        variant="ghost"
-        icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-        onClick={toggleColorMode}
-      />
-    );
+  const _renderEmailButton = () => {
+    return <Button variant="solid">Email</Button>;
   };
 
   return (
-    <Box w="100%">
+    <Box
+      w="100%"
+      position="sticky"
+      top={scrollDirection === "down" ? "-120px" : 0}
+      transition="all 0.3s"
+      zIndex={100}
+      bgColor="white"
+      backdropFilter="blur(20px)"
+    >
       <Box
         paddingInline={{
           md: "104px",
@@ -96,7 +107,10 @@ const MyHeader = () => {
             }}
           >
             <Text
-              fontSize="24px"
+              fontSize={{
+                base: "16px",
+                sm: "24px",
+              }}
               lineHeight="32px"
               textTransform="uppercase"
               display="block"
@@ -105,53 +119,90 @@ const MyHeader = () => {
               {APP_NAME}
             </Text>
           </Link>
-          <Flex alignItems="center" gap={16}>
-            {!isSmallerThan540 ? (
+          <Flex alignItems="center" gap="16px">
+            {!isSmallerThan480 ? (
               <>
                 {_renderLinks(menuItems)}
-                {_renderToggleThemeButton()}
+                {_renderEmailButton()}
+                {/* {_renderToggleThemeButton()} */}
               </>
             ) : (
               <Link className="icon" onClick={onOpen}>
                 <Flex alignItems="center">
-                  <HamburgerIcon fontSize={24} />
+                  <img src="icons/ic_hamburger.svg" />
                 </Flex>
               </Link>
             )}
           </Flex>
         </Flex>
       </Box>
-      <Drawer
-        placement="right"
-        onClose={onClose}
-        isOpen={isOpen}
-        closeOnEsc
-        closeOnOverlayClick
-        blockScrollOnMount
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">
-            <Flex justifyContent="space-between" alignItems="center">
-              <Text mb={0}>Menu</Text>
-              <Flex alignItems="center" gap={2}>
-                {_renderToggleThemeButton()}
-                <IconButton
-                  icon={<CloseIcon />}
-                  variant="ghost"
-                  onClick={onClose}
-                  fontSize={14}
-                />
+      <DarkMode>
+        <Drawer
+          placement="right"
+          onClose={onClose}
+          isOpen={isOpen}
+          closeOnEsc
+          closeOnOverlayClick
+          blockScrollOnMount
+          size="full"
+        >
+          <DrawerOverlay />
+          <DrawerContent bg="black">
+            <DrawerHeader borderBottomWidth={0}>
+              <Flex justifyContent="space-between" alignItems="center">
+                <Spacer />
+                <Flex alignItems="center" gap={2}>
+                  {/* {_renderToggleThemeButton()} */}
+                  <IconButton
+                    icon={<CloseIcon />}
+                    variant="ghost"
+                    onClick={onClose}
+                    fontSize={14}
+                  />
+                </Flex>
               </Flex>
-            </Flex>
-          </DrawerHeader>
-          <DrawerBody paddingBlock={8}>
-            <Stack direction="column" spacing={4}>
-              {_renderLinks(menuItems)}
-            </Stack>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+            </DrawerHeader>
+            <DrawerBody paddingBlock={8}>
+              <Stack
+                direction="column"
+                justifyContent="flex-start"
+                alignItems="flex-start"
+                spacing={8}
+              >
+                {_renderLinks(menuItems, true)}
+              </Stack>
+            </DrawerBody>
+            <DrawerFooter
+              borderTopWidth={0}
+              justifyContent="flex-start"
+              pb={"108px"}
+            >
+              <Flex
+                gap="30px"
+                flexDirection="column"
+                justifyContent="flex-start"
+                alignItems="flex-start"
+              >
+                <Text
+                  color="white"
+                  fontWeight={400}
+                  fontSize="20px"
+                  lineHeight={"30px"}
+                >
+                  I would love to hear from you. Please contact me
+                </Text>
+                <Button
+                  variant={"outline"}
+                  rightIcon={<img src="icons/ic_link_arrow.svg" />}
+                  iconSpacing={4}
+                >
+                  Email
+                </Button>
+              </Flex>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+      </DarkMode>
     </Box>
   );
 };

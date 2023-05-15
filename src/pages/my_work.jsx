@@ -7,6 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
 import data from "../projects.json";
 const MyWork = () => {
   const _renderCard = ({
@@ -72,6 +73,8 @@ const MyWork = () => {
               variant="solid"
               rightIcon={<img src={"icons/ic_arrow_right.svg"} alt="" />}
               iconSpacing={4}
+              as={ReactRouterLink}
+              to={link}
             >
               Read more
             </Button>
@@ -90,10 +93,6 @@ const MyWork = () => {
 
   return (
     <Box w="100%">
-      <Text fontWeight="400" fontSize="24px" lineHeight="32px">
-        My Work
-      </Text>
-      <Spacer h={4} />
       <Flex w="100%" gap="32px" flexDirection="column">
         {data.map((x) => _renderCard(x))}
       </Flex>

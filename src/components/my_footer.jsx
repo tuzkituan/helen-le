@@ -10,21 +10,8 @@ import {
 const MyFooter = () => {
   const blocks = [
     {
-      label: "If you want to learn more about me, please check",
-      items: [
-        {
-          name: "About",
-          link: "#",
-        },
-        {
-          name: "My resume",
-          link: "#",
-        },
-      ],
-    },
-    {
       label:
-        "I’m open to new opportunities and would love to hear from you. Please contact me by",
+        "If you want to learn more about me, please check",
       items: [
         {
           name: "Email",
@@ -36,6 +23,20 @@ const MyFooter = () => {
         },
       ],
     },
+    {
+      label: "I would love to hear from you. Please contact me",
+      items: [
+        {
+          name: "About",
+          link: "#",
+        },
+        {
+          name: "My resume",
+          link: "#",
+        },
+      ],
+    },
+   
   ];
   const _renderBlock = ({ label, items = [] }) => {
     return (
@@ -91,7 +92,7 @@ const MyFooter = () => {
           {blocks.map((x) => _renderBlock(x))}
         </Stack>
         <Divider bgColor="#C7C7C7" />
-        <Text>
+        <Text color="#C7C7C7">
           Written, designed by Helen Le and built by Lewis Nguyen © 2023
         </Text>
       </Flex>

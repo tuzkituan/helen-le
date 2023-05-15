@@ -37,8 +37,8 @@ export default function Root() {
   };
 
   return (
-    <Loading spinning={isMounting}>
-      <Box w="100%">
+    <Loading spinning={false}>
+      <Box w="100%" position="relative" overflow="clip">
         <MyHeader />
         <Box
           paddingInline={{
