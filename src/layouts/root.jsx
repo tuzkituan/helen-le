@@ -37,7 +37,7 @@ export default function Root() {
   };
 
   return (
-    <Loading spinning={false}>
+    <Loading spinning={isMounting}>
       <Box w="100%" position="relative" overflow="clip">
         <MyHeader />
         <Box
