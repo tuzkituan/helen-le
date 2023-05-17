@@ -57,7 +57,7 @@ const MyHeader = () => {
         variant={isInDrawer ? "link" : "ghost"}
         as={ReactRouterLink}
         to={x.link}
-        fontSize="20px"
+        textStyle="t8"
         fontWeight={isInDrawer ? 700 : 500}
         key={x.label}
         textDecoration={current === x.link ? "underline" : "none"}
@@ -107,11 +107,7 @@ const MyHeader = () => {
             }}
           >
             <Text
-              fontSize={{
-                base: "16px",
-                sm: "24px",
-              }}
-              lineHeight="32px"
+              textStyle="t6"
               textTransform="uppercase"
               display="block"
               fontWeight={500}

@@ -10,8 +10,7 @@ import {
 const MyFooter = () => {
   const blocks = [
     {
-      label:
-        "If you want to learn more about me, please check",
+      label: "If you want to learn more about me, please check",
       items: [
         {
           name: "Email",
@@ -36,17 +35,18 @@ const MyFooter = () => {
         },
       ],
     },
-   
   ];
   const _renderBlock = ({ label, items = [] }) => {
     return (
       <Box key={label} flex={1}>
-        <Text color="#C7C7C7">{label}</Text>
+        <Text color="#C7C7C7" textStyle="t7">
+          {label}
+        </Text>
         <Spacer height={6} />
         {items.map((x) => (
           <Link to={x.link} key={x.name} display="block" marginBlock={3}>
             <Flex alignItems="center" gap={4}>
-              <Text>{x.name}</Text>
+              <Text textStyle="t7">{x.name}</Text>
               <img src="icons/ic_link_arrow.svg" />
             </Flex>
           </Link>
@@ -71,12 +71,6 @@ const MyFooter = () => {
         alignItems="flex-start"
         color="#FAFAFA"
         flexDirection="column"
-        fontWeight="400px"
-        fontSize={{
-          base: "18px",
-          lg: "20px",
-        }}
-        lineHeight="28px"
         maxW="1200px"
         w="100%"
         margin="0 auto"
@@ -92,7 +86,7 @@ const MyFooter = () => {
           {blocks.map((x) => _renderBlock(x))}
         </Stack>
         <Divider bgColor="#C7C7C7" />
-        <Text color="#C7C7C7">
+        <Text color="#C7C7C7" textStyle="t7">
           Written, designed by Helen Le and built by Lewis Nguyen © 2023
         </Text>
       </Flex>

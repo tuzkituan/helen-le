@@ -1,14 +1,15 @@
 import { extendTheme, theme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
-import "@fontsource/inter"; // yarn add @fontsource/inter
+// import "@fontsource/inter"; // yarn add @fontsource/inter
+import "@fontsource/epilogue";
 
 const overrides = {
-  colors: { ...theme.colors, brand: theme.colors.red }, // main color
-  // fonts: {
-  //   heading: "Inter, -apple-system, system-ui, sans-serif",
-  //   body: "Inter, -apple-system, system-ui, sans-serif",
-  // },
+  colors: { ...theme.colors, brand: theme.colors.teal }, // main color
+  fonts: {
+    heading: "Epilogue, -apple-system, system-ui, sans-serif",
+    body: "Epilogue, -apple-system, system-ui, sans-serif",
+  },
   components: {
     Button: {
       // 1. We can update the base styles

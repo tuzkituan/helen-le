@@ -3,7 +3,6 @@ import {
   Button,
   Flex,
   Image,
-  Spacer,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -46,26 +45,10 @@ const MyWork = () => {
               lg: "40%",
             }}
           >
-            <Text
-              w="fit-content"
-              fontSize={{
-                base: "28px",
-                lg: "38px",
-              }}
-              lineHeight={{
-                base: "38px",
-                lg: "46px",
-              }}
-              fontWeight={400}
-            >
+            <Text w="fit-content" textStyle="t4" fontWeight={400}>
               {description}
             </Text>
-            <Text
-              w="fit-content"
-              fontSize="20px"
-              lineHeight="28px"
-              fontWeight={400}
-            >
+            <Text w="fit-content" textStyle="t7" fontWeight={400}>
               {title}
             </Text>
             <Button
@@ -82,7 +65,7 @@ const MyWork = () => {
           <Flex gap={8} justifyContent="space-evenly">
             {images.map((x) => (
               <Box key={x}>
-                <Image src={x} w="100%" h="100%" />
+                <Image loading="lazy" src={x} w="100%" h="100%" />
               </Box>
             ))}
           </Flex>

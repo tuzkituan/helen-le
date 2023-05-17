@@ -5,10 +5,13 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
   return (
     <Box position="relative" overflow="hidden">
       <Box
-        bgColor="#EDF4D7"
+        // bgColor="#EDF4D7"
         marginBlock="97px"
         paddingInline="148px"
         paddingBlock="60px"
+        w="100%"
+        h="100%"
+        background="linear-gradient(to bottom right, #EDF4D7 0%, #EDF4D7 50%, #FDF9EE 50%, #FDF9EE 100%)"
       >
         <Image src={titleImg} />
         <Spacer h="20px" />

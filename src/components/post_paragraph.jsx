@@ -1,6 +1,6 @@
-import { Box, Image, Spacer, Text } from "@chakra-ui/react";
+import { Box, Center, Image, Spacer, Text } from "@chakra-ui/react";
 
-const PostParagraph = ({ title, description, image }) => {
+const PostParagraph = ({ title, description, image, mockup }) => {
   return (
     <Box pl="148px">
       <Text textStyle="t5" fontWeight={700}>
@@ -16,8 +16,15 @@ const PostParagraph = ({ title, description, image }) => {
             display="block"
             src={image}
             w="100%"
-            maxW="800px"
+            maxW="900px"
+            loading="lazy"
           />
+        </>
+      ) : null}
+      {mockup ? (
+        <>
+          <Spacer height="64px" />
+          <Center>{mockup}</Center>
         </>
       ) : null}
     </Box>

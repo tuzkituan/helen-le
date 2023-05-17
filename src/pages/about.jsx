@@ -51,10 +51,8 @@ const About = () => {
             flex={2}
           >
             <Stack h="100%" spacing="24px">
-              <Text fontSize="46px" lineHeight="54px" fontWeight={400}>
-                Hi there!
-              </Text>
-              <Text fontSize="20px" lineHeight="38px" fontWeight={400}>
+              <Text textStyle="t3">Hi there!</Text>
+              <Text textStyle="t7">
                 I&apos;m Helen, a UX/UI designer dedicated to creating designs
                 that have a positive impact on people&apos;s lives. I constantly
                 strive for improvement and always ask myself, &apos;How can this
@@ -81,18 +79,13 @@ const About = () => {
           }}
         >
           <Box flex={1}>
-            <Text
-              fontWeight={400}
-              fontSize="20px"
-              lineHeight="38px"
-              color="#6D6D6D"
-            >
+            <Text textStyle="t7" color="#6D6D6D">
               How I continue to stay inspired and motivated?
             </Text>
           </Box>
 
           <Box flex={2}>
-            <Text fontWeight={400} fontSize="20px" lineHeight="38px">
+            <Text textStyle="t7">
               I&apos;m passionate about observing people&apos;s behaviors and
               interactions with the world around them. I draw inspiration from
               the challenges my friends and family face in their daily lives and
@@ -115,13 +108,7 @@ const About = () => {
             md: "row",
           }}
         >
-          <Text
-            fontWeight={400}
-            fontSize="20px"
-            lineHeight="38px"
-            color="#6D6D6D"
-            flex={1}
-          >
+          <Text textStyle="t7" color="#6D6D6D" flex={1}>
             Professional experience
           </Text>
 
@@ -134,28 +121,16 @@ const About = () => {
             }}
           >
             <Stack spacing={2} flex={1}>
-              <Text
-                fontWeight={400}
-                fontSize="20px"
-                lineHeight="38px"
-                textAlign="left"
-              >
+              <Text textStyle="t7" textAlign="left">
                 iLotusLand JSC
               </Text>
-              <Text
-                fontWeight={400}
-                fontSize="20px"
-                lineHeight="38px"
-                color="#6D6D6D"
-              >
+              <Text textStyle="t7" color="#6D6D6D">
                 UX/UI Designer
               </Text>
             </Stack>
 
             <Text
-              fontWeight={400}
-              fontSize="20px"
-              lineHeight="38px"
+              textStyle="t7"
               flex={1}
               textAlign={{
                 base: "left",
