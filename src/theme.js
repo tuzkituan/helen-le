@@ -5,10 +5,10 @@ import "@fontsource/inter"; // yarn add @fontsource/inter
 
 const overrides = {
   colors: { ...theme.colors, brand: theme.colors.red }, // main color
-  fonts: {
-    heading: "Inter, -apple-system, system-ui, sans-serif",
-    body: "Inter, -apple-system, system-ui, sans-serif",
-  },
+  // fonts: {
+  //   heading: "Inter, -apple-system, system-ui, sans-serif",
+  //   body: "Inter, -apple-system, system-ui, sans-serif",
+  // },
   components: {
     Button: {
       // 1. We can update the base styles
@@ -58,6 +58,59 @@ const overrides = {
         lineHeight: 'base',
       },
     }),
+  },
+  textStyles: {
+    t1: {
+      // you can also use responsive styles
+      fontSize: '72px',
+      fontWeight: '700',
+      lineHeight: '86.4px',
+    },
+    t2: {
+      fontSize: '60px',
+      fontWeight: '700',
+      lineHeight: '72px',
+    },
+    t3: {
+      fontSize: '48px',
+      fontWeight: '500',
+      lineHeight: '57.6px',
+    },
+    t4: {
+      fontSize: '40px',
+      fontWeight: '400',
+      lineHeight: '60px',
+    },
+    t5: {
+      fontSize: '32px',
+      fontWeight: '400',
+      lineHeight: '48px',
+    },
+    t6: {
+      fontSize: '24px',
+      fontWeight: '400',
+      lineHeight: '36px',
+    },
+    t7: {
+      fontSize: '20px',
+      fontWeight: '400',
+      lineHeight: '30px',
+    },
+    t8: {
+      fontSize: '16px',
+      fontWeight: '400',
+      lineHeight: '24px',
+    },
+    t9: {
+      fontSize: '14px',
+      fontWeight: '400',
+      lineHeight: '21px',
+    },
+    t10: {
+      fontSize: '12px',
+      fontWeight: '400',
+      lineHeight: '18px',
+    },
   },
 };
 
