@@ -11,17 +11,19 @@ const PostParagraph = ({
   videoAutoPlay = true,
 }) => {
   return (
-    <Box paddingInline={40}>
-      {header ? (
-        <Text textStyle="t10" textTransform="uppercase" pb="20px">
-          {header}
+    <Box>
+      <Box paddingInline={40}>
+        {header ? (
+          <Text textStyle="t10" textTransform="uppercase" pb="20px">
+            {header}
+          </Text>
+        ) : null}
+        <Text textStyle="t5" fontWeight={700}>
+          {title}
         </Text>
-      ) : null}
-      <Text textStyle="t5" fontWeight={700}>
-        {title}
-      </Text>
-      <Spacer height="20px" />
-      <Text textStyle="t7">{description}</Text>
+        <Spacer height="20px" />
+        <Text textStyle="t7">{description}</Text>
+      </Box>
       {image ? (
         <>
           <Spacer height="64px" />

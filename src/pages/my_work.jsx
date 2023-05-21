@@ -65,7 +65,13 @@ const MyWork = () => {
           <Flex gap={8} justifyContent="space-evenly">
             {images.map((x) => (
               <Box key={x}>
-                <Image loading="lazy" src={x} w="100%" h="100%" maxW="250px" />
+                <Image
+                  loading="lazy"
+                  src={x}
+                  w="100%"
+                  h="100%"
+                  maxW={images.length > 1 ? "250px" : "500px"}
+                />
               </Box>
             ))}
           </Flex>
