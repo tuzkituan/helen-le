@@ -8,9 +8,10 @@ const PostParagraph = ({
   mockup,
   video,
   maxW,
+  videoAutoPlay = true,
 }) => {
   return (
-    <Box pl="148px">
+    <Box paddingInline={40}>
       {header ? (
         <Text textStyle="t10" textTransform="uppercase" pb="20px">
           {header}

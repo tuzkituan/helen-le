@@ -5,24 +5,22 @@ import {
   BreadcrumbLink,
   Flex,
   Spacer,
-  Text,
 } from "@chakra-ui/react";
-import PostHeader from "../../components/post_header";
-import PostBannerImage from "../../components/post_banner_image";
-import PostParagraph from "../../components/post_paragraph";
-import data from "../../projects.json";
-import UserPersonas from "../../components/user_personas";
 import PainPoints from "../../components/pain_points";
-import PostFontPreview from "../../components/post_font_preview";
+import PostBannerImage from "../../components/post_banner_image";
 import PostColorPreview from "../../components/post_color_preview";
-import IphoneMockup from "../../components/iphone_mockup";
+import PostFontPreview from "../../components/post_font_preview";
+import PostHeader from "../../components/post_header";
 import PostNavigator from "../../components/post_navigator";
+import PostParagraph from "../../components/post_paragraph";
+import UserPersonas from "../../components/user_personas";
+import data from "../../projects.json";
 
 const Nurix = () => {
   const nurix = data[0];
   return (
     <Box>
-      <Breadcrumb>
+      <Breadcrumb paddingInline={40}>
         <BreadcrumbItem>
           <BreadcrumbLink href="/">Work</BreadcrumbLink>
         </BreadcrumbItem>
@@ -145,6 +143,7 @@ const Nurix = () => {
           title="Full app walkthrough"
           description={`Full app walkthrough included Login & User personal preferences, Browse and Add to favorites, Buy ingredients. Checkout and Tracking order.`}
           video="1iCR-bprJfj3XknOBvRil9dx1qKftrCcw"
+          videoAutoPlay={false}
         />
         <PostNavigator
           next={{
