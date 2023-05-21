@@ -5,7 +5,7 @@ const PostBannerImage = ({ color, images = [] }) => {
     <Box bgColor={color} p="40px" marginInline="-100vw">
       <Flex gap={8} justifyContent="center">
         {images.map((x) => (
-          <Box key={x}>
+          <Box key={x} maxW="250px" w="100%">
             <Image src={x} w="100%" h="100%" />
           </Box>
         ))}

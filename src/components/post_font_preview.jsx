@@ -15,9 +15,9 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
       >
         <Image src={titleImg} />
         <Spacer h="20px" />
-        <Image src={descriptionImg} />
+        <Image src={descriptionImg} backgroundColor="transparent" />
       </Box>
-      <Image src={mockup} position="absolute" top={0} right="148px" h="100%" />
+      <Image src={mockup} position="absolute" top={0} right="-60px" h="100%" />
     </Box>
   );
 };

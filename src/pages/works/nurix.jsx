@@ -16,6 +16,7 @@ import PainPoints from "../../components/pain_points";
 import PostFontPreview from "../../components/post_font_preview";
 import PostColorPreview from "../../components/post_color_preview";
 import IphoneMockup from "../../components/iphone_mockup";
+import PostNavigator from "../../components/post_navigator";
 
 const Nurix = () => {
   const nurix = data[0];
@@ -89,7 +90,8 @@ const Nurix = () => {
         <PostParagraph
           title="Design"
           description="The design should be clean, modern, and easy to navigate. The design should be focused on showcasing the healthy recipes and ingredients, making it easy for users to find and choose the recipes that meet their dietary preferences."
-          image="images/nurix_image_5.png"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oVoE2CgZE4pj6vq3f5Md5u0FACHkvNzxCAs1oaV5mXYS9H2gvAfTy9TM7KCMJ_jQS_TQKIOCza6dTjH9yHo2X0x2KiaA=s1600"
+          maxW="900px"
         />
         <PostParagraph
           title="Typography"
@@ -98,7 +100,7 @@ const Nurix = () => {
         <PostFontPreview
           titleImg="images/nourix_font_1.svg"
           descriptionImg="images/nourix_font_2.svg"
-          mockup="images/nurix_image_6.png"
+          mockup="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pmeHpgW8ETRQDLs25wXPGYkgstj7cwgDwF4-nnornUNfrhd3qWltTM8lBuJxioxbCL6Bor0bGUmzJlBZEwWuhvvsgndA=s1600"
         />
         <PostParagraph
           title="Color"
@@ -107,43 +109,48 @@ const Nurix = () => {
         <PostColorPreview
           colors={["#A4C639", "#F3E0A9", "#C72686", "#3E659F"]}
         />
-        <Text textStyle="t10" textTransform="uppercase">
-          Nurix app walkthrough
-        </Text>
         <PostParagraph
           title="Improved speed to log in"
           description="Because of user preference quiz. I included one-click login options such as Facebook, Google or Apple to improve speed to log in."
-          mockup={<IphoneMockup image="images/nurix_image_7.png" />}
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pO_WRjgTdsTRAnVmU5eSr9CyinNR_Z7REg_AtTu2JJEFeKFyg-m0b7iTLgafVapUo5_uqLw-XxClcUtv8WrRP3SRLZag=s1600"
         />
         <PostParagraph
           title="Relieve stress when personalizing"
           description="During the user preference quiz, using a progress bar can provide users with a sense of control and a clear indication of how far they are in the process. It can also help to reduce the perceived time it takes to complete the quiz."
-          mockup={<IphoneMockup />}
+          video="13J-TO-6GxHAvnyw9bLkoKGNUXlhSDm4h"
         />
         <PostParagraph
           title="Providing feedback"
           description="After the quiz, providing feedback to the user to keep them noticed that they completed the process and have chance to double check all their personalized quiz."
-          mockup={<IphoneMockup />}
+          video="1l3F1U9b8545JYsRjx0I2rL0IsUz3pKyM"
         />
         <PostParagraph
           title="Quickly find recipes"
           description="Easier for users to find what they need and narrow down choices."
-          image="images/img_nurix_8.png"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oDFbNEdshiCSOjItLkVKvogFoKG9pLbEw2wess5fLaZRfz54BRY0ucwHXhx06wh49GGqmOZbB6aa6yUqdb6ZNzcGlk=s1600"
+          maxW="1200px"
         />
         <PostParagraph
           title="Without manually recipe planner"
           description={`"Add ingredient to cart" button to each recipe can make it easier for users to create a grocery cart without having to manually write down each ingredient.`}
-          mockup={<IphoneMockup />}
+          video="1WF8sOMcTZwMbMccA7UYIg0wu0rsoOU-G"
         />
         <PostParagraph
           title="Real-time order tracking"
           description={`Help users stay up-to-date on the status of their order, including when it is being prepared, when it is out for delivery, and when it has been delivered.`}
-          mockup={<IphoneMockup />}
+          video="1IFksTMfRlcFdVi0eCsY0Nd1oxzf5d2N6"
         />
         <PostParagraph
+          header="NURIX APP WALKTHROUGH"
           title="Full app walkthrough"
           description={`Full app walkthrough included Login & User personal preferences, Browse and Add to favorites, Buy ingredients. Checkout and Tracking order.`}
-          mockup={<IphoneMockup />}
+          video="1iCR-bprJfj3XknOBvRil9dx1qKftrCcw"
+        />
+        <PostNavigator
+          next={{
+            name: "Navo",
+            link: "/navo",
+          }}
         />
       </Flex>
     </Box>

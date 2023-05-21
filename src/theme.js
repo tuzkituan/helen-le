@@ -6,10 +6,10 @@ import "@fontsource/epilogue";
 
 const overrides = {
   colors: { ...theme.colors, brand: theme.colors.teal }, // main color
-  fonts: {
-    heading: "Epilogue, -apple-system, system-ui, sans-serif",
-    body: "Epilogue, -apple-system, system-ui, sans-serif",
-  },
+  // fonts: {
+  //   heading: "Epilogue, -apple-system, system-ui, sans-serif",
+  //   body: "Epilogue, -apple-system, system-ui, sans-serif",
+  // },
   components: {
     Button: {
       // 1. We can update the base styles

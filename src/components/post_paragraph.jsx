@@ -1,8 +1,21 @@
 import { Box, Center, Image, Spacer, Text } from "@chakra-ui/react";
 
-const PostParagraph = ({ title, description, image, mockup }) => {
+const PostParagraph = ({
+  header,
+  title,
+  description,
+  image,
+  mockup,
+  video,
+  maxW,
+}) => {
   return (
     <Box pl="148px">
+      {header ? (
+        <Text textStyle="t10" textTransform="uppercase" pb="20px">
+          {header}
+        </Text>
+      ) : null}
       <Text textStyle="t5" fontWeight={700}>
         {title}
       </Text>
@@ -16,7 +29,7 @@ const PostParagraph = ({ title, description, image, mockup }) => {
             display="block"
             src={image}
             w="100%"
-            maxW="900px"
+            maxW={maxW || "340px"}
             loading="lazy"
           />
         </>
@@ -26,6 +39,23 @@ const PostParagraph = ({ title, description, image, mockup }) => {
           <Spacer height="64px" />
           <Center>{mockup}</Center>
         </>
+      ) : null}
+      {video ? (
+        <Box w="100%" maxW="650px" margin="0 auto">
+          <video
+            controls={false}
+            loop
+            muted=""
+            autoPlay
+            playsInline=""
+            preload="false"
+          >
+            <source
+              src={`https://drive.google.com/uc?export=download&id=${video}`}
+              type="video/mp4"
+            />
+          </video>
+        </Box>
       ) : null}
     </Box>
   );
