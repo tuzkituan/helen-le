@@ -8,6 +8,7 @@ import ErrorPage from "./error_page";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Nurix from "./pages/works/nurix";
+import Navo from "./pages/works/navo";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
       <Route errorElement={<ErrorPage />}>
         <Route index element={<Home />} />
         <Route path="nurix" element={<Nurix />} />
+        <Route path="navo" element={<Navo />} />
         <Route path="about" element={<About />} />
       </Route>
     </Route>

@@ -9,6 +9,7 @@ const PostParagraph = ({
   video,
   maxW,
   videoAutoPlay = true,
+  children,
 }) => {
   return (
     <Box>
@@ -59,6 +60,12 @@ const PostParagraph = ({
             />
           </video>
         </Box>
+      ) : null}
+      {children ? (
+        <>
+          <Spacer height="64px" />
+          {children}
+        </>
       ) : null}
     </Box>
   );
