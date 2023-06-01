@@ -26,6 +26,12 @@ const MyWork = () => {
           lg: "64px",
         }}
         borderRadius="8px"
+        _hover={{
+          cursor: "pointer",
+        }}
+        role="group"
+        as={ReactRouterLink}
+        to={link}
       >
         <Flex
           w="100%"
@@ -44,11 +50,34 @@ const MyWork = () => {
               base: "100%",
               lg: "40%",
             }}
+            order={{
+              base: 2,
+              lg: 1,
+            }}
           >
-            <Text w="fit-content" textStyle="t4" fontWeight={400}>
+            <Text
+              w="fit-content"
+              textStyle={{
+                base: "t6",
+                lg: "t5",
+              }}
+              fontWeight={500}
+              _groupHover={{
+                textDecoration: "underline",
+                transition: "ease 0.5s",
+              }}
+              transition="ease 0.5s"
+            >
               {description}
             </Text>
-            <Text w="fit-content" textStyle="t7" fontWeight={400}>
+            <Text
+              w="fit-content"
+              textStyle={{
+                base: "t9",
+                lg: "t7",
+              }}
+              fontWeight={400}
+            >
               {title}
             </Text>
             <Button
@@ -62,7 +91,19 @@ const MyWork = () => {
               Read more
             </Button>
           </Flex>
-          <Flex gap={8} justifyContent="space-evenly">
+          <Flex
+            gap={8}
+            justifyContent="space-evenly"
+            _groupHover={{
+              transform: `scale(1.1)`,
+              transition: "ease 0.5s",
+            }}
+            transition="ease 0.5s"
+            order={{
+              base: 1,
+              lg: 2,
+            }}
+          >
             {images.map((x) => (
               <Box key={x}>
                 <Image

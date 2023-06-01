@@ -42,11 +42,11 @@ export default function Root() {
         <MyHeader />
         <Box
           paddingInline={{
-            md: "104px",
-            sm: "24px",
-            lg: "104px",
-            xl: "230px",
-            base: "24px",
+            // md: "104px",
+            // sm: "24px",
+            // lg: "104px",
+            // xl: "230px",
+            base: 8,
           }}
           paddingTop={{
             base: "24px",

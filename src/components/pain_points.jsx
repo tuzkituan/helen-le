@@ -6,15 +6,31 @@ const PainPoints = ({ title = "PAIN POINTS", data = [] }) => {
     <Box
       bgColor="#FDF9EE"
       borderRadius={8}
-      paddingBlock="60px"
-      paddingInline="50px"
+      paddingBlock={{
+        lg: "60px",
+        base: 8,
+      }}
+      paddingInline={{
+        base: 4,
+        lg: "50px",
+      }}
     >
       <Box>
         <Divider w="36px" bgColor="#C7C7C7" h="4px" mb={2} />
         <Text textStyle="t10">{title}</Text>
       </Box>
       <Spacer h="30px" />
-      <Flex gap="40px" justifyContent="space-between">
+      <Flex
+        gap={{
+          lg: "40px",
+          base: 4,
+        }}
+        justifyContent="space-between"
+        flexDirection={{
+          base: "column",
+          lg: "row",
+        }}
+      >
         {data.map((x) => (
           <Flex
             key={x.id}
@@ -25,7 +41,13 @@ const PainPoints = ({ title = "PAIN POINTS", data = [] }) => {
             flex={1}
           >
             <Image src={x.image} w="100%" />
-            <Text textStyle="t7" textAlign="center">
+            <Text
+              textStyle={{
+                base: "t8",
+                lg: "t7",
+              }}
+              textAlign="center"
+            >
               {x.title}
             </Text>
           </Flex>

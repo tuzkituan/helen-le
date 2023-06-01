@@ -15,8 +15,9 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
       <Route errorElement={<ErrorPage />}>
         <Route index element={<Home />} />
-        <Route path="nurix" element={<Nurix />} />
-        <Route path="navo" element={<Navo />} />
+        <Route path="work" element={<Home />} />
+        <Route path="work/nurix" element={<Nurix />} />
+        <Route path="work/navo" element={<Navo />} />
         <Route path="about" element={<About />} />
       </Route>
     </Route>

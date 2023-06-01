@@ -13,17 +13,30 @@ const PostParagraph = ({
 }) => {
   return (
     <Box>
-      <Box paddingInline={40}>
+      <Box>
         {header ? (
           <Text textStyle="t10" textTransform="uppercase" pb="20px">
             {header}
           </Text>
         ) : null}
-        <Text textStyle="t5" fontWeight={700}>
+        <Text
+          textStyle={{
+            base: "t7",
+            lg: "t5",
+          }}
+          fontWeight={700}
+        >
           {title}
         </Text>
         <Spacer height="20px" />
-        <Text textStyle="t7">{description}</Text>
+        <Text
+          textStyle={{
+            base: "t8",
+            lg: "t7",
+          }}
+        >
+          {description}
+        </Text>
       </Box>
       {image ? (
         <>

@@ -25,7 +25,7 @@ import { useScrollDirection } from "../utils/hooks";
 
 const MyHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isSmallerThan480] = useMediaQuery("(max-width: 480px)");
+  const [isSmallerThan480] = useMediaQuery("(max-width: 992px)");
   const location = useLocation();
   const scrollDirection = useScrollDirection();
 
@@ -83,13 +83,16 @@ const MyHeader = () => {
     >
       <Box
         paddingInline={{
-          md: "104px",
-          sm: "24px",
-          lg: "104px",
-          xl: "230px",
-          base: "24px",
+          base: 8,
+          // sm: "24px",
+          // md: 8,
+          // lg: "104px",
+          // xl: "230px",
         }}
-        paddingBlock="36px"
+        paddingBlock={{
+          base: 4,
+          lg: 8,
+        }}
       >
         <Flex
           gap={12}
@@ -107,7 +110,10 @@ const MyHeader = () => {
             }}
           >
             <Text
-              textStyle="t6"
+              textStyle={{
+                base: "t8",
+                lg: "t6",
+              }}
               textTransform="uppercase"
               display="block"
               fontWeight={500}

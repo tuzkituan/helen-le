@@ -17,10 +17,16 @@ import UserPersonas from "../../components/user_personas";
 import data from "../../projects.json";
 
 const Nurix = () => {
+  const contentMaxW = "900px";
   const nurix = data[0];
   return (
-    <Box>
-      <Breadcrumb paddingInline={40}>
+    <Box maxWidth={contentMaxW} w="100%" margin="auto">
+      <Breadcrumb
+        textStyle={{
+          base: "t9",
+          lg: "t8",
+        }}
+      >
         <BreadcrumbItem>
           <BreadcrumbLink href="/">Work</BreadcrumbLink>
         </BreadcrumbItem>
@@ -30,7 +36,13 @@ const Nurix = () => {
         </BreadcrumbItem>
       </Breadcrumb>
       <Spacer height={4} />
-      <Flex gap="112px" flexDirection="column">
+      <Flex
+        gap={{
+          base: 10,
+          lg: 20,
+        }}
+        flexDirection="column"
+      >
         <PostHeader
           title="Healthy recipe planner & delivery app"
           description="Provide personalized meal planning, and ingredient delivery for users looking to improve their health and wellness."
@@ -105,7 +117,24 @@ const Nurix = () => {
           description="Color of the app is associated with health, wellness, and vitality. It also highly legible and easy on the eyes, making it easy for users to find and read the recipes and other content in the app."
         />
         <PostColorPreview
-          colors={["#A4C639", "#F3E0A9", "#C72686", "#3E659F"]}
+          colors={[
+            {
+              id: "#A4C639",
+              textColor: "#000",
+            },
+            {
+              id: "#F3E0A9",
+              textColor: "#000",
+            },
+            {
+              id: "#C72686",
+              textColor: "#fff",
+            },
+            {
+              id: "#3E659F",
+              textColor: "#fff",
+            },
+          ]}
         />
         <PostParagraph
           title="Improved speed to log in"
@@ -148,7 +177,7 @@ const Nurix = () => {
         <PostNavigator
           next={{
             name: "Navo",
-            link: "/navo",
+            link: "/work/navo",
           }}
         />
       </Flex>

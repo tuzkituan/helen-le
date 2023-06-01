@@ -50,13 +50,36 @@ const About = () => {
             gap="32px"
             flex={2}
           >
-            <Stack h="100%" spacing="24px">
-              <Text textStyle="t3">Hi there!</Text>
-              <Text textStyle="t7">
-                I&apos;m Helen, a UX/UI designer dedicated to creating designs
-                that have a positive impact on people&apos;s lives. I constantly
-                strive for improvement and always ask myself, &apos;How can this
-                be better?&apos; in every design I create.
+            <Stack
+              h="100%"
+              spacing={{
+                base: 4,
+                lg: "24px",
+              }}
+            >
+              <Text
+                textStyle={{
+                  base: "t6",
+                  lg: "t3",
+                }}
+                fontWeight={{
+                  base: "700",
+                  lg: "400",
+                }}
+              >
+                Hi there!
+              </Text>
+              <Text
+                textStyle={{
+                  base: "t8",
+                  lg: "t7",
+                }}
+              >
+                I&apos;m Helen, a UX/UI Designer with a number of experience
+                design skills including wire-framing, prototyping, design
+                thinking, user research, user interviews, usability testing,
+                user flows, dashboard design, mobile app design, web app design,
+                user experience (UX) design and user interface (UI) design.
               </Text>
             </Stack>
             <Box w="fit-content">
@@ -79,13 +102,30 @@ const About = () => {
           }}
         >
           <Box flex={1}>
-            <Text textStyle="t7" color="#6D6D6D">
+            <Text
+              textStyle={{
+                base: "t6",
+                lg: "t7",
+              }}
+              color={{
+                lg: "#6D6D6D",
+              }}
+              fontWeight={{
+                base: "700",
+                lg: "400",
+              }}
+            >
               How I continue to stay inspired and motivated?
             </Text>
           </Box>
 
           <Box flex={2}>
-            <Text textStyle="t7">
+            <Text
+              textStyle={{
+                base: "t8",
+                lg: "t7",
+              }}
+            >
               I&apos;m passionate about observing people&apos;s behaviors and
               interactions with the world around them. I draw inspiration from
               the challenges my friends and family face in their daily lives and
@@ -108,7 +148,20 @@ const About = () => {
             md: "row",
           }}
         >
-          <Text textStyle="t7" color="#6D6D6D" flex={1}>
+          <Text
+            textStyle={{
+              base: "t6",
+              lg: "t7",
+            }}
+            color={{
+              lg: "#6D6D6D",
+            }}
+            fontWeight={{
+              base: "700",
+              lg: "400",
+            }}
+            flex={1}
+          >
             Professional experience
           </Text>
 
@@ -121,16 +174,31 @@ const About = () => {
             }}
           >
             <Stack spacing={2} flex={1}>
-              <Text textStyle="t7" textAlign="left">
+              <Text
+                textStyle={{
+                  base: "t8",
+                  lg: "t7",
+                }}
+                textAlign="left"
+              >
                 iLotusLand JSC
               </Text>
-              <Text textStyle="t7" color="#6D6D6D">
+              <Text
+                textStyle={{
+                  base: "t8",
+                  lg: "t7",
+                }}
+                color="#6D6D6D"
+              >
                 UX/UI Designer
               </Text>
             </Stack>
 
             <Text
-              textStyle="t7"
+              textStyle={{
+                base: "t8",
+                lg: "t7",
+              }}
               flex={1}
               textAlign={{
                 base: "left",

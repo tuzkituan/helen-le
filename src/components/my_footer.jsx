@@ -39,14 +39,32 @@ const MyFooter = () => {
   const _renderBlock = ({ label, items = [] }) => {
     return (
       <Box key={label} flex={1}>
-        <Text color="#C7C7C7" textStyle="t7">
+        <Text
+          color="#C7C7C7"
+          textStyle={{
+            base: "t9",
+            lg: "t7",
+          }}
+        >
           {label}
         </Text>
-        <Spacer height={6} />
+        <Spacer
+          height={{
+            base: 2,
+            lg: 6,
+          }}
+        />
         {items.map((x) => (
           <Link to={x.link} key={x.name} display="block" marginBlock={3}>
             <Flex alignItems="center" gap={4}>
-              <Text textStyle="t7">{x.name}</Text>
+              <Text
+                textStyle={{
+                  base: "t9",
+                  lg: "t7",
+                }}
+              >
+                {x.name}
+              </Text>
               <img src="icons/ic_link_arrow.svg" />
             </Flex>
           </Link>
@@ -57,17 +75,20 @@ const MyFooter = () => {
   return (
     <Box
       paddingInline={{
-        md: "104px",
-        sm: "24px",
-        lg: "104px",
-        xl: "230px",
-        base: "24px",
+        // md: "104px",
+        // sm: "24px",
+        // lg: "104px",
+        // xl: "230px",
+        base: 8,
       }}
       bgColor="#141414"
       paddingBlock="72px"
     >
       <Flex
-        gap={12}
+        gap={{
+          base: 6,
+          lg: 12,
+        }}
         alignItems="flex-start"
         color="#FAFAFA"
         flexDirection="column"
@@ -86,7 +107,13 @@ const MyFooter = () => {
           {blocks.map((x) => _renderBlock(x))}
         </Stack>
         <Divider bgColor="#C7C7C7" />
-        <Text color="#C7C7C7" textStyle="t7">
+        <Text
+          color="#C7C7C7"
+          textStyle={{
+            base: "t10",
+            lg: "t7",
+          }}
+        >
           Written, designed by Helen Le and built by Lewis Nguyen © 2023
         </Text>
       </Flex>

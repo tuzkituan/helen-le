@@ -6,22 +6,24 @@ import {
   Flex,
   Spacer,
 } from "@chakra-ui/react";
-import PainPoints from "../../components/pain_points";
 import PostBannerImage from "../../components/post_banner_image";
-import PostColorPreview from "../../components/post_color_preview";
-import PostFontPreview from "../../components/post_font_preview";
 import PostHeader from "../../components/post_header";
 import PostNavigator from "../../components/post_navigator";
 import PostParagraph from "../../components/post_paragraph";
-import UserPersonas from "../../components/user_personas";
 import data from "../../projects.json";
 import UserResearch from "../../components/user_research";
 
 const Navo = () => {
+  const contentMaxW = "900px";
   const navo = data[1];
   return (
-    <Box>
-      <Breadcrumb paddingInline={40}>
+    <Box maxWidth={contentMaxW} w="100%" margin="auto">
+      <Breadcrumb
+        textStyle={{
+          base: "t9",
+          lg: "t8",
+        }}
+      >
         <BreadcrumbItem>
           <BreadcrumbLink href="/">Work</BreadcrumbLink>
         </BreadcrumbItem>
@@ -31,7 +33,13 @@ const Navo = () => {
         </BreadcrumbItem>
       </Breadcrumb>
       <Spacer height={4} />
-      <Flex gap="112px" flexDirection="column">
+      <Flex
+        gap={{
+          base: 10,
+          lg: 20,
+        }}
+        flexDirection="column"
+      >
         <PostHeader
           title="Improve the parking experience"
           description="A concept for a parking experience aims to help users save time when find parking near office, hospitals, events, and more."
@@ -116,11 +124,11 @@ const Navo = () => {
         <PostNavigator
           prev={{
             name: "Nurix",
-            link: "/nurix",
+            link: "/work/nurix",
           }}
           next={{
-            name: "Navo",
-            link: "/navo",
+            name: "Farmate",
+            link: "/work/farmate",
           }}
         />
       </Flex>

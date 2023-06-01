@@ -2,10 +2,25 @@ import { Box, Spacer, Text } from "@chakra-ui/react";
 
 const PostHeader = ({ title, description }) => {
   return (
-    <Box paddingInline={40}>
-      <Text textStyle="t2">{title}</Text>
+    <Box>
+      <Text
+        textStyle={{
+          base: "t6",
+          lg: "t2",
+        }}
+        fontWeight="700"
+      >
+        {title}
+      </Text>
       <Spacer height="20px" />
-      <Text textStyle="t5">{description}</Text>
+      <Text
+        textStyle={{
+          base: "t8",
+          lg: "t5",
+        }}
+      >
+        {description}
+      </Text>
     </Box>
   );
 };

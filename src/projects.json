@@ -3,7 +3,7 @@
         "id": 1,
         "description": "Healthy recipe planner & delivery app.",
         "title": "Nurix",
-        "link": "/nurix",
+        "link": "work/nurix",
         "images": [
             "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pPNkrHuE5191xedIMIALgJPC_oc6YUWpYQ8B1qKHCktdVUh7aau8CrkT_h91e3C3TloitlmEquOIKfGlinx69sR0qy_A=s1600",
             "https://lh3.googleusercontent.com/drive-viewer/AFGJ81q1JG2Y8RAUPCHz8hgFw7-jq4zLDVwAkkEGWf0TJq98HNe8neZJDCMuRA9izl9HvD9IQ4rae7Ll8JReSrwNwSUqzXB4=s1600"
@@ -14,7 +14,7 @@
         "id": 2,
         "description": "Improve the parking experience.",
         "title": "Navo",
-        "link": "/navo",
+        "link": "work/navo",
         "images": [
             "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pmTKoiv-qVr5UDIzZZdhYd1A-EO_t8g-HovkvQh-U4S11Zhg3j7XVx6UApC_xecnNDz8rZUMY0cLUtf6xtacrv5Awqng=s1600",
             "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qr-zlEr0GeDZaSSgbCFTQruzQCoBFBVpnlVOjW-6qQNy_5a6duXpC3x3U7Hu6paVcXZ-IYwdiWipVE4R-Dp2GE6iBH=s1600"
@@ -25,7 +25,7 @@
         "id": 3,
         "description": "Enhances farm operations for Vietnamese farmers.",
         "title": "Farmate",
-        "link": "/farmate",
+        "link": "work/farmate",
         "images": [
             "images/farmate_1.png"
         ],

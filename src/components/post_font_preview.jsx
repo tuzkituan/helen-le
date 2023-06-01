@@ -7,7 +7,6 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
       <Box
         // bgColor="#EDF4D7"
         marginBlock="97px"
-        paddingInline={40}
         paddingBlock="60px"
         w="100%"
         h="100%"

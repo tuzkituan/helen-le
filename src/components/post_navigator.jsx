@@ -14,10 +14,23 @@ const PostNavigator = ({ prev, next }) => {
       <Flex justifyContent={justifyContent} w="100%">
         <Flex gap="30px" w="fit-content" flexDirection={order}>
           <Flex flexDirection="column">
-            <Text textStyle="t9" color="#7A7A7A">
+            <Text
+              textStyle={{
+                base: "t10",
+                lg: "t9",
+              }}
+              color="#7A7A7A"
+            >
               {text}
             </Text>
-            <Text textStyle="t7">{item.name}</Text>
+            <Text
+              textStyle={{
+                base: "t8",
+                lg: "t7",
+              }}
+            >
+              {item.name}
+            </Text>
           </Flex>
 
           <IconButton
