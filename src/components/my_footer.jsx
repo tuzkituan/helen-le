@@ -65,7 +65,7 @@ const MyFooter = () => {
               >
                 {x.name}
               </Text>
-              <img src="icons/ic_link_arrow.svg" />
+              <img src="../icons/ic_link_arrow.svg" />
             </Flex>
           </Link>
         ))}

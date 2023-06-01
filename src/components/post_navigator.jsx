@@ -8,8 +8,8 @@ const PostNavigator = ({ prev, next }) => {
     const order = type === "prev" ? "row-reverse" : "row";
     const icon =
       type === "prev"
-        ? "icons/ic_chevron_left.svg"
-        : "icons/ic_chevron_right.svg";
+        ? "../icons/ic_chevron_left.svg"
+        : "../icons/ic_chevron_right.svg";
     return (
       <Flex justifyContent={justifyContent} w="100%">
         <Flex gap="30px" w="fit-content" flexDirection={order}>

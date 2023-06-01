@@ -5,6 +5,7 @@ import {
   Image,
   ListItem,
   Spacer,
+  Stack,
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
@@ -40,14 +41,64 @@ const UserPersonas = ({
           lg: "row",
         }}
       >
-        <Flex flexDirection="column" gap={2} alignItems="center">
-          <Image src={avatar} />
-          <Spacer display="block" h="16px" />
-          <Text textStyle="t6" fontWeight={700}>
-            {name}
-          </Text>
-          <Text textStyle="t8">{age} years old</Text>
-          <Text textStyle="t8">{position}</Text>
+        <Flex
+          flexDirection={{
+            base: "row",
+            lg: "column",
+          }}
+          alignItems={{
+            base: "flex-start",
+            lg: "center",
+          }}
+          justifyContent={{
+            base: "space-between",
+            lg: "flex-start",
+          }}
+          gap={4}
+        >
+          <Box
+            w={{
+              base: "72px",
+              lg: "100%",
+            }}
+            order={{
+              base: 2,
+              lg: 1,
+            }}
+
+            // h={{
+            //   base: "72px",
+            //   lg: "100%",
+            // }}
+          >
+            <Image
+              src={avatar}
+              borderRadius={{
+                base: "50%",
+                lg: 8,
+              }}
+              objectFit="cover"
+              w="100%"
+            />
+          </Box>
+
+          {/* <Spacer display="block" h="16px" /> */}
+          <Stack
+            textAlign={{
+              base: "left",
+              lg: "center",
+            }}
+            order={{
+              base: 1,
+              lg: 2,
+            }}
+          >
+            <Text textStyle="t6" fontWeight={700}>
+              {name}
+            </Text>
+            <Text textStyle="t8">{age} years old</Text>
+            <Text textStyle="t8">{position}</Text>
+          </Stack>
         </Flex>
         <Flex
           flexDirection="column"

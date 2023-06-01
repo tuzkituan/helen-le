@@ -61,7 +61,7 @@ const Nurix = () => {
             name: "Sarah Tran",
             age: 26,
             position: "Marketing Manager",
-            avatar: "images/nurix_image_4.png",
+            avatar: "../images/nurix_image_4.png",
           }}
           data={[
             {
@@ -84,15 +84,15 @@ const Nurix = () => {
         <PainPoints
           data={[
             {
-              image: "images/nurix_image_2.png",
+              image: "../images/nurix_image_2.png",
               title: "Difficulty in manually planning recipes",
             },
             {
-              image: "images/nurix_image_3.png",
+              image: "../images/nurix_image_3.png",
               title: "Lack of knowledge about nutritional needs",
             },
             {
-              image: "images/nurix_image_1.png",
+              image: "../images/nurix_image_1.png",
               title: "Time and energy constraints in meal preparation",
             },
           ]}
@@ -108,8 +108,8 @@ const Nurix = () => {
           description="I want to make it easy for users to choose from the variety of meal and ingredient options available, especially since meal names and other details can be lengthy. Relying solely on images may not be enough, so I need to ensure that the font used is highly readable and legible, especially on small screens. That's why I chose DM Sans, a modern font that is easy to read and perfect for mobile devices."
         />
         <PostFontPreview
-          titleImg="images/nourix_font_1.svg"
-          descriptionImg="images/nourix_font_2.svg"
+          titleImg="../images/nourix_font_1.svg"
+          descriptionImg="../images/nourix_font_2.svg"
           mockup="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pmeHpgW8ETRQDLs25wXPGYkgstj7cwgDwF4-nnornUNfrhd3qWltTM8lBuJxioxbCL6Bor0bGUmzJlBZEwWuhvvsgndA=s1600"
         />
         <PostParagraph

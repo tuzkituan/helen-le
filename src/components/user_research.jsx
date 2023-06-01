@@ -2,9 +2,9 @@ import { Box, Flex, Image, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
 
 const PATTERNS = [
-  "images/img_pattern_1.png",
-  "images/img_pattern_2.png",
-  "images/img_pattern_3.png",
+  "../images/img_pattern_1.png",
+  "../images/img_pattern_2.png",
+  "../images/img_pattern_3.png",
 ];
 
 const UserResearch = ({ data = [] }) => {

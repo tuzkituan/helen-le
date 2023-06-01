@@ -131,7 +131,7 @@ const MyHeader = () => {
             ) : (
               <Link className="icon" onClick={onOpen}>
                 <Flex alignItems="center">
-                  <img src="icons/ic_hamburger.svg" />
+                  <img src="../icons/ic_hamburger.svg" />
                 </Flex>
               </Link>
             )}
@@ -195,7 +195,7 @@ const MyHeader = () => {
                 </Text>
                 <Button
                   variant={"outline"}
-                  rightIcon={<img src="icons/ic_link_arrow.svg" />}
+                  rightIcon={<img src="../icons/ic_link_arrow.svg" />}
                   iconSpacing={4}
                 >
                   Email

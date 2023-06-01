@@ -2,7 +2,7 @@ import { extendTheme, theme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 // import "@fontsource/inter"; // yarn add @fontsource/inter
-import "@fontsource/inter";
+// import "@fontsource/inter";
 
 const overrides = {
   colors: { ...theme.colors, brand: theme.colors.teal }, // main color
