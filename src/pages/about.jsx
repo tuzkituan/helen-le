@@ -12,7 +12,7 @@ import {
 
 const About = () => {
   return (
-    <Box w="100%">
+    <Box w="100%" margin="0 auto" maxW="936px">
       <Stack spacing="32px" divider={<Divider />}>
         {/* <Alert
           status="warning"
@@ -60,11 +60,11 @@ const About = () => {
               <Text
                 textStyle={{
                   base: "t6",
-                  lg: "t3",
+                  lg: "t5",
                 }}
                 fontWeight={{
-                  base: "700",
-                  lg: "400",
+                  base: "700 !important",
+                  lg: "600 !important",
                 }}
               >
                 Hi there!
@@ -84,7 +84,17 @@ const About = () => {
             </Stack>
             <Box w="fit-content">
               <Button
-                rightIcon={<img src={"icons/ic_link_arrow.svg"} alt="" />}
+                iconSpacing={4}
+                rightIcon={
+                  <img
+                    src={"icons/ic_link_arrow.svg"}
+                    alt=""
+                    style={{
+                      width: "12.5px",
+                      height: "12.5px",
+                    }}
+                  />
+                }
               >
                 My resume
               </Button>

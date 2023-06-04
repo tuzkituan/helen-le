@@ -9,7 +9,15 @@ const PATTERNS = [
 
 const UserResearch = ({ data = [] }) => {
   return (
-    <Flex gap="40px" justifyContent="center" w="100%" flexWrap="wrap">
+    <Flex
+      gap="40px"
+      justifyContent="space-between"
+      flexWrap="wrap"
+      // flexDirection={{
+      //   base: "column",
+      //   lg: "row",
+      // }}
+    >
       {data.map((x, i) => (
         <Box
           key={x.id}
@@ -18,12 +26,11 @@ const UserResearch = ({ data = [] }) => {
           borderRadius="24px"
           boxShadow="0px 8px 16px -4px rgba(9, 26, 47, 0.08)"
           // h="390px"
-          h="395px"
-          minW="325px"
-          maxW="325px"
-          flex={1}
-          // maxW="400px"
-          // minW="300px"
+          h="400px"
+          flex={{
+            base: "",
+            lg: 1,
+          }}
         >
           <Image
             w="100%"
@@ -57,13 +64,23 @@ const UserResearch = ({ data = [] }) => {
               paddingInline={8}
               paddingBlock={2}
             >
-              <Text textStyle="t6" fontWeight={700}>
+              <Text textStyle="t6" fontWeight="700 !important">
                 {x.name}
               </Text>
               <Spacer h="4px" />
               <Text textStyle="t10">{x.position}</Text>
               <Spacer h="4px" />
-              <Text textStyle="t8">{x.content}</Text>
+              <Text
+                textStyle="t8"
+                style={{
+                  display: "-webkit-box",
+                  overflow: "hidden",
+                  "-webkit-line-clamp": 3,
+                  "-webkit-box-orient": "vertical",
+                }}
+              >
+                {x.content}
+              </Text>
             </Box>
           </Box>
         </Box>

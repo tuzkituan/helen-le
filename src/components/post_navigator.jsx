@@ -1,7 +1,8 @@
-import { Button, Flex, IconButton, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import projects from "../projects.json";
 
-const PostNavigator = ({ prev, next }) => {
+const PostNavigator = ({ current }) => {
   const _renderButton = (item, type) => {
     const text = type === "prev" ? "PREV" : "NEXT";
     const justifyContent = type === "prev" ? "flex-start" : "flex-end";
@@ -43,11 +44,32 @@ const PostNavigator = ({ prev, next }) => {
       </Flex>
     );
   };
+
+  const prev = () => {
+    if (current > 0) {
+      return {
+        name: projects[current - 1].title,
+        link: projects[current - 1].link,
+      };
+    }
+    return null;
+  };
+
+  const next = () => {
+    if (current < projects.length - 1) {
+      return {
+        name: projects[current + 1].title,
+        link: projects[current + 1].link,
+      };
+    }
+    return null;
+  };
+
   return (
-    <div>
-      {prev ? _renderButton(prev, "prev") : null}
-      {next ? _renderButton(next, "next") : null}
-    </div>
+    <Box>
+      {prev() ? _renderButton(prev(), "prev") : null}
+      {next() ? _renderButton(next(), "next") : null}
+    </Box>
   );
 };
 

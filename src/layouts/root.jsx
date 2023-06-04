@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Loading from "../components/loading";
@@ -6,6 +6,7 @@ import MyFooter from "../components/my_footer";
 import MyHeader from "../components/my_header";
 import { motion } from "framer-motion";
 import ScrollToTop from "../components/scroll_to_top";
+import { MAIN_MAX_W } from "../appConstants";
 
 export default function Root() {
   const [isMounting, setIsMounting] = React.useState(true);
@@ -38,37 +39,50 @@ export default function Root() {
 
   return (
     <Loading spinning={isMounting}>
-      <Box w="100%" position="relative" overflow="clip">
-        <MyHeader />
-        <Box
-          paddingInline={{
-            // md: "104px",
-            // sm: "24px",
-            // lg: "104px",
-            // xl: "230px",
-            base: 8,
-          }}
-          paddingTop={{
-            base: "24px",
-            md: "40px",
-          }}
-          paddingBottom="104px"
-        >
-          <motion.div
-            key={pathname}
-            initial="initial"
-            animate="in"
-            variants={pageVariants}
-            transition={pageTransition}
+      <Flex
+        direction="column"
+        justifyContent="space-between"
+        w="100%"
+        position="relative"
+        overflow="clip"
+        minH="100vh"
+      >
+        <Box>
+          <MyHeader />
+          <Box
+            paddingInline={{
+              // md: "104px",
+              // sm: "24px",
+              // lg: "104px",
+              // xl: "230px",
+              base: 8,
+            }}
+            paddingTop={{
+              base: "24px",
+              md: "40px",
+            }}
+            paddingBottom={{
+              base: "48px",
+              lg: "104px",
+            }}
           >
-            <Box maxW="1200px" w="100%" margin="0 auto">
-              <Outlet />
-            </Box>
-          </motion.div>
+            <motion.div
+              key={pathname}
+              initial="initial"
+              animate="in"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Box maxW={MAIN_MAX_W} w="100%" margin="0 auto">
+                <Outlet />
+              </Box>
+            </motion.div>
+          </Box>
         </Box>
+
         <MyFooter />
         <ScrollToTop />
-      </Box>
+      </Flex>
     </Loading>
   );
 }

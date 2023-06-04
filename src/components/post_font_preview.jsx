@@ -1,14 +1,25 @@
 import { Box, Image, Spacer } from "@chakra-ui/react";
 import React from "react";
+import { CONTENT_MAX_W } from "../appConstants";
 
 const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
   return (
-    <Box position="relative" overflow="hidden">
+    <Box
+      position="relative"
+      overflow="hidden"
+      maxW={CONTENT_MAX_W}
+      margin="0 auto"
+      w="100%"
+    >
       <Box
         // bgColor="#EDF4D7"
         marginBlock="97px"
-        paddingInline={4}
+        paddingInline={{
+          base: 4,
+          lg: "64px",
+        }}
         paddingBlock="60px"
+        borderRadius="8px 0 8px 0"
         w="100%"
         h="100%"
         background="linear-gradient(to bottom right, #EDF4D7 0%, #EDF4D7 50%, #FDF9EE 50%, #FDF9EE 100%)"
@@ -38,7 +49,7 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
           lg: 0,
         }}
         right={{
-          lg: "-90px",
+          lg: "-150px",
           base: "-110px",
         }}
         h={{

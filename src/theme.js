@@ -2,19 +2,27 @@ import { extendTheme, theme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 // import "@fontsource/inter"; // yarn add @fontsource/inter
-// import "@fontsource/inter";
+import "@fontsource/inter/100.css";
+import "@fontsource/inter/200.css";
+import "@fontsource/inter/300.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/inter/900.css";
 
 const overrides = {
   colors: { ...theme.colors, brand: theme.colors.teal }, // main color
-  // fonts: {
-  //   heading: "Inter, -apple-system, system-ui, sans-serif",
-  //   body: "Inter, -apple-system, system-ui, sans-serif",
-  // },
+  fonts: {
+    heading: "Inter, -apple-system, system-ui, sans-serif",
+    body: "Inter, -apple-system, system-ui, sans-serif",
+  },
   components: {
     Button: {
       // 1. We can update the base styles
       baseStyle: {
-        // fontWeight: 700, // Normally, it is "semibold"
+        fontWeight: 500, // Normally, it is "semibold"
         borderRadius: "8px",
       },
       // 3. We can add a new visual variant

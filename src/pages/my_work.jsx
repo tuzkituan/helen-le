@@ -23,7 +23,7 @@ const MyWork = () => {
         bgColor={useColorModeValue(color, "blackAlpha.600")}
         p={{
           base: "24px",
-          lg: "64px",
+          lg: "144px",
         }}
         borderRadius="8px"
         _hover={{
@@ -61,7 +61,7 @@ const MyWork = () => {
                 base: "t6",
                 lg: "t5",
               }}
-              fontWeight={500}
+              fontWeight="400 !important"
               _groupHover={{
                 textDecoration: "underline",
                 transition: "ease 0.5s",
@@ -76,7 +76,7 @@ const MyWork = () => {
                 base: "t9",
                 lg: "t7",
               }}
-              fontWeight={400}
+              fontWeight="400 !important"
             >
               {title}
             </Text>

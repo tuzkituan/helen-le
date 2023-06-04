@@ -20,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 import { useLayoutEffect } from "react";
 import { Link as ReactRouterLink, useLocation } from "react-router-dom";
-import { APP_NAME } from "../appConstants";
+import { APP_NAME, MAIN_MAX_W } from "../appConstants";
 import { useScrollDirection } from "../utils/hooks";
 
 const MyHeader = () => {
@@ -30,14 +30,17 @@ const MyHeader = () => {
   const scrollDirection = useScrollDirection();
 
   useLayoutEffect(() => {
+    console.log("🚀  ~ location:", location);
     if (isOpen) {
       onClose();
     }
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, [location]);
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
+  }, [JSON.stringify(location)]);
 
   const menuItems = [
     {
@@ -45,7 +48,7 @@ const MyHeader = () => {
       link: "/",
     },
     {
-      label: "About",
+      label: "About me",
       link: "/about",
     },
   ];
@@ -57,8 +60,8 @@ const MyHeader = () => {
         variant={isInDrawer ? "link" : "ghost"}
         as={ReactRouterLink}
         to={x.link}
-        textStyle="t8"
-        fontWeight={isInDrawer ? 700 : 500}
+        textStyle="t7"
+        fontWeight={isInDrawer ? 700 : 400}
         key={x.label}
         textDecoration={current === x.link ? "underline" : "none"}
       >
@@ -68,7 +71,23 @@ const MyHeader = () => {
   };
 
   const _renderEmailButton = () => {
-    return <Button variant="solid">Email</Button>;
+    return (
+      <Button
+        variant="solid"
+        rightIcon={
+          <img
+            src="../icons/ic_link_arrow.svg"
+            style={{
+              width: "12.5px",
+              height: "12.5px",
+            }}
+          />
+        }
+        iconSpacing={4}
+      >
+        Email me
+      </Button>
+    );
   };
 
   return (
@@ -78,7 +97,7 @@ const MyHeader = () => {
       top={scrollDirection === "down" ? "-120px" : 0}
       transition="all 0.3s"
       zIndex={100}
-      bgColor="white"
+      bgColor="whiteAlpha.800"
       backdropFilter="blur(20px)"
     >
       <Box
@@ -91,14 +110,14 @@ const MyHeader = () => {
         }}
         paddingBlock={{
           base: 4,
-          lg: 8,
+          lg: 4,
         }}
       >
         <Flex
           gap={12}
           alignItems="center"
           justifyContent="space-between"
-          maxW="1200px"
+          maxW={MAIN_MAX_W}
           w="100%"
           margin="0 auto"
         >
@@ -112,11 +131,11 @@ const MyHeader = () => {
             <Text
               textStyle={{
                 base: "t8",
-                lg: "t6",
+                lg: "t7",
               }}
               textTransform="uppercase"
               display="block"
-              fontWeight={500}
+              fontWeight="500 !important"
             >
               {APP_NAME}
             </Text>

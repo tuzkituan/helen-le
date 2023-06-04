@@ -12,26 +12,28 @@ import PostNavigator from "../../components/post_navigator";
 import PostParagraph from "../../components/post_paragraph";
 import data from "../../projects.json";
 import UserResearch from "../../components/user_research";
+import { CONTENT_MAX_W, MAIN_MAX_W } from "../../appConstants";
 
 const Navo = () => {
-  const contentMaxW = "900px";
   const navo = data[1];
   return (
-    <Box maxWidth={contentMaxW} w="100%" margin="auto">
-      <Breadcrumb
-        textStyle={{
-          base: "t9",
-          lg: "t8",
-        }}
-      >
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">Work</BreadcrumbLink>
-        </BreadcrumbItem>
+    <Box maxWidth={MAIN_MAX_W} w="100%" margin="auto">
+      <Box maxW={CONTENT_MAX_W} w="100%" margin="auto">
+        <Breadcrumb
+          textStyle={{
+            base: "t9",
+            lg: "t8",
+          }}
+        >
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Work</BreadcrumbLink>
+          </BreadcrumbItem>
 
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink href="/navo">Navo</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink href="/navo">Navo</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      </Box>
       <Spacer height={4} />
       <Flex
         gap={{
@@ -121,16 +123,7 @@ const Navo = () => {
           description={`To maintain high-quality standards for parking places, users can rate their parking experience after their session is over. In addition, first-time users of the Navo app can receive discounts on future parking sessions as an incentive to use the app."`}
           video="17mdivtodOj-e-wJl06rYKpMGTJ7pdnpE"
         />
-        <PostNavigator
-          prev={{
-            name: "Nurix",
-            link: "/work/nurix",
-          }}
-          next={{
-            name: "Farmate",
-            link: "/work/farmate",
-          }}
-        />
+        <PostNavigator current={navo.id} />
       </Flex>
     </Box>
   );

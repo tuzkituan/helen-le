@@ -32,15 +32,21 @@ export default function ScrollToTop() {
         <Box
           onClick={scrollToTop}
           position="fixed"
-          bottom="20px"
-          right={["16px", "20px"]}
+          bottom={["16px", "32px"]}
+          right={["16px", "32px"]}
           zIndex={3}
         >
           <IconButton
-            size="md"
-            icon={<ArrowUpIcon />}
+            w="48px"
+            h="48px"
+            icon={<img src="../icons/ic_top.svg" />}
             variant="solid"
-            colorScheme="orange"
+            borderRadius="50%"
+            bgColor="whiteAlpha.900"
+            border="1px solid #141414"
+            _hover={{
+              bgColor: "whiteAlpha.900",
+            }}
           ></IconButton>
         </Box>
       )}

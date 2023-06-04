@@ -1,14 +1,15 @@
 import { Box, Spacer, Text } from "@chakra-ui/react";
+import { CONTENT_MAX_W } from "../appConstants";
 
 const PostHeader = ({ title, description }) => {
   return (
-    <Box>
+    <Box maxW={CONTENT_MAX_W} margin="0 auto">
       <Text
         textStyle={{
           base: "t6",
-          lg: "t2",
+          lg: "t4",
         }}
-        fontWeight="700"
+        fontWeight="700 !important"
       >
         {title}
       </Text>

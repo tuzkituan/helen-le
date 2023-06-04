@@ -1,4 +1,5 @@
 import { Box, Center, Image, Spacer, Text } from "@chakra-ui/react";
+import { CONTENT_MAX_W } from "../appConstants";
 
 const PostParagraph = ({
   header,
@@ -12,7 +13,7 @@ const PostParagraph = ({
   children,
 }) => {
   return (
-    <Box>
+    <Box maxW={CONTENT_MAX_W} margin="0 auto">
       <Box>
         {header ? (
           <Text textStyle="t10" textTransform="uppercase" pb="20px">
@@ -24,7 +25,7 @@ const PostParagraph = ({
             base: "t7",
             lg: "t5",
           }}
-          fontWeight={700}
+          fontWeight="700 !important"
         >
           {title}
         </Text>

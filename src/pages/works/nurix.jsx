@@ -15,26 +15,30 @@ import PostNavigator from "../../components/post_navigator";
 import PostParagraph from "../../components/post_paragraph";
 import UserPersonas from "../../components/user_personas";
 import data from "../../projects.json";
+import { CONTENT_MAX_W, MAIN_MAX_W } from "../../appConstants";
 
 const Nurix = () => {
-  const contentMaxW = "900px";
-  const nurix = data[0];
-  return (
-    <Box maxWidth={contentMaxW} w="100%" margin="auto">
-      <Breadcrumb
-        textStyle={{
-          base: "t9",
-          lg: "t8",
-        }}
-      >
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">Work</BreadcrumbLink>
-        </BreadcrumbItem>
+  const nurix = data[2];
 
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink href="/nurix">Nurix</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
+  return (
+    <Box maxWidth={MAIN_MAX_W} w="100%" margin="auto">
+      <Box maxW={CONTENT_MAX_W} w="100%" margin="auto">
+        <Breadcrumb
+          textStyle={{
+            base: "t9",
+            lg: "t8",
+          }}
+        >
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Work</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink href="/nurix">Nurix</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      </Box>
+
       <Spacer height={4} />
       <Flex
         gap={{
@@ -101,7 +105,7 @@ const Nurix = () => {
           title="Design"
           description="The design should be clean, modern, and easy to navigate. The design should be focused on showcasing the healthy recipes and ingredients, making it easy for users to find and choose the recipes that meet their dietary preferences."
           image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oVoE2CgZE4pj6vq3f5Md5u0FACHkvNzxCAs1oaV5mXYS9H2gvAfTy9TM7KCMJ_jQS_TQKIOCza6dTjH9yHo2X0x2KiaA=s1600"
-          maxW="900px"
+          maxW="936px"
         />
         <PostParagraph
           title="Typography"
@@ -155,7 +159,7 @@ const Nurix = () => {
           title="Quickly find recipes"
           description="Easier for users to find what they need and narrow down choices."
           image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oDFbNEdshiCSOjItLkVKvogFoKG9pLbEw2wess5fLaZRfz54BRY0ucwHXhx06wh49GGqmOZbB6aa6yUqdb6ZNzcGlk=s1600"
-          maxW="1200px"
+          maxW={MAIN_MAX_W}
         />
         <PostParagraph
           title="Without manually recipe planner"
@@ -174,12 +178,7 @@ const Nurix = () => {
           video="1iCR-bprJfj3XknOBvRil9dx1qKftrCcw"
           videoAutoPlay={false}
         />
-        <PostNavigator
-          next={{
-            name: "Navo",
-            link: "/work/navo",
-          }}
-        />
+        <PostNavigator current={nurix.id} />
       </Flex>
     </Box>
   );
