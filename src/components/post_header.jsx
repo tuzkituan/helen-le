@@ -3,7 +3,7 @@ import { CONTENT_MAX_W } from "../appConstants";
 
 const PostHeader = ({ title, description }) => {
   return (
-    <Box maxW={CONTENT_MAX_W} margin="0 auto">
+    <Box maxW={CONTENT_MAX_W} margin="0 auto" w="100%">
       <Text
         textStyle={{
           base: "t6",

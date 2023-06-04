@@ -30,7 +30,6 @@ const MyHeader = () => {
   const scrollDirection = useScrollDirection();
 
   useLayoutEffect(() => {
-    console.log("🚀  ~ location:", location);
     if (isOpen) {
       onClose();
     }
@@ -45,7 +44,7 @@ const MyHeader = () => {
   const menuItems = [
     {
       label: "Work",
-      link: "/",
+      link: "/work",
     },
     {
       label: "About me",
@@ -63,7 +62,7 @@ const MyHeader = () => {
         textStyle="t7"
         fontWeight={isInDrawer ? 700 : 400}
         key={x.label}
-        textDecoration={current === x.link ? "underline" : "none"}
+        textDecoration={current.includes(x.link) ? "underline" : "none"}
       >
         {x.label}
       </Button>

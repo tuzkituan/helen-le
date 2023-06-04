@@ -13,7 +13,7 @@ const PainPoints = ({ title = "PAIN POINTS", data = [] }) => {
         base: 8,
       }}
     >
-      <Box maxW={CONTENT_MAX_W} margin="0 auto">
+      <Box maxW={CONTENT_MAX_W} margin="0 auto" w="100%">
         <Box>
           <Divider w="36px" bgColor="#C7C7C7" h="4px" mb={2} />
           <Text textStyle="t10">{title}</Text>

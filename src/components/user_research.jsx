@@ -11,22 +11,27 @@ const UserResearch = ({ data = [] }) => {
   return (
     <Flex
       gap="40px"
-      justifyContent="space-between"
-      flexWrap="wrap"
-      // flexDirection={{
-      //   base: "column",
-      //   lg: "row",
+      overflowX="auto"
+      w="fit-content"
+      // css={{
+      //   "&::-webkit-scrollbar": {
+      //     display: "none",
+      //   },
+      //   "-ms-overflow-style": "none" /* IE and Edge */,
+      //   "scrollbar-width": "none",
       // }}
     >
       {data.map((x, i) => (
         <Box
           key={x.id}
           position="relative"
-          overflow="hidden"
           borderRadius="24px"
+          overflow="hidden"
           boxShadow="0px 8px 16px -4px rgba(9, 26, 47, 0.08)"
           // h="390px"
           h="400px"
+          minW="300px"
+          maxW="300px"
           flex={{
             base: "",
             lg: 1,
