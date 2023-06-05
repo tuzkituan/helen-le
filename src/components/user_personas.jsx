@@ -50,10 +50,8 @@ const UserPersonas = ({
               base: "flex-start",
               lg: "center",
             }}
-            justifyContent={{
-              base: "space-between",
-              lg: "flex-start",
-            }}
+            justifyContent="space-between"
+            w="45%"
             gap={4}
           >
             <Box
@@ -65,11 +63,6 @@ const UserPersonas = ({
                 base: 2,
                 lg: 1,
               }}
-
-              // h={{
-              //   base: "72px",
-              //   lg: "100%",
-              // }}
             >
               <Image
                 src={avatar}

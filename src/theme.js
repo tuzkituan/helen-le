@@ -32,11 +32,26 @@ const overrides = {
           bg: "gray.900",
           color:  "#fff",
           _hover: {
-            bg: "gray.900",
+            bg: "#2C2C2C",
             color: "#fff",
           },
           _active: {
             bg: "gray.900",
+            color: "#fff",
+          },
+        }),
+        outline: () => ({
+          bg: "#141414",
+            borderColor: "#727272",
+            color:  "#fff",
+          _hover: {
+            bg: "#141414",
+            color: "#fff",
+            borderColor: "#fff"
+          },
+          _active: {
+            bg: "#141414",
+            borderColor: "#fff",
             color: "#fff",
           },
         }),

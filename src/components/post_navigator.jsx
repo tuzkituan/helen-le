@@ -12,7 +12,7 @@ const PostNavigator = ({ current }) => {
         ? "../icons/ic_chevron_left.svg"
         : "../icons/ic_chevron_right.svg";
     return (
-      <Flex justifyContent={justifyContent} w="100%">
+      <Flex justifyContent={justifyContent} w="100%" as={Link} to={item.link}>
         <Flex gap="30px" w="fit-content" flexDirection={order}>
           <Flex flexDirection="column">
             <Text
@@ -35,9 +35,7 @@ const PostNavigator = ({ current }) => {
           </Flex>
 
           <IconButton
-            as={Link}
             borderRadius="50%"
-            to={item.link}
             icon={<Image src={icon} w="20px" h="20px" />}
           ></IconButton>
         </Flex>

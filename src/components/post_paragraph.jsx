@@ -80,7 +80,7 @@ const PostParagraph = ({
       </Box>
       {children ? (
         <>
-          <Spacer height="64px" />
+          <Spacer height="32px" />
           {children}
         </>
       ) : null}

@@ -43,7 +43,9 @@ export default function ScrollToTop() {
             variant="solid"
             borderRadius="50%"
             bgColor="whiteAlpha.900"
-            border="1px solid #141414"
+            css={{
+              boxShadow: "0px 0px 20px rgba(20, 20, 20, 0.1)",
+            }}
             _hover={{
               bgColor: "whiteAlpha.900",
             }}

@@ -21,9 +21,13 @@ const MyWork = () => {
       <Box
         key={id}
         bgColor={useColorModeValue(color, "blackAlpha.600")}
-        p={{
+        paddingInline={{
           base: "24px",
           lg: "144px",
+        }}
+        paddingBlock={{
+          base: "24px",
+          lg: "64px",
         }}
         borderRadius="8px"
         _hover={{
@@ -95,7 +99,7 @@ const MyWork = () => {
             gap={8}
             justifyContent="space-evenly"
             _groupHover={{
-              transform: `scale(1.1)`,
+              transform: `scale(1.05)`,
               transition: "ease 0.5s",
             }}
             transition="ease 0.5s"
@@ -111,7 +115,7 @@ const MyWork = () => {
                   src={x}
                   w="100%"
                   h="100%"
-                  maxW={images.length > 1 ? "250px" : "500px"}
+                  maxW={images.length > 1 ? "250px" : "535px"}
                 />
               </Box>
             ))}

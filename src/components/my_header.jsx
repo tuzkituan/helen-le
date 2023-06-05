@@ -56,13 +56,21 @@ const MyHeader = () => {
     const current = location.pathname;
     return arr.map((x) => (
       <Button
-        variant={isInDrawer ? "link" : "ghost"}
+        variant={isInDrawer ? "ghost" : "ghost"}
         as={ReactRouterLink}
         to={x.link}
         textStyle="t7"
         fontWeight={isInDrawer ? 700 : 400}
         key={x.label}
         textDecoration={current.includes(x.link) ? "underline" : "none"}
+        _hover={{
+          bg: "transparent",
+          textDecoration: "underline",
+        }}
+        _active={{
+          bg: "transparent",
+          textDecoration: "underline",
+        }}
       >
         {x.label}
       </Button>

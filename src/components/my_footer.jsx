@@ -43,7 +43,7 @@ const MyFooter = () => {
           lg: "32px",
         }}
         alignItems="flex-start"
-        color="#FAFAFA"
+        color="#F5F5FA"
         flexDirection="column"
         maxW={MAIN_MAX_W}
         w="100%"
@@ -60,7 +60,8 @@ const MyFooter = () => {
           {/* {blocks.map((x) => _renderBlock(x))} */}
           <Box flex={1}>
             <Text textStyle="t7">
-              I would love to hear from you. Let’s do great things together!
+              I would love to hear from you. <br />
+              Let’s do great things together!
             </Text>
             <Spacer h="16px" />
             <Button
@@ -82,7 +83,7 @@ const MyFooter = () => {
             </Flex>
           </Box>
         </Stack>
-        <Divider bgColor="#C7C7C7" />
+        <Divider bgColor="#2C2C2C" />
         <Text
           color="#C7C7C7"
           textStyle={{

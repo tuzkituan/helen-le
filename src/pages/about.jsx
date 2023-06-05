@@ -27,20 +27,22 @@ const About = () => {
         <Flex
           gap={{
             base: "32px",
-            xl: "124px",
+            xl: "64px",
           }}
           flexDirection={{
             base: "column",
             md: "row",
           }}
         >
-          <Box borderRadius="8px" flex={1}>
+          <Box borderRadius="8px" flex={1} overflow="hidden">
             <Image
               src="images/orange_avatar.png"
               w={{
                 base: "100%",
                 lg: "25vw",
               }}
+              h="100%"
+              objectFit="cover"
             />
           </Box>
 
@@ -104,7 +106,7 @@ const About = () => {
         <Flex
           gap={{
             base: "32px",
-            xl: "124px",
+            xl: "64px",
           }}
           flexDirection={{
             base: "column",
@@ -151,7 +153,7 @@ const About = () => {
         <Flex
           gap={{
             base: "32px",
-            xl: "124px",
+            xl: "64px",
           }}
           flexDirection={{
             base: "column",

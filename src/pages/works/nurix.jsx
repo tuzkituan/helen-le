@@ -119,28 +119,31 @@ const Nurix = () => {
         <PostParagraph
           title="Color"
           description="Color of the app is associated with health, wellness, and vitality. It also highly legible and easy on the eyes, making it easy for users to find and read the recipes and other content in the app."
-        />
-        <PostColorPreview
-          colors={[
-            {
-              id: "#A4C639",
-              textColor: "#000",
-            },
-            {
-              id: "#F3E0A9",
-              textColor: "#000",
-            },
-            {
-              id: "#C72686",
-              textColor: "#fff",
-            },
-            {
-              id: "#3E659F",
-              textColor: "#fff",
-            },
-          ]}
-        />
+        >
+          <PostColorPreview
+            colors={[
+              {
+                id: "#A4C639",
+                textColor: "#000",
+              },
+              {
+                id: "#F3E0A9",
+                textColor: "#000",
+              },
+              {
+                id: "#C72686",
+                textColor: "#fff",
+              },
+              {
+                id: "#3E659F",
+                textColor: "#fff",
+              },
+            ]}
+          />
+        </PostParagraph>
+
         <PostParagraph
+          header="NURIX APP WALKTHROUGH"
           title="Improved speed to log in"
           description="Because of user preference quiz. I included one-click login options such as Facebook, Google or Apple to improve speed to log in."
           image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pO_WRjgTdsTRAnVmU5eSr9CyinNR_Z7REg_AtTu2JJEFeKFyg-m0b7iTLgafVapUo5_uqLw-XxClcUtv8WrRP3SRLZag=s1600"
@@ -172,7 +175,6 @@ const Nurix = () => {
           video="1IFksTMfRlcFdVi0eCsY0Nd1oxzf5d2N6"
         />
         <PostParagraph
-          header="NURIX APP WALKTHROUGH"
           title="Full app walkthrough"
           description={`Full app walkthrough included Login & User personal preferences, Browse and Add to favorites, Buy ingredients. Checkout and Tracking order.`}
           video="1iCR-bprJfj3XknOBvRil9dx1qKftrCcw"
