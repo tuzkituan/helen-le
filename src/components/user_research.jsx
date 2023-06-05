@@ -10,12 +10,16 @@ const PATTERNS = [
 const UserResearch = ({ data = [] }) => {
   return (
     <Flex
-      gap="40px"
+      gap="32px"
       overflowX="auto"
       paddingBottom={4}
       w={{
         base: "100%",
         lg: "100%",
+      }}
+      justifyContent={{
+        base: "unset",
+        lg: "space-between",
       }}
     >
       {data.map((x, i) => (
@@ -27,8 +31,14 @@ const UserResearch = ({ data = [] }) => {
           boxShadow="0px 8px 16px -4px rgba(9, 26, 47, 0.08)"
           // h="390px"
           h="420px"
-          minW="280px"
-          maxW="280px"
+          minW={{
+            base: "280px",
+            lg: "unset",
+          }}
+          maxW={{
+            base: "280px",
+            lg: "unset",
+          }}
           flex={{
             base: "",
             lg: 1,
