@@ -12,14 +12,11 @@ const UserResearch = ({ data = [] }) => {
     <Flex
       gap="40px"
       overflowX="auto"
-      w="fit-content"
-      // css={{
-      //   "&::-webkit-scrollbar": {
-      //     display: "none",
-      //   },
-      //   "-ms-overflow-style": "none" /* IE and Edge */,
-      //   "scrollbar-width": "none",
-      // }}
+      paddingBottom={4}
+      w={{
+        base: "100%",
+        lg: "100%",
+      }}
     >
       {data.map((x, i) => (
         <Box
@@ -29,9 +26,9 @@ const UserResearch = ({ data = [] }) => {
           overflow="hidden"
           boxShadow="0px 8px 16px -4px rgba(9, 26, 47, 0.08)"
           // h="390px"
-          h="400px"
-          minW="300px"
-          maxW="300px"
+          h="420px"
+          minW="280px"
+          maxW="280px"
           flex={{
             base: "",
             lg: 1,
