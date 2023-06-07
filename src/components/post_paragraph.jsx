@@ -1,5 +1,5 @@
 import { Box, Center, Image, Spacer, Text } from "@chakra-ui/react";
-import { CONTENT_MAX_W } from "../appConstants";
+import { CONTENT_MAX_W, MAIN_MAX_W } from "../appConstants";
 
 const PostParagraph = ({
   header,
@@ -13,8 +13,8 @@ const PostParagraph = ({
   children,
 }) => {
   return (
-    <Box maxW={CONTENT_MAX_W} margin="0 auto" w="100%">
-      <Box>
+    <Box maxW={MAIN_MAX_W} margin="0 auto" w="100%">
+      <Box maxW={CONTENT_MAX_W} margin="0 auto" w="100%">
         {header ? (
           <Text textStyle="t10" textTransform="uppercase" pb="20px">
             {header}
@@ -29,18 +29,28 @@ const PostParagraph = ({
         >
           {title}
         </Text>
-        <Spacer height="20px" />
-        <Text
-          textStyle={{
-            base: "t8",
-            lg: "t7",
-          }}
-        >
-          {description}
-        </Text>
+        {description ? (
+          <>
+            <Spacer height="20px" />
+            <Text
+              textStyle={{
+                base: "t8",
+                lg: "t7",
+              }}
+            >
+              {description}
+            </Text>
+          </>
+        ) : null}
       </Box>
 
-      <Box position="relative" display="block">
+      <Box
+        position="relative"
+        display="block"
+        maxW={CONTENT_MAX_W}
+        margin="0 auto"
+        w="100%"
+      >
         {image ? (
           <>
             <Spacer height="64px" />

@@ -1,13 +1,14 @@
 [
     {
         "id": 0,
-        "description": "Enhances farm operations for Vietnamese farmers.",
-        "title": "Farmate",
-        "link": "/work/farmate",
+        "description": "Healthy recipe planner & delivery app.",
+        "title": "Nurix",
+        "link": "/work/nurix",
         "images": [
-            "../images/farmate_1.png"
+            "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pPNkrHuE5191xedIMIALgJPC_oc6YUWpYQ8B1qKHCktdVUh7aau8CrkT_h91e3C3TloitlmEquOIKfGlinx69sR0qy_A=s1600",
+            "https://lh3.googleusercontent.com/drive-viewer/AFGJ81q1JG2Y8RAUPCHz8hgFw7-jq4zLDVwAkkEGWf0TJq98HNe8neZJDCMuRA9izl9HvD9IQ4rae7Ll8JReSrwNwSUqzXB4=s1600"
         ],
-        "color": "#CCDDD9"
+        "color": "#EDF4D7"
     },
     {
         "id": 1,
@@ -22,13 +23,13 @@
     },
     {
         "id": 2,
-        "description": "Healthy recipe planner & delivery app.",
-        "title": "Nurix",
-        "link": "/work/nurix",
+        "description": "Enhances farm operations for Vietnamese farmers.",
+        "title": "Synapse",
+        "link": "/work/synapse",
         "images": [
-            "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pPNkrHuE5191xedIMIALgJPC_oc6YUWpYQ8B1qKHCktdVUh7aau8CrkT_h91e3C3TloitlmEquOIKfGlinx69sR0qy_A=s1600",
-            "https://lh3.googleusercontent.com/drive-viewer/AFGJ81q1JG2Y8RAUPCHz8hgFw7-jq4zLDVwAkkEGWf0TJq98HNe8neZJDCMuRA9izl9HvD9IQ4rae7Ll8JReSrwNwSUqzXB4=s1600"
+            "../images/farmate_1.png"
         ],
-        "color": "#EDF4D7"
+        "color": "#CCDDD9",
+        "backgroundImage": "../images/img_synapse_banner.png"
     }
 ]

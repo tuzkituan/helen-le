@@ -1,5 +1,6 @@
 import { Box, Flex, Image, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
+import { MAIN_MAX_W } from "../appConstants";
 
 const PATTERNS = [
   "../images/img_pattern_1.png",
@@ -12,15 +13,13 @@ const UserResearch = ({ data = [] }) => {
     <Flex
       gap="32px"
       overflowX="auto"
-      paddingBottom={4}
-      w={{
-        base: "100%",
-        lg: "100%",
-      }}
+      maxW={MAIN_MAX_W}
+      w="100%"
       justifyContent={{
         base: "unset",
         lg: "space-between",
       }}
+      paddingBottom={4}
     >
       {data.map((x, i) => (
         <Box

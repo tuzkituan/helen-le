@@ -9,7 +9,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Nurix from "./pages/works/nurix";
 import Navo from "./pages/works/navo";
-import Farmate from "./pages/works/farmate";
+import Synapte from "./pages/works/synapse";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
         <Route path="work" element={<Home />} />
         <Route path="work/nurix" element={<Nurix />} />
         <Route path="work/navo" element={<Navo />} />
-        <Route path="work/farmate" element={<Farmate />} />
+        <Route path="work/synapse" element={<Synapte />} />
         <Route path="about" element={<About />} />
       </Route>
     </Route>
