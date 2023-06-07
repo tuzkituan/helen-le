@@ -18,7 +18,7 @@ import data from "../../projects.json";
 import { CONTENT_MAX_W, MAIN_MAX_W } from "../../appConstants";
 
 const Nurix = () => {
-  const nurix = data[0];
+  const nurix = data[2];
 
   return (
     <Box maxWidth={MAIN_MAX_W} w="100%" margin="auto">

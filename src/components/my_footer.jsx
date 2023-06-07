@@ -66,7 +66,16 @@ const MyFooter = () => {
             <Spacer h="16px" />
             <Button
               variant="outline"
-              rightIcon={<img src="../icons/ic_link_arrow.svg" />}
+              rightIcon={
+                <img
+                  src="../icons/ic_link_arrow.svg"
+                  style={{
+                    width: "12.5px",
+                    height: "12.5px",
+                  }}
+                />
+              }
+              iconSpacing={4}
             >
               Email me
             </Button>

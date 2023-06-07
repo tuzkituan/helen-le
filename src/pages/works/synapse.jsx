@@ -17,7 +17,7 @@ import PostParagraph from "../../components/post_paragraph";
 import PostNavigator from "../../components/post_navigator";
 
 const Synapse = () => {
-  const synapse = data[2];
+  const synapse = data[0];
   const pain_points = [
     {
       label: "Monitor effectively ",
@@ -72,59 +72,37 @@ const Synapse = () => {
           title="Objective"
           description={`To create a user-friendly platform and app that provides farmers with real-time data and insights to help them manage their farms more efficiently.`}
         />
-        <PostParagraph title="Key results">
-          <Flex
-            gap={{
-              lg: "40px",
-              base: 4,
-            }}
-            justifyContent="space-between"
-            flexDirection={{
-              base: "column",
-              lg: "row",
-            }}
-            maxW={CONTENT_MAX_W}
-            margin="0 auto"
-            w="100%"
-          >
-            {pain_points.map((x) => (
-              <Flex
-                key={x.label}
-                flexDirection="column"
-                gap={4}
-                // justifyContent="center"
-                alignItems="center"
-                flex={1}
-              >
-                <Image src={x.image} w="100%" />
-                <Text
-                  textStyle={{
-                    base: "t8",
-                    lg: "t7",
-                  }}
-                  textAlign="center"
-                >
-                  {x.label}
-                </Text>
-              </Flex>
-            ))}
-          </Flex>
-        </PostParagraph>
+
         <PostParagraph
           title="Target customer"
           description="Vietnamese farmers with varying levels of technological proficiency."
         />
-        <PostParagraph title="Pain points" />
-        <PostParagraph header="PRODUCT RESEARCH" title="5 WHY" />
         <PostParagraph
           title="User personas"
           description="I conducted 114 interviews and surveys with Vietnamese farmers in the central region of Vietnam to gather insights on their crop monitoring challenges, preferences, and requirements. Farmers were categorized based on age, technological literacy, farm size, and specific needs, resulting in the development of primary and secondary user personas."
         />
         <PostParagraph
-          title="Solution"
-          description="I conducted 114 interviews and surveys with Vietnamese farmers in the central region of Vietnam to gather insights on their crop monitoring challenges, preferences, and requirements. Farmers were categorized based on age, technological literacy, farm size, and specific needs, resulting in the development of primary and secondary user personas."
+          header="SOLUTION"
+          title="Comprehensive farm insights at a glance"
+          description="Provide users with a comprehensive view of their farm, offering real-time updates on pest alerts, weather conditions, wind forecast, and nutrient alerts."
         />
-        <PostNavigator current={2} />
+        <PostParagraph description="Provide interactive elements for users to access detailed information or take immediate actions based on the alerts received." />
+        <PostParagraph description="Enable users to make immediate decisions based on accurate and up-to-date information, ensuring effective crop monitoring and management." />
+        <PostParagraph
+          title="Crop performance insights: enhancing field productivity"
+          description="Offer users a comprehensive analysis of crop performance, highlighting potential issues causing lower crop levels in the current season compared to previous seasons."
+        />
+        <PostParagraph
+          title="Field recommendations for maximum crop performance"
+          description="Simplify the field creation process with a step-by-step wizard, supplemented by an accessible help center for any assistance while adding new fields."
+        />
+        <PostParagraph description="Provide clear explanations for the recommendations, detailing the rationale behind each suggestion." />
+        <PostParagraph
+          title="Continuous guidance and support: accessing expert advice anytime"
+          description="Enable in-app chat for seamless communication between users and support team members, as well as the ability to talk to experts for professional advice on topics such as pest management and fertilizer effectiveness."
+        />
+        <PostParagraph description="Enable users to add events for irrigation and fertilizer while having video chats with experts helps them maintain a comprehensive record of their farming activities." />
+        <PostNavigator current={0} />
       </Flex>
     </Box>
   );
