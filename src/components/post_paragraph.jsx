@@ -15,7 +15,6 @@ const PostParagraph = ({
   return (
     <Box maxW={CONTENT_MAX_W} margin="0 auto" w="100%">
       <Box>
-        {" "}
         {header ? (
           <Text textStyle="t10" textTransform="uppercase" pb="20px">
             {header}
@@ -45,7 +44,6 @@ const PostParagraph = ({
         ) : null}
       </Box>
       <Box position="relative" display="block">
-        {" "}
         {image ? (
           <>
             <Spacer height="64px" />
