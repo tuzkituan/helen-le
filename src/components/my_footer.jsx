@@ -103,7 +103,7 @@ const MyFooter = () => {
             </Flex>
           </Box>
         </Stack>
-        <Divider bgColor="#2C2C2C" />
+        <Divider borderColor="#2C2C2C" />
         <Text
           color="#C7C7C7"
           textStyle={{

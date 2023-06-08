@@ -60,7 +60,6 @@ const Synapse = () => {
           image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81o4NWIleKOJOmkLyVi6YIml6ntpx1_PtltDO3cvbz0UAKo0fpimhPJkyKinac6fFRPTwXsUg7es4LFAdniPpCn5iZ0OIg=s1600"
           maxW="100%s"
         />
-
         <PostParagraph
           title="Target customer"
           description="Vietnamese farmers with varying levels of technological proficiency."
@@ -80,7 +79,6 @@ const Synapse = () => {
             />
           </Box>
         </PostParagraph>
-
         <Box>
           <img
             src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81o-lpPoahmaVvUWkJ1CFZ84hA9yo5QLQRksihmsjGA1h1PAVEVYbo6KxxJdpD_k3m80K09K5hrDCsmLbL_sg_Ysfz3xsw=s1600"
@@ -90,7 +88,6 @@ const Synapse = () => {
             }}
           />
         </Box>
-
         <Box
           marginInline={{
             base: -8,
@@ -105,7 +102,6 @@ const Synapse = () => {
             alt=""
           />
         </Box>
-
         <PostParagraph
           title="User personas"
           description="I conducted 114 interviews and surveys with Vietnamese farmers in the central region of Vietnam to gather insights on their crop monitoring challenges, preferences, and requirements. Farmers were categorized based on age, technological literacy, farm size, and specific needs, resulting in the development of primary and secondary user personas."
@@ -126,14 +122,14 @@ const Synapse = () => {
               }}
             />
             <img
-              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81rsK3ntkO8bPZIemk1vKSgPi12kZe71MgQWVsi3HC9iJVXBNCfpLd8rsXnw4pzczIdSw6cUfPaY_uZjUMVdEudpFR9icA=s1600"
+              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oX_ZLPRhZy48XQV9-Tlk1bo1jXw_tKPnkLMw0We0zuuC1EWdUVgGj2yxlrG68HBs9vED47JyAg2sq83dCe677KI2BLvw=s1600"
               alt=""
               style={{
                 position: "absolute",
-                top: "0px",
+                top: "-100px",
                 bottom: 0,
-                height: "104%",
-                right: "-100px",
+                height: "139%",
+                right: "-240px",
                 zIndex: 1,
               }}
             />
@@ -177,6 +173,22 @@ const Synapse = () => {
           image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81plMRrn28gfD4NtT8YnRGdT0plfhHk3mvWU5qqaQLnfF3udYenWUfwXjUeMlvHrzSemIxPG4kZZhnGogQo7kfIGr94vcQ=s1600"
           description="Enable users to add events for irrigation and fertilizer while having video chats with experts helps them maintain a comprehensive record of their farming activities."
         />
+        <PostParagraph maxW="100%" title="Responsive design">
+          <Box
+            marginInline={{
+              base: -8,
+              lg: `calc(calc(${CONTENT_MAX_W} - 100vw) / 2)`,
+            }}
+          >
+            <img
+              style={{
+                width: "100%",
+              }}
+              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81o5_BJKtPtDcSfwcilSWjf5hbv8WDwrrBWT0XaOhsBVqNKOAcj7Y_Du2v8GeJkD-TWVHj-qoA2fMpao2lzX22_pMphRwg=s1600"
+              alt=""
+            />
+          </Box>
+        </PostParagraph>
         <PostNavigator current={0} />
       </Flex>
     </Box>

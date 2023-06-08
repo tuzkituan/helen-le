@@ -15,24 +15,26 @@ const data = [
   {
     bgImage1: "../images/img_circle_bg_1.svg",
     bgImage2: "../images/img_circle_bg_2.svg",
+    dividerColor: "#FFF1F6",
     user: {
       name: "Phuong Vo",
       old: 35,
       title: "High school diploma",
       subTitle: "Small-scale organic farmer",
-      avatar: "../images/img_phuong.png",
+      avatar:
+        "https://lh3.googleusercontent.com/drive-viewer/AFGJ81rtDHT6kevzldyElDwjU8zlDwf2S1gKOz_0mgfMKo4gaZ72rfWGGITuv58nmkC3ZBeudbvmERIGKFop0rT9DPr4HSOd4g=s1600",
     },
     items: [
       {
         title: "Goals",
-        icon: "../icons/ic_goals.svg",
+        icon: "../icons/ic_goals_pink.svg",
         content: [
           "Improve the sustainability of her farm, increase crop quality, reduce costs.",
         ],
       },
       {
         title: "Pain points",
-        icon: "../icons/ic_pain_points.svg",
+        icon: "../icons/ic_pain_points_pink.svg",
         content: [
           "Limited access to real-time data and insights.",
           "Challenges in monitoring crop health and weather conditions.",
@@ -40,7 +42,7 @@ const data = [
       },
       {
         title: "Behaviors",
-        icon: "../icons/ic_behaviors.svg",
+        icon: "../icons/ic_behaviors_pink.svg",
         content: [
           "Phuong is passionate about organic farming and sustainable agriculture.",
           "She wants to improve the health and quality of her crops while minimizing her environmental impact.",
@@ -53,24 +55,26 @@ const data = [
   {
     bgImage1: "../images/img_circle_bg_3.svg",
     bgImage2: "../images/img_circle_bg_4.svg",
+    dividerColor: "#E7F8F4",
     user: {
       name: "Trung Nguyen",
       old: 28,
       title: "Some college education",
       subTitle: "The second-generation farmer",
-      avatar: "../images/img_trung.png",
+      avatar:
+        "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pJMOVAXm34-N4A6yA0PSssbCRDEC0ePhUvyLFmzDPqHfUfeytXC69S8uNKdJvBIH8DhkMBb78howcwrlMw-WVtVXU1CA=s1600",
     },
     items: [
       {
         title: "Goals",
-        icon: "../icons/ic_goals.svg",
+        icon: "../icons/ic_goals_green.svg",
         content: [
           "Increase crop yield, reduce costs, and expand the farm’s market share.",
         ],
       },
       {
         title: "Pain points",
-        icon: "../icons/ic_pain_points.svg",
+        icon: "../icons/ic_pain_points_green.svg",
         content: [
           "It's stressful and confusing to figure out the right way to care for crops with so many different methods and products available.",
           "Managing multiple crops simultaneously.",
@@ -78,7 +82,7 @@ const data = [
       },
       {
         title: "Behaviors",
-        icon: "../icons/ic_behaviors.svg",
+        icon: "../icons/ic_behaviors_green.svg",
         content: [
           "Relies on the experience and knowledge passed down from his parents.",
           "Has a hands-on approach to farming, and is open to trying new farming practices and technologies.",
@@ -180,11 +184,16 @@ const UserPersonas = () => {
                   display: "block",
                   position: "relative",
                   zIndex: 2,
+                  objectFit: "cover",
+                  objectPosition: "top",
+                  borderRadius: "50%",
+                  border: "4px solid #fff",
+                  boxShadow: "0px 15px 30px -4px rgba(9, 26, 47, 0.25)",
                 }}
               />
             </Flex>
           </Flex>
-          <Divider bgColor="#FFF1F6" />
+          <Divider borderColor={item.dividerColor} />
           <Stack
             spacing={4}
             p={{
