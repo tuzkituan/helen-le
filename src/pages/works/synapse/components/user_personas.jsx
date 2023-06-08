@@ -93,23 +93,47 @@ const UserPersonas = () => {
     return (
       <Box
         key={item.user.name}
-        bgImage={item.bgImage1}
-        backgroundRepeat="no-repeat"
-        backgroundSize="cover"
-        backgroundPosition="-237px 100%"
+        position="relative"
+        zIndex={0}
+        _before={{
+          content: '""',
+          position: "absolute",
+          backgroundImage: `url(${item.bgImage1})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "600px",
+          left: 0,
+          width: "100%",
+          height: "100%",
+          top: 0,
+          marginTop: "-173px",
+          marginLeft: "-251px",
+        }}
+        _after={{
+          content: '""',
+          position: "absolute",
+          backgroundImage: `url(${item.bgImage1})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "232px",
+          right: 0,
+          width: "232px",
+          height: "232px",
+          top: 0,
+          marginTop: "-50px",
+          marginRight: "-50px",
+          zIndex: 0,
+        }}
       >
         <Box
           display="block"
           position="relative"
           // border="1px solid red"
           borderRadius={8}
+          zIndex={4}
           css={{
             background:
               "linear-gradient(56.12deg, rgba(255, 255, 255, 0.4) 3.82%, rgba(255, 255, 255, 0.16) 97.69%);",
             backdropFilter: "blur(2px)",
-            border: "4px solid",
-            borderImageSource:
-              "linear-gradient(56.34deg, rgba(255, 255, 255, 0.8) 2.47%, rgba(255, 255, 255, 0.32) 98.42%)",
+            border: "4px solid #fff",
           }}
         >
           <Flex
@@ -153,6 +177,9 @@ const UserPersonas = () => {
                 style={{
                   width: "92px",
                   height: "92px",
+                  display: "block",
+                  position: "relative",
+                  zIndex: 2,
                 }}
               />
             </Flex>
@@ -204,7 +231,12 @@ const UserPersonas = () => {
   };
 
   return (
-    <Flex flexDirection="column" gap="32px" overflow="visible">
+    <Flex
+      flexDirection="column"
+      gap="32px"
+      overflow="visible"
+      position="relative"
+    >
       {data.map((x) => _renderBlock(x))}
     </Flex>
   );

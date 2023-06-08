@@ -116,43 +116,65 @@ const Synapse = () => {
           header="SOLUTION"
           title="Comprehensive farm insights at a glance"
           description="Provide users with a comprehensive view of their farm, offering real-time updates on pest alerts, weather conditions, wind forecast, and nutrient alerts."
-        />
+        >
+          <Box position="relative">
+            <img
+              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81p-dUKzmqwI42GNWjaX5KsVcW7kdy2xb2cXMA5kEbk_lr1V_M5_jGksCxRuah1tzq0T3wGahOgIjpiXIWo_oLflamPTNw=s1600"
+              alt=""
+              style={{
+                zIndex: 0,
+              }}
+            />
+            <img
+              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81rsK3ntkO8bPZIemk1vKSgPi12kZe71MgQWVsi3HC9iJVXBNCfpLd8rsXnw4pzczIdSw6cUfPaY_uZjUMVdEudpFR9icA=s1600"
+              alt=""
+              style={{
+                position: "absolute",
+                top: "0px",
+                bottom: 0,
+                height: "104%",
+                right: "-100px",
+                zIndex: 1,
+              }}
+            />
+          </Box>
+        </PostParagraph>
         <PostParagraph
           description="Provide interactive elements for users to access detailed information or take immediate actions based on the alerts received."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qt88PKSgXoW2CUmb72j1j7k_9ql5nP74akkFoZPHlpvteaM298rTKa0_gUmbosj4_N-LqzQQFI2rBkPEbEzlc5OAqyXQ=s1600"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81p-dUKzmqwI42GNWjaX5KsVcW7kdy2xb2cXMA5kEbk_lr1V_M5_jGksCxRuah1tzq0T3wGahOgIjpiXIWo_oLflamPTNw=s1600"
           maxW="100%"
         />
         <PostParagraph
           description="Enable users to make immediate decisions based on accurate and up-to-date information, ensuring effective crop monitoring and management."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pI4KKbEsxvdXJlA8iqrQryNoItBLpU_o2UMOvfTR4adEvguMrQwSIoiza237_c1WjYyQwRJLREEzBlPhg3tUVCBc31Iw=s1600"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qfcs6feFVG2Id9xDRgLLuJdWC7B0TO60iPNtMynhLS9Lh8ObG5VVogR-qr7RPKKJwwEYZJgUTwt41ntgF2YaCtzyGX8w=s1600"
           maxW="100%"
         />
         <PostParagraph
           title="Crop performance insights: enhancing field productivity"
           description="Offer users a comprehensive analysis of crop performance, highlighting potential issues causing lower crop levels in the current season compared to previous seasons."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qzIblrP8uvbP854VtetcCHCmetRjxnkl4H2qu7zn70sR2OJCRF_2LckyJ3aKoo5Et4UvYvSXf9ZuUSw7EObCWk_J4JJQ=s1600"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qFZKpfwU560ertjpeElC7J5MIv7zoSv335RSwhaZcFulgplXyTy2d0ZerFP-4xNksBKOgFcnOI9k2qbUPVgcvNFw_nxQ=s1600"
           maxW="100%"
         />
         <PostParagraph
           title="Field recommendations for maximum crop performance"
           description="Simplify the field creation process with a step-by-step wizard, supplemented by an accessible help center for any assistance while adding new fields."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81olSYt2LLRaeE-JK6H9Kbp55EebHoO9EPqQ1FLoYt0u_p_aLlOj-qx-SOc0fZy9h2rhlS9E7kA4e5hESSFN_KLKMH3A=s1600"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oWti81ll2-jIWwp_nhxYPojaimkZACBb-BXRYvlmLxJOYCggq59jvzMXpr2Xqvb8cmaaqTCz1OQDGqQ43AjazktktG=s1600"
           maxW="100%"
         />
         <PostParagraph
           description="Provide clear explanations for the recommendations, detailing the rationale behind each suggestion."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pplMSOfp5WkHcrvflNITX41gC_qrdVByTQKn7rZuZoh_k8Lqr2R-2A2jqPiEAa5FK9cs_x7JMIXE1lQY8qbhSrqPfuFw=s1600"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81o_szyCu6xCbsZt6cPDVZyV6pYfJH--5KnqyjJGlAubGg6wBNKswMpFJr5eao9H_k1_wcMzjRz_Z1kLhATGMEI9gf7hsQ=s1600"
           maxW="100%"
         />
         <PostParagraph
           title="Continuous guidance and support: accessing expert advice anytime"
           description="Enable in-app chat for seamless communication between users and support team members, as well as the ability to talk to experts for professional advice on topics such as pest management and fertilizer effectiveness."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81q4CwaqBzch6YNq-oLa3bcnINCfOJbXGO0Zg-T3fVSzJWGbjbC2w-Q_uO0EBm4rc59--yznWUoeIOf6jpx7j70bogprVA=s1600"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pvE9YaseXVllfhU7XzduqGPnH64IxEgab96DcgcdkQt9K4aP91PYGQHtKn6PtD5wDzARAhMn91OCPctzeE0rMijd-dfg=s1600"
           maxW="100%"
         />
         <PostParagraph
           maxW="100%"
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oACYbioqiUS0iStxsL5Df1R6dTgYAcvd6Y3-j4CN0z9D17YPULBOD9Zc052vdmd8lQvUs5nGHXNNsRYZX8ujfJsT-wgA=s1600"
+          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81plMRrn28gfD4NtT8YnRGdT0plfhHk3mvWU5qqaQLnfF3udYenWUfwXjUeMlvHrzSemIxPG4kZZhnGogQo7kfIGr94vcQ=s1600"
           description="Enable users to add events for irrigation and fertilizer while having video chats with experts helps them maintain a comprehensive record of their farming activities."
         />
         <PostNavigator current={0} />

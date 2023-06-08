@@ -22,6 +22,7 @@ import { useLayoutEffect } from "react";
 import { Link as ReactRouterLink, useLocation } from "react-router-dom";
 import { APP_NAME, MAIN_MAX_W } from "../appConstants";
 import { useScrollDirection } from "../utils/hooks";
+import { MY_DATA } from "../myData";
 
 const MyHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -90,6 +91,8 @@ const MyHeader = () => {
             }}
           />
         }
+        as={ReactRouterLink}
+        to={`mailto:${MY_DATA.EMAIL}`}
         iconSpacing={4}
       >
         Email me
@@ -221,10 +224,20 @@ const MyHeader = () => {
                 </Text>
                 <Button
                   variant={"outline"}
-                  rightIcon={<img src="../icons/ic_link_arrow.svg" />}
+                  rightIcon={
+                    <img
+                      src="../icons/ic_link_arrow.svg"
+                      style={{
+                        width: "12.5px",
+                        height: "12.5px",
+                      }}
+                    />
+                  }
+                  as={ReactRouterLink}
+                  to={`mailto:${MY_DATA.EMAIL}`}
                   iconSpacing={4}
                 >
-                  Email
+                  Email me
                 </Button>
               </Flex>
             </DrawerFooter>

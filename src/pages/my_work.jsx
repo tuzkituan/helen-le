@@ -35,6 +35,13 @@ const MyWork = () => {
         }}
         role="group"
         as={ReactRouterLink}
+        h={{
+          base: "unset",
+          lg: "652px",
+        }}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
         to={link}
       >
         <Flex
@@ -98,6 +105,7 @@ const MyWork = () => {
           <Flex
             gap={8}
             justifyContent="space-evenly"
+            alignItems="center"
             _groupHover={{
               transform: `scale(1.05)`,
               transition: "ease 0.5s",
@@ -114,7 +122,7 @@ const MyWork = () => {
                   loading="lazy"
                   src={x}
                   w="100%"
-                  h="100%"
+                  // h="100%"
                   maxW={images.length > 1 ? "250px" : "535px"}
                 />
               </Box>

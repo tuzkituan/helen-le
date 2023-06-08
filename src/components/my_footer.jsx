@@ -8,20 +8,24 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
 import { MAIN_MAX_W } from "../appConstants";
+import { MY_DATA } from "../myData";
 const MyFooter = () => {
   const data = [
     {
       name: "About",
-      link: "#",
+      link: MY_DATA.ABOUT,
     },
     {
       name: "My resume",
-      link: "#",
+      link: MY_DATA.RESUME,
+      newTab: true,
     },
     {
       name: "LinkedIn",
-      link: "#",
+      link: MY_DATA.LINKED_IN,
+      newTab: true,
     },
   ];
 
@@ -76,6 +80,8 @@ const MyFooter = () => {
                 />
               }
               iconSpacing={4}
+              as={ReactRouterLink}
+              to={`mailto:${MY_DATA.EMAIL}`}
             >
               Email me
             </Button>
@@ -85,7 +91,12 @@ const MyFooter = () => {
             <Spacer h="6px" />
             <Flex gap="32px">
               {data.map((x) => (
-                <Link key={x.name} textStyle="t7">
+                <Link
+                  key={x.name}
+                  href={x.link}
+                  target={x.newTab ? "_blank" : null}
+                  textStyle="t7"
+                >
                   {x.name}
                 </Link>
               ))}

@@ -9,8 +9,11 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import { MY_DATA } from "../myData";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <Box w="100%" margin="0 auto" maxW="936px">
       <Stack spacing="32px" divider={<Divider />}>
@@ -87,6 +90,7 @@ const About = () => {
             <Box w="fit-content">
               <Button
                 iconSpacing={4}
+                onClick={() => window.open(MY_DATA.RESUME)}
                 rightIcon={
                   <img
                     src={"icons/ic_link_arrow.svg"}
