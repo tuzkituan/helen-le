@@ -1,6 +1,4 @@
 import {
-  Alert,
-  AlertIcon,
   Box,
   Button,
   Divider,
@@ -8,12 +6,13 @@ import {
   Image,
   Stack,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
 import { MY_DATA } from "../myData";
 
 const About = () => {
-  const navigate = useNavigate();
+  const [isSmallerThanMd] = useMediaQuery("(max-width: 768px)");
+
   return (
     <Box w="100%" margin="0 auto" maxW="936px">
       <Stack spacing="32px" divider={<Divider />}>
@@ -29,7 +28,8 @@ const About = () => {
 
         <Flex
           gap={{
-            base: "32px",
+            base: "10px",
+            md: 8,
             xl: "64px",
           }}
           flexDirection={{
@@ -42,7 +42,7 @@ const About = () => {
               src="images/orange_avatar.png"
               w={{
                 base: "100%",
-                lg: "25vw",
+                // lg: "25vw",
               }}
               h="100%"
               objectFit="cover"
@@ -58,14 +58,14 @@ const About = () => {
             <Stack
               h="100%"
               spacing={{
-                base: 4,
+                base: "10px",
                 lg: "24px",
               }}
             >
               <Text
                 textStyle={{
                   base: "t6",
-                  lg: "t5",
+                  md: "t5",
                 }}
                 fontWeight={{
                   base: "700 !important",
@@ -77,7 +77,7 @@ const About = () => {
               <Text
                 textStyle={{
                   base: "t8",
-                  lg: "t7",
+                  md: "t7",
                 }}
               >
                 I&apos;m Helen, a UX/UI Designer with a number of experience
@@ -109,7 +109,8 @@ const About = () => {
         </Flex>
         <Flex
           gap={{
-            base: "32px",
+            base: "10px",
+            md: 8,
             xl: "64px",
           }}
           flexDirection={{
@@ -121,7 +122,7 @@ const About = () => {
             <Text
               textStyle={{
                 base: "t6",
-                lg: "t7",
+                md: "t7",
               }}
               color={{
                 lg: "#6D6D6D",
@@ -139,7 +140,7 @@ const About = () => {
             <Text
               textStyle={{
                 base: "t8",
-                lg: "t7",
+                md: "t7",
               }}
             >
               I&apos;m passionate about observing people&apos;s behaviors and
@@ -156,7 +157,8 @@ const About = () => {
 
         <Flex
           gap={{
-            base: "32px",
+            base: "10px",
+            md: 8,
             xl: "64px",
           }}
           flexDirection={{
@@ -167,7 +169,7 @@ const About = () => {
           <Text
             textStyle={{
               base: "t6",
-              lg: "t7",
+              md: "t7",
             }}
             color={{
               lg: "#6D6D6D",
@@ -181,50 +183,103 @@ const About = () => {
             Professional experience
           </Text>
 
-          <Flex
-            flex={2}
-            gap="32px"
-            flexDirection={{
-              base: "column",
-              md: "row",
-            }}
-          >
-            <Stack spacing={2} flex={1}>
+          {isSmallerThanMd ? (
+            <Flex
+              flex={2}
+              gap="8px"
+              flexDirection={{
+                base: "column",
+                md: "row",
+              }}
+            >
+              <Flex gap={2} flex={1} alignItems="center">
+                <Text
+                  textStyle={{
+                    base: "t8",
+                    md: "t7",
+                  }}
+                  textAlign="left"
+                >
+                  iLotusLand JSC
+                </Text>
+                <img
+                  src="../icons/ic_dot.svg"
+                  style={{
+                    width: 4,
+                    height: 4,
+                  }}
+                />
+                <Text
+                  textStyle={{
+                    base: "t8",
+                    md: "t7",
+                  }}
+                >
+                  UX/UI Designer
+                </Text>
+              </Flex>
+
               <Text
                 textStyle={{
                   base: "t8",
-                  lg: "t7",
+                  md: "t7",
                 }}
-                textAlign="left"
-              >
-                iLotusLand JSC
-              </Text>
-              <Text
-                textStyle={{
-                  base: "t8",
-                  lg: "t7",
+                flex={1}
+                textAlign={{
+                  base: "left",
+                  lg: "right",
                 }}
                 color="#6D6D6D"
               >
-                UX/UI Designer
+                Jun 2022 - Current
               </Text>
-            </Stack>
-
-            <Text
-              textStyle={{
-                base: "t8",
-                lg: "t7",
+            </Flex>
+          ) : (
+            <Flex
+              flex={2}
+              gap="32px"
+              flexDirection={{
+                base: "column",
+                md: "row",
               }}
-              flex={1}
-              textAlign={{
-                base: "left",
-                lg: "right",
-              }}
-              color="#6D6D6D"
             >
-              Jun 2022 - Current
-            </Text>
-          </Flex>
+              <Stack spacing={2} flex={1}>
+                <Text
+                  textStyle={{
+                    base: "t8",
+                    md: "t7",
+                  }}
+                  textAlign="left"
+                >
+                  iLotusLand JSC
+                </Text>
+                <Text
+                  textStyle={{
+                    base: "t8",
+                    md: "t7",
+                  }}
+                  color="#6D6D6D"
+                >
+                  UX/UI Designer
+                </Text>
+              </Stack>
+
+              <Text
+                textStyle={{
+                  base: "t8",
+                  md: "t7",
+                }}
+                flex={1}
+                textAlign={{
+                  base: "left",
+                  lg: "right",
+                }}
+                color="#6D6D6D"
+              >
+                Jun 2022 - Current
+              </Text>
+            </Flex>
+          )}
         </Flex>
       </Stack>
     </Box>

@@ -118,7 +118,8 @@ const Synapse = () => {
               src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81p-dUKzmqwI42GNWjaX5KsVcW7kdy2xb2cXMA5kEbk_lr1V_M5_jGksCxRuah1tzq0T3wGahOgIjpiXIWo_oLflamPTNw=s1600"
               alt=""
               style={{
-                zIndex: 0,
+                height: "auto",
+                width: "100%",
               }}
             />
             <img
@@ -126,10 +127,10 @@ const Synapse = () => {
               alt=""
               style={{
                 position: "absolute",
-                top: "-100px",
                 bottom: 0,
-                height: "139%",
-                right: "-240px",
+                height: "140%",
+                left: "39%",
+                top: "-23%",
                 zIndex: 1,
               }}
             />

@@ -135,6 +135,11 @@ const overrides = {
       fontWeight: '400',
       lineHeight: '18px',
     },
+    t11: {
+      fontSize: '10px',
+      fontWeight: '400',
+      lineHeight: '14px',
+    },
   },
 };
 

@@ -53,6 +53,27 @@ const MyHeader = () => {
     },
   ];
 
+  const collapsedMenuItems = [
+    {
+      label: "Work",
+      link: "/work",
+    },
+    {
+      label: "About me",
+      link: MY_DATA.ABOUT,
+    },
+    {
+      label: "Linkedln",
+      link: MY_DATA.LINKED_IN,
+      isNewTab: true,
+    },
+    {
+      label: "My resume",
+      link: MY_DATA.RESUME,
+      isNewTab: true,
+    },
+  ];
+
   const _renderLinks = (arr, isInDrawer = false) => {
     const current = location.pathname;
     return arr.map((x) => (
@@ -60,8 +81,9 @@ const MyHeader = () => {
         variant={isInDrawer ? "ghost" : "ghost"}
         as={ReactRouterLink}
         to={x.link}
+        target={x.isNewTab ? "_blank" : "_self"}
         textStyle="t7"
-        fontWeight={isInDrawer ? 700 : 400}
+        fontWeight={isInDrawer ? 500 : 400}
         key={x.label}
         textDecoration={current.includes(x.link) ? "underline" : "none"}
         _hover={{
@@ -72,6 +94,11 @@ const MyHeader = () => {
           bg: "transparent",
           textDecoration: "underline",
         }}
+        {...(isInDrawer
+          ? {
+              paddingInline: 0,
+            }
+          : null)}
       >
         {x.label}
       </Button>
@@ -178,7 +205,7 @@ const MyHeader = () => {
           size="full"
         >
           <DrawerOverlay />
-          <DrawerContent bg="black">
+          <DrawerContent bg="#141414">
             <DrawerHeader borderBottomWidth={0}>
               <Flex justifyContent="space-between" alignItems="center">
                 <Spacer />
@@ -198,9 +225,9 @@ const MyHeader = () => {
                 direction="column"
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                spacing={8}
+                spacing={4}
               >
-                {_renderLinks(menuItems, true)}
+                {_renderLinks(collapsedMenuItems, true)}
               </Stack>
             </DrawerBody>
             <DrawerFooter

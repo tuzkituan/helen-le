@@ -2,19 +2,20 @@ import {
   Box,
   Divider,
   Flex,
-  List,
   ListItem,
   Stack,
   Text,
   UnorderedList,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
-import { CONTENT_MAX_W } from "../../../../appConstants";
 
 const data = [
   {
+    id: 1,
     bgImage1: "../images/img_circle_bg_1.svg",
     bgImage2: "../images/img_circle_bg_2.svg",
+    zIndex: 0,
     dividerColor: "#FFF1F6",
     user: {
       name: "Phuong Vo",
@@ -53,8 +54,10 @@ const data = [
     ],
   },
   {
+    id: 2,
     bgImage1: "../images/img_circle_bg_3.svg",
     bgImage2: "../images/img_circle_bg_4.svg",
+    zIndex: -1,
     dividerColor: "#E7F8F4",
     user: {
       name: "Trung Nguyen",
@@ -93,12 +96,15 @@ const data = [
 ];
 
 const UserPersonas = () => {
+  const [isSmallerThan992] = useMediaQuery("(max-width: 992px)");
+  const avatarSize = isSmallerThan992 ? "77px" : "92px";
+
   const _renderBlock = (item) => {
     return (
       <Box
         key={item.user.name}
         position="relative"
-        zIndex={0}
+        zIndex={item.zIndex}
         _before={{
           content: '""',
           position: "absolute",
@@ -109,7 +115,7 @@ const UserPersonas = () => {
           width: "100%",
           height: "100%",
           top: 0,
-          marginTop: "-173px",
+          marginTop: item.id === 1 ? "-173px" : "-250px",
           marginLeft: "-251px",
         }}
         _after={{
@@ -117,13 +123,13 @@ const UserPersonas = () => {
           position: "absolute",
           backgroundImage: `url(${item.bgImage1})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "232px",
+          backgroundSize: item.id === 1 ? "232px" : "464px",
           right: 0,
-          width: "232px",
-          height: "232px",
+          width: item.id === 1 ? "232px" : "464px",
+          height: item.id === 1 ? "232px" : "464px",
           top: 0,
-          marginTop: "-50px",
-          marginRight: "-50px",
+          marginTop: item.id === 1 ? "-50px" : "-152px",
+          marginRight: item.id === 1 ? "-50px" : "-150px",
           zIndex: 0,
         }}
       >
@@ -148,46 +154,112 @@ const UserPersonas = () => {
             }}
           >
             <Flex justifyContent="space-between" gap={4} alignItems="center">
-              <Stack>
-                <Flex gap={2} alignItems="center">
-                  <Text textStyle="t7" fontWeight="700 !important">
+              <Stack
+                spacing={{
+                  base: 1,
+                  lg: 2,
+                }}
+              >
+                <Flex
+                  gap={{
+                    base: 1,
+                    lg: 2,
+                  }}
+                  flexDirection={{
+                    base: "column",
+                    lg: "row",
+                  }}
+                  alignItems={{
+                    base: "flex-start",
+                    lg: "center",
+                  }}
+                >
+                  <Text
+                    textStyle={{
+                      base: "t8",
+                      lg: "t7",
+                    }}
+                    fontWeight="700 !important"
+                  >
                     {item.user.name}
                   </Text>
-                  <img
-                    src="../icons/ic_dot.svg"
-                    style={{
-                      width: 4,
-                      height: 4,
+                  {!isSmallerThan992 ? (
+                    <img
+                      src="../icons/ic_dot.svg"
+                      style={{
+                        width: 4,
+                        height: 4,
+                      }}
+                    />
+                  ) : null}
+                  <Text
+                    textStyle={{
+                      base: "t11",
+                      lg: "t7",
                     }}
-                  />
-                  <Text textStyle="t7" fontWeight="700 !important">
+                    fontWeight={{
+                      base: "400",
+                      lg: "700 !important",
+                    }}
+                  >
                     {item.user.old} years old
                   </Text>
                 </Flex>
-                <Flex gap={2} alignItems="center">
-                  <Text textStyle="t10">{item.user.title}</Text>
-                  <img
-                    src="../icons/ic_dot.svg"
-                    style={{
-                      width: 4,
-                      height: 4,
+                <Flex
+                  gap={{
+                    base: 1,
+                    lg: 2,
+                  }}
+                  flexDirection={{
+                    base: "column",
+                    lg: "row",
+                  }}
+                  alignItems={{
+                    base: "flex-start",
+                    lg: "center",
+                  }}
+                >
+                  <Text
+                    textStyle={{
+                      base: "t11",
+                      lg: "t10",
                     }}
-                  />
-                  <Text textStyle="t10">{item.user.subTitle} years old</Text>
+                  >
+                    {item.user.title}
+                  </Text>
+                  {!isSmallerThan992 ? (
+                    <img
+                      src="../icons/ic_dot.svg"
+                      style={{
+                        width: 4,
+                        height: 4,
+                      }}
+                    />
+                  ) : null}
+                  <Text
+                    textStyle={{
+                      base: "t11",
+                      lg: "t10",
+                    }}
+                  >
+                    {item.user.subTitle} years old
+                  </Text>
                 </Flex>
               </Stack>
               <img
                 src={item.user.avatar}
                 style={{
-                  width: "92px",
-                  height: "92px",
+                  width: avatarSize,
+                  minWidth: avatarSize,
+                  maxWidth: avatarSize,
+                  height: avatarSize,
                   display: "block",
                   position: "relative",
                   zIndex: 2,
                   objectFit: "cover",
                   objectPosition: "top",
                   borderRadius: "50%",
-                  border: "4px solid #fff",
+                  border: "2px solid #fff",
                   boxShadow: "0px 15px 30px -4px rgba(9, 26, 47, 0.25)",
                 }}
               />
@@ -213,7 +285,10 @@ const UserPersonas = () => {
                     }}
                   />
                   <Text
-                    textStyle="t7"
+                    textStyle={{
+                      base: "t8",
+                      lg: "t7",
+                    }}
                     color="#0C0C0C"
                     fontWeight="700 !important"
                   >
@@ -223,13 +298,26 @@ const UserPersonas = () => {
                 {x.content.length > 1 ? (
                   <UnorderedList listStylePosition="inside" pl={3}>
                     {x.content.map((t) => (
-                      <ListItem textStyle="t7" key={t}>
+                      <ListItem
+                        textStyle={{
+                          base: "t9",
+                          lg: "t7",
+                        }}
+                        key={t}
+                      >
                         {t}
                       </ListItem>
                     ))}
                   </UnorderedList>
                 ) : (
-                  <Text textStyle="t7">{x.content}</Text>
+                  <Text
+                    textStyle={{
+                      base: "t9",
+                      lg: "t7",
+                    }}
+                  >
+                    {x.content}
+                  </Text>
                 )}
               </Stack>
             ))}
