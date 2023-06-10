@@ -5,6 +5,7 @@ import {
   BreadcrumbLink,
   Flex,
   Spacer,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
 import { CONTENT_MAX_W, MAIN_MAX_W } from "../../../appConstants";
@@ -16,6 +17,7 @@ import data from "../../../projects.json";
 import UserPersonas from "./components/user_personas";
 
 const Synapse = () => {
+  const [isSmallerThanSm] = useMediaQuery("(max-width: 480px)");
   const synapse = data[0];
 
   return (
@@ -81,7 +83,11 @@ const Synapse = () => {
         </PostParagraph>
         <Box>
           <img
-            src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81o-lpPoahmaVvUWkJ1CFZ84hA9yo5QLQRksihmsjGA1h1PAVEVYbo6KxxJdpD_k3m80K09K5hrDCsmLbL_sg_Ysfz3xsw=s1600"
+            src={
+              isSmallerThanSm
+                ? "https://lh3.googleusercontent.com/drive-viewer/AFGJ81r9Fq0gQgO0Mhq60sWJrn_XlutHPzrmsGhYuvhOJjeicNHNwYfJ4z36ovXfkbax9-bJXLr813zrh5yqFYyInGEZRKzfFw=s1600"
+                : "https://lh3.googleusercontent.com/drive-viewer/AFGJ81o-lpPoahmaVvUWkJ1CFZ84hA9yo5QLQRksihmsjGA1h1PAVEVYbo6KxxJdpD_k3m80K09K5hrDCsmLbL_sg_Ysfz3xsw=s1600"
+            }
             alt=""
             style={{
               width: "100%",
