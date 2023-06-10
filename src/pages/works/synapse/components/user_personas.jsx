@@ -111,12 +111,11 @@ const UserPersonas = () => {
           backgroundImage: `url(${item.bgImage1})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "600px",
-          left: 0,
-          width: "100%",
+          left: "-30%",
+          width: "150%",
           height: "100%",
           top: 0,
           marginTop: item.id === 1 ? "-173px" : "-250px",
-          marginLeft: "-251px",
         }}
         _after={{
           content: '""',

@@ -127,14 +127,15 @@ const MyHeader = () => {
     );
   };
 
+  const isScrollingDown = scrollDirection === "down";
   return (
     <Box
       w="100%"
       position="sticky"
-      top={scrollDirection === "down" ? "-120px" : 0}
+      top={isScrollingDown ? "-120px" : 0}
       transition="all 0.3s"
       zIndex={100}
-      bgColor="whiteAlpha.800"
+      bgColor="whiteAlpha.900"
       backdropFilter="blur(20px)"
     >
       <Box
@@ -146,7 +147,7 @@ const MyHeader = () => {
           // xl: "230px",
         }}
         paddingBlock={{
-          base: 4,
+          base: 6,
           lg: 4,
         }}
       >
@@ -196,7 +197,7 @@ const MyHeader = () => {
       </Box>
       <DarkMode>
         <Drawer
-          placement="right"
+          placement="top"
           onClose={onClose}
           isOpen={isOpen}
           closeOnEsc

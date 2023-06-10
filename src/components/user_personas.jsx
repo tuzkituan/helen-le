@@ -51,7 +51,10 @@ const UserPersonas = ({
               lg: "center",
             }}
             justifyContent="space-between"
-            w="45%"
+            w={{
+              base: "100%",
+              lg: "45%",
+            }}
             gap={4}
           >
             <Box
