@@ -4,6 +4,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Flex,
+  Image,
   Spacer,
 } from "@chakra-ui/react";
 import PainPoints from "../../components/pain_points";
@@ -146,8 +147,23 @@ const Nurix = () => {
           header="NURIX APP WALKTHROUGH"
           title="Improved speed to log in"
           description="Because of user preference quiz. I included one-click login options such as Facebook, Google or Apple to improve speed to log in."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pO_WRjgTdsTRAnVmU5eSr9CyinNR_Z7REg_AtTu2JJEFeKFyg-m0b7iTLgafVapUo5_uqLw-XxClcUtv8WrRP3SRLZag=s1600"
-        />
+        >
+          <Box
+            paddingInline={{
+              base: "23%",
+            }}
+          >
+            <Image
+              display="block"
+              margin="0 auto"
+              maxW={{
+                base: "340px",
+              }}
+              w="100%"
+              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pO_WRjgTdsTRAnVmU5eSr9CyinNR_Z7REg_AtTu2JJEFeKFyg-m0b7iTLgafVapUo5_uqLw-XxClcUtv8WrRP3SRLZag=s1600"
+            />
+          </Box>
+        </PostParagraph>
         <PostParagraph
           title="Relieve stress when personalizing"
           description="During the user preference quiz, using a progress bar can provide users with a sense of control and a clear indication of how far they are in the process. It can also help to reduce the perceived time it takes to complete the quiz."
