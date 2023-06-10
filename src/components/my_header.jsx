@@ -248,7 +248,7 @@ const MyHeader = () => {
                   fontSize="20px"
                   lineHeight={"30px"}
                 >
-                  I would love to hear from you. Please contact me
+                  I would love to hear from you. Let’s do great things together!
                 </Text>
                 <Button
                   variant={"outline"}
