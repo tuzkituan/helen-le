@@ -20,7 +20,13 @@ const PostBannerImage = ({ color, images = [], maxW, backgroundImage }) => {
           : "-100vw",
       }}
     >
-      <Flex gap={8} justifyContent="center">
+      <Flex
+        gap={{
+          base: 6,
+          lg: 8,
+        }}
+        justifyContent="center"
+      >
         {images.map((x) => (
           <Box key={x} maxW={maxW || count > 1 ? "250px" : "500px"} w="100%">
             <Image src={x} w="100%" h="100%" />

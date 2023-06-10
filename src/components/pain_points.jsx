@@ -5,7 +5,7 @@ import { CONTENT_MAX_W } from "../appConstants";
 const PainPoints = ({ title = "PAIN POINTS", data = [] }) => {
   return (
     <Box
-      paddingInline={8}
+      paddingInline="20px"
       bgColor="#FDF9EE"
       borderRadius={8}
       paddingBlock={{

@@ -6,7 +6,7 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
   return (
     <Box
       position="relative"
-      overflow="hidden"
+      // overflow="hidden"
       maxW={CONTENT_MAX_W}
       margin="0 auto"
       w="100%"
@@ -18,7 +18,11 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
           base: 4,
           lg: "64px",
         }}
-        paddingBlock="60px"
+        paddingBlock={{
+          base: "24px",
+          md: "60px",
+          lg: "60px",
+        }}
         borderRadius="8px 0 8px 0"
         w="100%"
         h="100%"
@@ -27,7 +31,8 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
         <Image
           src={titleImg}
           maxW={{
-            base: "200px",
+            base: "100px",
+            sm: "200px",
             lg: "100%",
           }}
         />
@@ -36,7 +41,8 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
           src={descriptionImg}
           backgroundColor="transparent"
           maxW={{
-            base: "300px",
+            base: "170px",
+            sm: "300px",
             lg: "100%",
           }}
         />
@@ -45,16 +51,25 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
         src={mockup}
         position="absolute"
         top={{
-          base: "15%",
+          base: "20%",
+          sm: "15%",
+          md: "11%",
           lg: 0,
         }}
         right={{
+          sm: "-110px",
           lg: "-150px",
-          base: "-110px",
+          base: "-80px",
         }}
         h={{
-          base: "70%",
+          base: "auto",
+          sm: "70%",
+          md: "80%",
           lg: "100%",
+        }}
+        w={{
+          base: "350px",
+          sm: "unset",
         }}
       />
     </Box>

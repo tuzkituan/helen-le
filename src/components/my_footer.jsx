@@ -36,7 +36,7 @@ const MyFooter = () => {
         // sm: "24px",
         // lg: "104px",
         // xl: "230px",
-        base: 8,
+        base: "20px",
       }}
       bgColor="#141414"
       paddingBlock="56px"

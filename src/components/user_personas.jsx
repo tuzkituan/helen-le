@@ -21,7 +21,7 @@ const UserPersonas = ({
     <Box
       bgColor="#EDF4D7"
       borderRadius={8}
-      paddingInline={8}
+      paddingInline="20px"
       position="relative"
       paddingBlock={{
         lg: "60px",

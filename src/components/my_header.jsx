@@ -140,7 +140,7 @@ const MyHeader = () => {
     >
       <Box
         paddingInline={{
-          base: 8,
+          base: "20px",
           // sm: "24px",
           // md: 8,
           // lg: "104px",
