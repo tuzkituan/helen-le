@@ -70,9 +70,9 @@ const PostParagraph = ({
               <video
                 controls={false}
                 loop
-                muted=""
+                muted
                 autoPlay
-                playsInline=""
+                playsInline
                 preload="false"
               >
                 <source
