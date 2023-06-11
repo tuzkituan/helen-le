@@ -66,14 +66,7 @@ const PostParagraph = ({
             </>
           ) : null}
           {video ? (
-            <Box
-              w="100%"
-              maxW="650px"
-              margin="0 auto"
-              css={{
-                marginBlock: "-32px",
-              }}
-            >
+            <Box w="100%" maxW="650px" margin="0 auto">
               <video
                 controls={false}
                 loop
