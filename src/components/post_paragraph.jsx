@@ -73,7 +73,7 @@ const PostParagraph = ({
                 muted
                 autoPlay
                 playsInline
-                preload="false"
+                // preload="false"
               >
                 <source
                   src={`https://drive.google.com/uc?export=download&id=${video}`}

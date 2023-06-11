@@ -7,11 +7,13 @@ import {
   Spacer,
   Stack,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
 import { MAIN_MAX_W } from "../appConstants";
 import { MY_DATA } from "../myData";
 const MyFooter = () => {
+  const [isSmallerThanLg] = useMediaQuery("(max-width: 992px)");
   const data = [
     {
       name: "About",
@@ -39,7 +41,10 @@ const MyFooter = () => {
         base: "20px",
       }}
       bgColor="#141414"
-      paddingBlock="56px"
+      paddingBlock={{
+        lg: "56px",
+        base: "20px",
+      }}
     >
       <Flex
         gap={{
@@ -63,8 +68,13 @@ const MyFooter = () => {
         >
           {/* {blocks.map((x) => _renderBlock(x))} */}
           <Box flex={1}>
-            <Text textStyle="t7">
-              I would love to hear from you. <br />
+            <Text
+              textStyle={{
+                base: "t8",
+                lg: "t7",
+              }}
+            >
+              I would love to hear from you. {!isSmallerThanLg ? <br /> : null}
               Let’s do great things together!
             </Text>
             <Spacer h="16px" />
@@ -87,7 +97,14 @@ const MyFooter = () => {
             </Button>
           </Box>
           <Box flex={1} paddingTop={0.5}>
-            <Text textStyle="t8">Know more about me</Text>
+            <Text
+              textStyle={{
+                lg: "t8",
+                base: "t10",
+              }}
+            >
+              Know more about me
+            </Text>
             <Spacer h="6px" />
             <Flex gap="32px">
               {data.map((x) => (
@@ -95,7 +112,10 @@ const MyFooter = () => {
                   key={x.name}
                   href={x.link}
                   target={x.newTab ? "_blank" : null}
-                  textStyle="t7"
+                  textStyle={{
+                    lg: "t7",
+                    base: "t8",
+                  }}
                 >
                   {x.name}
                 </Link>

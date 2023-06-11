@@ -11,6 +11,8 @@ import { MAIN_MAX_W } from "../appConstants";
 export default function Root() {
   const [isMounting, setIsMounting] = React.useState(true);
   const { pathname } = useLocation();
+  const location = useLocation();
+  const current = location.pathname;
 
   useEffect(() => {
     // Simulate a delay before loading the content
@@ -18,6 +20,19 @@ export default function Root() {
       setIsMounting(false);
     }, 1000);
   }, []);
+
+  const getPaddingBottom = () => {
+    if (current.includes("/about")) {
+      return {
+        lg: "203px",
+        base: "80px",
+      };
+    }
+    return {
+      lg: "112px",
+      base: "48px",
+    };
+  };
 
   const pageVariants = {
     initial: {
@@ -62,8 +77,8 @@ export default function Root() {
               lg: "80px",
             }}
             paddingBottom={{
-              base: "48px",
-              lg: "112px",
+              base: getPaddingBottom().base,
+              lg: getPaddingBottom().lg,
             }}
           >
             <motion.div

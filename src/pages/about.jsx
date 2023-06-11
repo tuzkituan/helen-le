@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <Box w="100%" margin="0 auto" maxW={CONTENT_MAX_W}>
-      <Stack spacing="32px" divider={<Divider />}>
+      <Stack spacing="32px" divider={isSmallerThanMd ? null : <Divider />}>
         {/* <Alert
           status="warning"
           borderRadius="8px"
