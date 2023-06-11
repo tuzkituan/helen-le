@@ -43,44 +43,46 @@ const PostParagraph = ({
           </>
         ) : null}
       </Box>
-      <Box position="relative" display="block">
-        {image ? (
-          <>
-            <Spacer height="64px" />
-            <Image
-              margin="0 auto"
-              display="block"
-              src={image}
-              w="100%"
-              maxW={maxW || "340px"}
-              loading="lazy"
-            />
-          </>
-        ) : null}
-        {mockup ? (
-          <>
-            <Spacer height="64px" />
-            <Center>{mockup}</Center>
-          </>
-        ) : null}
-        {video ? (
-          <Box w="100%" maxW="650px" margin="0 auto">
-            <video
-              controls={false}
-              loop
-              muted=""
-              autoPlay
-              playsInline=""
-              preload="false"
-            >
-              <source
-                src={`https://drive.google.com/uc?export=download&id=${video}`}
-                type="video/mp4"
+      {image || mockup || video ? (
+        <Box position="relative" display="block">
+          {image ? (
+            <>
+              <Spacer height="32px" />
+              <Image
+                margin="0 auto"
+                display="block"
+                src={image}
+                w="100%"
+                maxW={maxW || "340px"}
+                loading="lazy"
               />
-            </video>
-          </Box>
-        ) : null}
-      </Box>
+            </>
+          ) : null}
+          {mockup ? (
+            <>
+              <Spacer height="32px" />
+              <Center>{mockup}</Center>
+            </>
+          ) : null}
+          {video ? (
+            <Box w="100%" maxW="650px" margin="0 auto">
+              <video
+                controls={false}
+                loop
+                muted=""
+                autoPlay
+                playsInline=""
+                preload="false"
+              >
+                <source
+                  src={`https://drive.google.com/uc?export=download&id=${video}`}
+                  type="video/mp4"
+                />
+              </video>
+            </Box>
+          ) : null}
+        </Box>
+      ) : null}
       {children ? (
         <>
           <Spacer height="32px" />

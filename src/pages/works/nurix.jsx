@@ -44,7 +44,7 @@ const Nurix = () => {
       <Flex
         gap={{
           base: 10,
-          lg: 20,
+          lg: "80px",
         }}
         flexDirection="column"
       >
