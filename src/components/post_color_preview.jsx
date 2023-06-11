@@ -20,14 +20,14 @@ const PostColorPreview = ({ colors = [] }) => {
           bgColor={x.id}
           h={{
             base: "40px",
-            lg: "112px",
+            lg: "81px",
           }}
           w={width[i]}
         >
           <Text
             textStyle={{
               base: "t10",
-              lg: "t7",
+              lg: "t6",
             }}
             color={x.textColor}
           >

@@ -8,6 +8,7 @@ import {
   Stack,
   Text,
   UnorderedList,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
 import { CONTENT_MAX_W } from "../appConstants";
@@ -17,6 +18,8 @@ const UserPersonas = ({
   info: { name, age, position, avatar },
   data = [],
 }) => {
+  const [isSmallerThan992] = useMediaQuery("(max-width: 992px)");
+
   return (
     <Box
       bgColor="#EDF4D7"
@@ -92,8 +95,47 @@ const UserPersonas = ({
               <Text textStyle="t6" fontWeight="700 !important">
                 {name}
               </Text>
-              <Text textStyle="t8">{age} years old</Text>
-              <Text textStyle="t8">{position}</Text>
+              <Flex
+                flexDirection={{
+                  base: "row",
+                  lg: "column",
+                }}
+                justifyContent="center"
+                alignItems="center"
+                gap={{
+                  base: "8px",
+                  lg: "2px",
+                }}
+              >
+                <Text
+                  textStyle="t8"
+                  order={{
+                    base: 3,
+                    lg: 1,
+                  }}
+                >
+                  {age} years old
+                </Text>
+                {isSmallerThan992 ? (
+                  <Image
+                    src="../icons/ic_dot.svg"
+                    w="4px"
+                    h="4px"
+                    order={{
+                      base: 2,
+                    }}
+                  />
+                ) : null}
+                <Text
+                  textStyle="t8"
+                  order={{
+                    base: 1,
+                    lg: 3,
+                  }}
+                >
+                  {position}
+                </Text>
+              </Flex>
             </Stack>
           </Flex>
           <Flex

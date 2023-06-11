@@ -69,7 +69,7 @@ const Navo = () => {
                 name: "Minh Ha",
                 position: "Social Media Executive",
                 content:
-                  "I frequently forget where I parked my motorbike,  leads to time-consuming searches on foot.",
+                  "I frequently forget where I parked my motorbike, so time-consuming searches on foot.",
                 image:
                   "https://lh3.googleusercontent.com/drive-viewer/AFGJ81o7r5F90iooFUw_Z6qzuK3KTrTagI0LK24Km4dXZTUWsJswmxNtyUIKBcuIvVOuuK0St2h6cr66KpL53ky0Du3seQp0Gw=s1600",
               },
@@ -120,7 +120,7 @@ const Navo = () => {
         />
         <PostParagraph
           title="Rating"
-          description={`To maintain high-quality standards for parking places, users can rate their parking experience after their session is over. In addition, first-time users of the Navo app can receive discounts on future parking sessions as an incentive to use the app."`}
+          description={`To maintain high-quality standards for parking places, users can rate their parking experience after their session is over. In addition, first-time users of the Navo app can receive discounts on future parking sessions as an incentive to use the app.`}
           video="17mdivtodOj-e-wJl06rYKpMGTJ7pdnpE"
         />
         <PostNavigator current={navo.id} />

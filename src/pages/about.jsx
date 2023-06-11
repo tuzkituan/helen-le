@@ -9,12 +9,13 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { MY_DATA } from "../myData";
+import { CONTENT_MAX_W } from "../appConstants";
 
 const About = () => {
   const [isSmallerThanMd] = useMediaQuery("(max-width: 768px)");
 
   return (
-    <Box w="100%" margin="0 auto" maxW="936px">
+    <Box w="100%" margin="0 auto" maxW={CONTENT_MAX_W}>
       <Stack spacing="32px" divider={<Divider />}>
         {/* <Alert
           status="warning"
@@ -80,7 +81,7 @@ const About = () => {
                   md: "t7",
                 }}
               >
-                I&apos;m Helen, a UX/UI Designer with a number of experience
+                I&apos;m Helen, a UX/UI designer with a number of experience
                 design skills including wire-framing, prototyping, design
                 thinking, user research, user interviews, usability testing,
                 user flows, dashboard design, mobile app design, web app design,
@@ -180,7 +181,7 @@ const About = () => {
             }}
             flex={1}
           >
-            Professional experience
+            Experience
           </Text>
 
           {isSmallerThanMd ? (

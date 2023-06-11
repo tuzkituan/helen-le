@@ -29,21 +29,24 @@ const overrides = {
       variants: {
         // 4. We can override existing variants
         solid: () => ({
-          bg: "gray.900",
+          bg: "#141414",
+          borderColor: "#141414",
           color:  "#fff",
           _hover: {
-            bg: "#2C2C2C",
+            bg: "#141414",
             color: "#fff",
+            borderColor: "#141414"
           },
           _active: {
-            bg: "gray.900",
+            bg: "#141414",
+            borderColor: "#141414",
             color: "#fff",
           },
         }),
         outline: () => ({
           bg: "#141414",
-            borderColor: "#727272",
-            color:  "#fff",
+          borderColor: "#727272",
+          color:  "#fff",
           _hover: {
             bg: "#141414",
             color: "#fff",

@@ -80,7 +80,7 @@ const Nurix = () => {
               title: "😡 Frustrations",
               items: [
                 "Limited time to plan and prepare meals.",
-                "Lack of knowledge about nutrition..",
+                "Lack of knowledge about nutrition.",
                 "Difficulty finding healthy options when eating out.",
               ],
             },
@@ -106,7 +106,7 @@ const Nurix = () => {
           title="Design"
           description="The design should be clean, modern, and easy to navigate. The design should be focused on showcasing the healthy recipes and ingredients, making it easy for users to find and choose the recipes that meet their dietary preferences."
           image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oVoE2CgZE4pj6vq3f5Md5u0FACHkvNzxCAs1oaV5mXYS9H2gvAfTy9TM7KCMJ_jQS_TQKIOCza6dTjH9yHo2X0x2KiaA=s1600"
-          maxW="936px"
+          maxW={CONTENT_MAX_W}
         />
         <PostParagraph
           title="Typography"
@@ -194,7 +194,6 @@ const Nurix = () => {
           title="Full app walkthrough"
           description={`Full app walkthrough included Login & User personal preferences, Browse and Add to favorites, Buy ingredients. Checkout and Tracking order.`}
           video="1iCR-bprJfj3XknOBvRil9dx1qKftrCcw"
-          videoAutoPlay={false}
         />
         <PostNavigator current={nurix.id} />
       </Flex>

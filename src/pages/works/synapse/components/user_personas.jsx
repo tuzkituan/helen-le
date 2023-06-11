@@ -46,9 +46,8 @@ const data = [
         icon: "../icons/ic_behaviors_pink.svg",
         content: [
           "Phuong is passionate about organic farming and sustainable agriculture.",
-          "She wants to improve the health and quality of her crops while minimizing her environmental impact.",
-          "She is interested in using technology to optimize her farm operations but may be hesitant to invest in expensive tools.",
-          "She is also interested in connecting with other sustainable farmers and learning from their experiences.",
+          "She wants to improve the health and quality of her crops.",
+          "She is interested in using technology to optimize her farm operations.",
         ],
       },
     ],
@@ -241,7 +240,7 @@ const UserPersonas = () => {
                       lg: "t10",
                     }}
                   >
-                    {item.user.subTitle} years old
+                    {item.user.subTitle}
                   </Text>
                 </Flex>
               </Stack>

@@ -47,7 +47,7 @@ const Synapse = () => {
         flexDirection="column"
       >
         <PostHeader
-          title="Enhances farm operations for Vietnamese farmers."
+          title="Enhances farm operations for Vietnamese farmers"
           description="A crop monitoring platform empowers Vietnamese farmers to monitor their farms effectively, boosting productivity, and sustainability."
         />
         <PostBannerImage
@@ -110,7 +110,7 @@ const Synapse = () => {
         </Box>
         <PostParagraph
           title="User personas"
-          description="I conducted 114 interviews and surveys with Vietnamese farmers in the central region of Vietnam to gather insights on their crop monitoring challenges, preferences, and requirements. Farmers were categorized based on age, technological literacy, farm size, and specific needs, resulting in the development of primary and secondary user personas."
+          description="I conducted 114 interviews and surveys with Vietnamese farmers in the central region of Vietnam to gather insights on their crop monitoring challenges, preferences, and requirements. Farmers were categorized based on age, technological literacy, farm size, and specific needs."
         >
           <UserPersonas />
         </PostParagraph>
