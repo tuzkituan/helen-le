@@ -72,7 +72,10 @@ const MyWork = () => {
                 base: "t6",
                 lg: "t5",
               }}
-              fontWeight="400 !important"
+              fontWeight={{
+                base: "500 !important",
+                lg: "400 !important",
+              }}
               _groupHover={{
                 textDecoration: "underline",
                 transition: "ease 0.5s",

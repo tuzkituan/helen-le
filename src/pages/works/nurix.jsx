@@ -43,7 +43,7 @@ const Nurix = () => {
       <Spacer height={4} />
       <Flex
         gap={{
-          base: 10,
+          base: "48px",
           lg: "80px",
         }}
         flexDirection="column"
@@ -112,11 +112,18 @@ const Nurix = () => {
           title="Typography"
           description="I want to make it easy for users to choose from the variety of meal and ingredient options available, especially since meal names and other details can be lengthy. Relying solely on images may not be enough, so I need to ensure that the font used is highly readable and legible, especially on small screens. That's why I chose DM Sans, a modern font that is easy to read and perfect for mobile devices."
         />
-        <PostFontPreview
-          titleImg="../images/nourix_font_1.svg"
-          descriptionImg="../images/nourix_font_2.svg"
-          mockup="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pmeHpgW8ETRQDLs25wXPGYkgstj7cwgDwF4-nnornUNfrhd3qWltTM8lBuJxioxbCL6Bor0bGUmzJlBZEwWuhvvsgndA=s1600"
-        />
+        <Box
+          marginInline={{
+            base: "-20px",
+            lg: 0,
+          }}
+        >
+          <PostFontPreview
+            titleImg="../images/nourix_font_1.svg"
+            descriptionImg="../images/nourix_font_2.svg"
+            mockup="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pmeHpgW8ETRQDLs25wXPGYkgstj7cwgDwF4-nnornUNfrhd3qWltTM8lBuJxioxbCL6Bor0bGUmzJlBZEwWuhvvsgndA=s1600"
+          />
+        </Box>
         <PostParagraph
           title="Color"
           description="Color of the app is associated with health, wellness, and vitality. It also highly legible and easy on the eyes, making it easy for users to find and read the recipes and other content in the app."

@@ -20,6 +20,13 @@ const UserResearch = ({ data = [] }) => {
         lg: "space-between",
       }}
       paddingBottom={4}
+      css={{
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
+        "-ms-overflow-style": "none" /* IE and Edge */,
+        "scrollbar-width": "none",
+      }}
     >
       {data.map((x, i) => (
         <Box
@@ -29,7 +36,7 @@ const UserResearch = ({ data = [] }) => {
           overflow="hidden"
           boxShadow="0px 8px 16px -4px rgba(9, 26, 47, 0.08)"
           // h="390px"
-          h="420px"
+          h="400px"
           minW={{
             base: "280px",
             lg: "unset",
@@ -55,16 +62,16 @@ const UserResearch = ({ data = [] }) => {
           />
           <Box
             position="absolute"
-            right="-20px"
+            // right="-20px"
             bottom="-36px"
             zIndex={3}
-            h="52%"
+            h="49%"
           >
             <Image
               w="100%"
               src={PATTERNS[i]}
               display="block"
-              transform="scale(1.5)"
+              transform="scale(1.55)"
             />
             <Box
               zIndex={10}
@@ -72,7 +79,10 @@ const UserResearch = ({ data = [] }) => {
               top={0}
               left={0}
               right={0}
-              paddingInline={8}
+              paddingInline={{
+                base: "20px",
+                // lg: 8,
+              }}
               paddingBlock={2}
             >
               <Text textStyle="t6" fontWeight="700 !important">

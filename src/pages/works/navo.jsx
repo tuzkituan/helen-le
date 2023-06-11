@@ -37,7 +37,7 @@ const Navo = () => {
       <Spacer height={4} />
       <Flex
         gap={{
-          base: 10,
+          base: "48px",
           lg: "80px",
         }}
         flexDirection="column"

@@ -10,13 +10,13 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
       maxW={CONTENT_MAX_W}
       margin="0 auto"
       w="100%"
-      marginTop="-32px"
+      marginTop="-58px"
     >
       <Box
         // bgColor="#EDF4D7"
-        marginBlock="97px"
+        marginBlock="80px"
         paddingInline={{
-          base: 4,
+          base: "32px",
           lg: "64px",
         }}
         paddingBlock={{
@@ -24,7 +24,10 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
           md: "60px",
           lg: "60px",
         }}
-        borderRadius="8px 0 8px 0"
+        borderRadius={{
+          lg: "8px 0 8px 0",
+          base: 0,
+        }}
         w="100%"
         h="100%"
         background="linear-gradient(to bottom right, #EDF4D7 0%, #EDF4D7 50%, #FDF9EE 50%, #FDF9EE 100%)"
@@ -32,12 +35,17 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
         <Image
           src={titleImg}
           maxW={{
-            base: "100px",
+            base: "150px",
             sm: "200px",
             lg: "100%",
           }}
         />
-        <Spacer h="20px" />
+        <Spacer
+          h={{
+            base: "12px",
+            lg: "20px",
+          }}
+        />
         <Image
           src={descriptionImg}
           backgroundColor="transparent"
@@ -52,24 +60,24 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
         src={mockup}
         position="absolute"
         top={{
-          base: "20%",
-          sm: "15%",
-          md: "11%",
-          lg: 0,
+          base: "-35px",
+          sm: "-33px",
+          md: "-42px",
+          lg: "-35px",
         }}
         right={{
-          sm: "-110px",
-          lg: "-150px",
-          base: "-80px",
+          sm: "-98px",
+          lg: "-128px",
+          base: "-94px",
         }}
         h={{
           base: "auto",
-          sm: "70%",
-          md: "80%",
-          lg: "100%",
+          sm: "128%",
+          md: "128%",
+          lg: "125%",
         }}
         w={{
-          base: "350px",
+          base: "417px",
           sm: "unset",
         }}
       />

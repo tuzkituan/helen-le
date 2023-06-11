@@ -100,8 +100,12 @@ const UserPersonas = ({
                   base: "row",
                   lg: "column",
                 }}
-                justifyContent="center"
+                justifyContent={{
+                  base: "flex-start",
+                  lg: "center",
+                }}
                 alignItems="center"
+                flexWrap="wrap"
                 gap={{
                   base: "8px",
                   lg: "2px",

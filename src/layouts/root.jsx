@@ -13,6 +13,7 @@ export default function Root() {
   const { pathname } = useLocation();
   const location = useLocation();
   const current = location.pathname;
+  console.log("🚀  ~ current:", current);
 
   useEffect(() => {
     // Simulate a delay before loading the content
@@ -22,7 +23,7 @@ export default function Root() {
   }, []);
 
   const getPaddingBottom = () => {
-    if (current.includes("/about")) {
+    if (current === "/about" || current.includes("/work")) {
       return {
         lg: "203px",
         base: "80px",

@@ -48,7 +48,12 @@ const PostParagraph = ({
         <Box position="relative" display="block" zIndex={0}>
           {image ? (
             <>
-              <Spacer height="32px" />
+              <Spacer
+                height={{
+                  lg: "32px",
+                  base: "20px",
+                }}
+              />
               <Image
                 margin="0 auto"
                 display="block"
@@ -61,7 +66,12 @@ const PostParagraph = ({
           ) : null}
           {mockup ? (
             <>
-              <Spacer height="32px" />
+              <Spacer
+                height={{
+                  lg: "32px",
+                  base: "20px",
+                }}
+              />
               <Center>{mockup}</Center>
             </>
           ) : null}
@@ -86,7 +96,12 @@ const PostParagraph = ({
       ) : null}
       {children ? (
         <>
-          <Spacer height="32px" />
+          <Spacer
+            height={{
+              lg: "32px",
+              base: "20px",
+            }}
+          />
           {children}
         </>
       ) : null}
