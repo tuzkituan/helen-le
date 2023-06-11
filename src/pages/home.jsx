@@ -15,7 +15,7 @@ const Home = () => {
         Hi, I&apos;m Helen Le
         <br />a UX/UI designer from Vietnam.
       </Text>
-      <Spacer height={16} />
+      <Spacer height="80px" />
       <MyWork />
     </Box>
   );

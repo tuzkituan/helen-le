@@ -59,11 +59,11 @@ export default function Root() {
             }}
             paddingTop={{
               base: "24px",
-              md: "40px",
+              md: "80px",
             }}
             paddingBottom={{
               base: "48px",
-              lg: "104px",
+              lg: "112px",
             }}
           >
             <motion.div
