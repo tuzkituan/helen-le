@@ -112,7 +112,10 @@ const UserPersonas = () => {
           backgroundSize: "600px",
           left: "-30%",
           width: "150%",
-          height: "100%",
+          height: {
+            base: "100%",
+            sm: "150%",
+          },
           top: 0,
           marginTop: item.id === 1 ? "-173px" : "-250px",
         }}

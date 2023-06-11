@@ -14,7 +14,7 @@ const PostParagraph = ({
 }) => {
   return (
     <Box maxW={CONTENT_MAX_W} margin="0 auto" w="100%">
-      <Box>
+      <Box position="relative" zIndex={1}>
         {header ? (
           <Text textStyle="t10" textTransform="uppercase" pb="20px">
             {header}
@@ -26,6 +26,7 @@ const PostParagraph = ({
             lg: "t5",
           }}
           fontWeight="700 !important"
+          display="block"
         >
           {title}
         </Text>
@@ -44,7 +45,7 @@ const PostParagraph = ({
         ) : null}
       </Box>
       {image || mockup || video ? (
-        <Box position="relative" display="block">
+        <Box position="relative" display="block" zIndex={0}>
           {image ? (
             <>
               <Spacer height="32px" />
@@ -65,7 +66,14 @@ const PostParagraph = ({
             </>
           ) : null}
           {video ? (
-            <Box w="100%" maxW="650px" margin="0 auto">
+            <Box
+              w="100%"
+              maxW="650px"
+              margin="0 auto"
+              css={{
+                marginBlock: "-32px",
+              }}
+            >
               <video
                 controls={false}
                 loop

@@ -10,6 +10,7 @@ const PostFontPreview = ({ titleImg, descriptionImg, mockup }) => {
       maxW={CONTENT_MAX_W}
       margin="0 auto"
       w="100%"
+      marginTop="-32px"
     >
       <Box
         // bgColor="#EDF4D7"
