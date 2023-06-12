@@ -89,15 +89,18 @@ const Nurix = () => {
         <PainPoints
           data={[
             {
-              image: "../images/nurix_image_2.png",
+              image:
+                "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qG_dWPf9pWBBneyfXE6CqL9IOFtYvnpqjuB1xkbuUxfdzoXeaIfuvKi8QeWJWRBSICW91YnMr4p6v67-DuJYcofItQ=s1600",
               title: "Difficulty in manually planning recipes",
             },
             {
-              image: "../images/nurix_image_3.png",
+              image:
+                "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qlExt3Uv2BgaX3t7Blhjns6uo9LFZqfgAAqRAstcmBqcqCllkg-oH_AF2819uWGQ-nr9BekpdsJUBjc6F4ZfVV34z9pA=s1600",
               title: "Lack of knowledge about nutritional needs",
             },
             {
-              image: "../images/nurix_image_1.png",
+              image:
+                "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oQZxeOJUuj2kPcRGq3oe7AXZeDZwUihSmVEmWV4NxzQ-uzuK4Zj5FcIM0DNgOkQ4puE33RNSEuMkFBEh2G6yIQnCXC=s1600",
               title: "Time and energy constraints in meal preparation",
             },
           ]}

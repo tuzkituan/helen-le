@@ -56,7 +56,10 @@ const MyWork = () => {
         >
           <Flex
             flexDirection="column"
-            gap="16px"
+            gap={{
+              base: "16px",
+              lg: "32px",
+            }}
             justifyContent="center"
             w={{
               base: "100%",
@@ -67,7 +70,12 @@ const MyWork = () => {
               lg: 1,
             }}
           >
-            <Stack spacing="6px">
+            <Stack
+              spacing={{
+                base: "6px",
+                lg: "10px",
+              }}
+            >
               <Text
                 w="fit-content"
                 textStyle={{
@@ -79,8 +87,10 @@ const MyWork = () => {
                   lg: "400 !important",
                 }}
                 _groupHover={{
-                  textDecoration: "underline",
-                  transition: "ease 0.5s",
+                  lg: {
+                    textDecoration: "underline",
+                    transition: "ease 0.5s",
+                  },
                 }}
                 transition="ease 0.5s"
               >
@@ -118,17 +128,26 @@ const MyWork = () => {
               as={ReactRouterLink}
               to={link}
               size={{ base: "base", lg: "lg" }}
+              fontWeight={{
+                base: "500 !important",
+                lg: "400 !important",
+              }}
             >
               Read more
             </Button>
           </Flex>
           <Flex
-            gap={8}
+            gap={{
+              base: "16px",
+              lg: "32px",
+            }}
             justifyContent="space-evenly"
             alignItems="center"
             _groupHover={{
-              transform: `scale(1.05)`,
-              transition: "ease 0.5s",
+              lg: {
+                transform: `scale(1.05)`,
+                transition: "ease 0.5s",
+              },
             }}
             transition="ease 0.5s"
             order={{

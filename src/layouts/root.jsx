@@ -65,7 +65,7 @@ export default function Root() {
               base: "20px",
             }}
             paddingTop={{
-              base: "24px",
+              base: "28px",
               lg: "80px",
             }}
             paddingBottom={{

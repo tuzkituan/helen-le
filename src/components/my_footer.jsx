@@ -48,7 +48,7 @@ const MyFooter = () => {
     >
       <Flex
         gap={{
-          base: 6,
+          base: "16px",
           lg: "32px",
         }}
         alignItems="flex-start"

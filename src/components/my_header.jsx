@@ -155,8 +155,8 @@ const MyHeader = () => {
           // xl: "230px",
         }}
         paddingBlock={{
-          base: 6,
-          lg: 4,
+          base: "20px",
+          lg: "20px",
         }}
       >
         <Flex
@@ -215,7 +215,7 @@ const MyHeader = () => {
         >
           <DrawerOverlay />
           <DrawerContent bg="#141414">
-            <DrawerHeader borderBottomWidth={0}>
+            <DrawerHeader borderBottomWidth={0} paddingBottom={0}>
               <Flex justifyContent="space-between" alignItems="center">
                 <Spacer />
                 <Flex alignItems="center" gap={2}>
@@ -224,12 +224,12 @@ const MyHeader = () => {
                     icon={<CloseIcon />}
                     variant="ghost"
                     onClick={onClose}
-                    fontSize={14}
+                    fontSize={16}
                   />
                 </Flex>
               </Flex>
             </DrawerHeader>
-            <DrawerBody paddingBlock={8}>
+            <DrawerBody paddingBlock={0}>
               <Stack
                 direction="column"
                 justifyContent="flex-start"
@@ -242,10 +242,10 @@ const MyHeader = () => {
             <DrawerFooter
               borderTopWidth={0}
               justifyContent="flex-start"
-              pb={"108px"}
+              pb={"80px"}
             >
               <Flex
-                gap="30px"
+                gap="16px"
                 flexDirection="column"
                 justifyContent="flex-start"
                 alignItems="flex-start"

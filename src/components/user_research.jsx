@@ -46,7 +46,7 @@ const UserResearch = ({ data = [] }) => {
             overflow="hidden"
             boxShadow="0px 8px 16px -4px rgba(9, 26, 47, 0.08)"
             // h="390px"
-            h="400px"
+            h="405px"
             minW={{
               base: "280px",
               lg: "unset",

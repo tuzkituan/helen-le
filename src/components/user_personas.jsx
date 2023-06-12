@@ -42,8 +42,8 @@ const UserPersonas = ({
         </Box>
         <Spacer
           h={{
-            lg: "30px",
             base: "20px",
+            lg: "32px",
           }}
         />
         <Flex

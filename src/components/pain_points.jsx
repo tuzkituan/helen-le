@@ -22,11 +22,16 @@ const PainPoints = ({ title = "PAIN POINTS", data = [] }) => {
           <Divider w="36px" bgColor="#C7C7C7" h="4px" mb={2} />
           <Text textStyle="t10">{title}</Text>
         </Box>
-        <Spacer h="30px" />
+        <Spacer
+          h={{
+            base: "20px",
+            lg: "32px",
+          }}
+        />
         <Flex
           gap={{
-            lg: "40px",
-            base: 4,
+            lg: "32px",
+            base: "20px",
           }}
           justifyContent="space-between"
           flexDirection={{
@@ -38,12 +43,36 @@ const PainPoints = ({ title = "PAIN POINTS", data = [] }) => {
             <Flex
               key={x.id}
               flexDirection="column"
-              gap={4}
+              gap={{
+                base: "10px",
+                lg: "16px",
+              }}
               // justifyContent="center"
               alignItems="center"
               flex={1}
             >
-              <Image src={x.image} w="100%" />
+              <Box
+                position="relative"
+                aspectRatio={{
+                  base: "4/3",
+                  lg: "1/1",
+                }}
+                w="100%"
+                borderRadius="4px"
+                overflow="hidden"
+              >
+                <Image
+                  src={x.image}
+                  w="100%"
+                  h="100%"
+                  objectFit="cover"
+                  position="absolute"
+                  top={0}
+                  left={0}
+                  right={0}
+                  bottom={0}
+                />
+              </Box>
               <Text
                 textStyle={{
                   base: "t8",

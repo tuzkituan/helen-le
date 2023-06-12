@@ -2,7 +2,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import { CONTENT_MAX_W } from "../appConstants";
 
 const PostColorPreview = ({ colors = [] }) => {
-  const width = ["39%", "25%", "17%", "19%"];
+  const width = ["38%", "24%", "19%", "19%"];
   return (
     <Flex
       w="100%"
@@ -22,6 +22,10 @@ const PostColorPreview = ({ colors = [] }) => {
             base: "40px",
             lg: "81px",
           }}
+          paddingInline={{
+            base: "6px",
+            lg: "16px",
+          }}
           w={width[i]}
         >
           <Text
@@ -30,6 +34,13 @@ const PostColorPreview = ({ colors = [] }) => {
               lg: "t6",
             }}
             color={x.textColor}
+            fontWeight={
+              i === 3 || i === 2
+                ? {
+                    lg: "500 !important",
+                  }
+                : null
+            }
           >
             {x.id}
           </Text>

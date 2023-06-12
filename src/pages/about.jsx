@@ -19,9 +19,8 @@ const About = () => {
       <Stack
         spacing={{
           base: "48px",
-          lg: "32px",
+          lg: "76px",
         }}
-        divider={isSmallerThanMd ? null : <Divider />}
       >
         {/* <Alert
           status="warning"
@@ -46,7 +45,7 @@ const About = () => {
         >
           <Box borderRadius="8px" flex={1} overflow="hidden">
             <Image
-              src="images/orange_avatar.png"
+              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qNMClxYGm2GwBU7v2fSCBhDEinMdrmSr6GMrMoGuctTchn_J4cuofci48iiqgTahdBli0heR4dhfoGACghJfvlQAmH=s1600"
               w={{
                 base: "100%",
                 // lg: "25vw",
@@ -129,6 +128,14 @@ const About = () => {
             base: "column",
             md: "row",
           }}
+          borderTop={{
+            base: 0,
+            lg: "1px solid #E8E8E8",
+          }}
+          paddingTop={{
+            base: "none",
+            lg: "32px",
+          }}
         >
           <Box flex={1}>
             <Text
@@ -176,6 +183,14 @@ const About = () => {
           flexDirection={{
             base: "column",
             md: "row",
+          }}
+          borderTop={{
+            base: 0,
+            lg: "1px solid #E8E8E8",
+          }}
+          paddingTop={{
+            base: "0",
+            lg: "32px",
           }}
         >
           <Text
