@@ -43,7 +43,15 @@ const About = () => {
             md: "row",
           }}
         >
-          <Box borderRadius="8px" flex={1} overflow="hidden">
+          <Box
+            borderRadius="8px"
+            flex={1}
+            overflow="hidden"
+            aspectRatio={{
+              base: "1/1",
+              lg: "unset",
+            }}
+          >
             <Image
               src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qNMClxYGm2GwBU7v2fSCBhDEinMdrmSr6GMrMoGuctTchn_J4cuofci48iiqgTahdBli0heR4dhfoGACghJfvlQAmH=s1600"
               w={{
