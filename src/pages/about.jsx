@@ -16,7 +16,13 @@ const About = () => {
 
   return (
     <Box w="100%" margin="0 auto" maxW={CONTENT_MAX_W}>
-      <Stack spacing="32px" divider={isSmallerThanMd ? null : <Divider />}>
+      <Stack
+        spacing={{
+          base: "48px",
+          lg: "32px",
+        }}
+        divider={isSmallerThanMd ? null : <Divider />}
+      >
         {/* <Alert
           status="warning"
           borderRadius="8px"
@@ -29,7 +35,7 @@ const About = () => {
 
         <Flex
           gap={{
-            base: "10px",
+            base: "20px",
             md: 8,
             xl: "64px",
           }}
@@ -53,7 +59,10 @@ const About = () => {
           <Flex
             flexDirection="column"
             justifyContent="space-between"
-            gap="32px"
+            gap={{
+              base: "20px",
+              lg: "32px",
+            }}
             flex={2}
           >
             <Stack
