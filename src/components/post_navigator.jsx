@@ -12,16 +12,16 @@ const PostNavigator = ({ current }) => {
         ? "../icons/ic_chevron_left.svg"
         : "../icons/ic_chevron_right.svg";
     return (
-      <Flex
-        justifyContent={justifyContent}
-        w="100%"
-        marginTop={{
-          base: "calc(80px - 48px)",
-          lg: "calc(112px - 80px)",
-        }}
-      >
+      <Flex justifyContent={justifyContent} w="100%">
         <Box as={Link} to={item.link} w="fit-content">
-          <Flex gap="30px" w="fit-content" flexDirection={order}>
+          <Flex
+            gap={{
+              base: "20px",
+              lg: "30px",
+            }}
+            w="fit-content"
+            flexDirection={order}
+          >
             <Flex flexDirection="column">
               <Text
                 textStyle={{
@@ -44,6 +44,15 @@ const PostNavigator = ({ current }) => {
 
             <IconButton
               borderRadius="50%"
+              w={{
+                base: "40px",
+                lg: "48px",
+              }}
+              h={{
+                base: "40px",
+                lg: "48px",
+              }}
+              minW="unset"
               icon={<Image src={icon} w="20px" h="20px" />}
             ></IconButton>
           </Flex>
@@ -73,7 +82,12 @@ const PostNavigator = ({ current }) => {
   };
 
   return (
-    <Box>
+    <Box
+      marginTop={{
+        base: "calc(80px - 48px)",
+        lg: "calc(112px - 80px)",
+      }}
+    >
       {prev() ? _renderButton(prev(), "prev") : null}
       {next() ? _renderButton(next(), "next") : null}
     </Box>
