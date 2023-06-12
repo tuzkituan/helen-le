@@ -47,13 +47,13 @@ const overrides = {
           borderColor: "#141414",
           color: "#fff",
           _hover: {
-            bg: "#141414",
+            bg: "#2C2C2C",
             color: "#fff",
-            borderColor: "#141414",
+            borderColor: "#2C2C2C",
           },
           _active: {
-            bg: "#141414",
-            borderColor: "#141414",
+            bg: "#2C2C2C",
+            borderColor: "#2C2C2C",
             color: "#fff",
           },
         }),
