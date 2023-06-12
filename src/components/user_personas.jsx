@@ -36,9 +36,17 @@ const UserPersonas = ({
           <Divider w="36px" bgColor="#C7C7C7" h="4px" mb={2} />
           <Text textStyle="t10">{title}</Text>
         </Box>
-        <Spacer h="30px" />
+        <Spacer
+          h={{
+            lg: "30px",
+            base: "20px",
+          }}
+        />
         <Flex
-          gap="64px"
+          gap={{
+            base: "20px",
+            lg: "64px",
+          }}
           flexDirection={{
             base: "column",
             lg: "row",
@@ -62,7 +70,7 @@ const UserPersonas = ({
           >
             <Box
               w={{
-                base: "72px",
+                base: "46px",
                 lg: "100%",
               }}
               order={{
@@ -91,8 +99,18 @@ const UserPersonas = ({
                 base: 1,
                 lg: 2,
               }}
+              spacing={{
+                lg: 2,
+                base: 0,
+              }}
             >
-              <Text textStyle="t6" fontWeight="700 !important">
+              <Text
+                textStyle={{
+                  base: "t7",
+                  lg: "t6",
+                }}
+                fontWeight="600 !important"
+              >
                 {name}
               </Text>
               <Flex
@@ -112,7 +130,10 @@ const UserPersonas = ({
                 }}
               >
                 <Text
-                  textStyle="t8"
+                  textStyle={{
+                    base: "t10",
+                    lg: "t8",
+                  }}
                   order={{
                     base: 3,
                     lg: 1,
@@ -131,7 +152,10 @@ const UserPersonas = ({
                   />
                 ) : null}
                 <Text
-                  textStyle="t8"
+                  textStyle={{
+                    base: "t10",
+                    lg: "t8",
+                  }}
                   order={{
                     base: 1,
                     lg: 3,
@@ -145,7 +169,7 @@ const UserPersonas = ({
           <Flex
             flexDirection="column"
             gap={{
-              base: 8,
+              base: "16px",
               lg: "30px",
             }}
           >

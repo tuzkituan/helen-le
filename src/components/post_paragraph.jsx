@@ -16,7 +16,7 @@ const PostParagraph = ({
     <Box maxW={CONTENT_MAX_W} margin="0 auto" w="100%">
       <Box position="relative" zIndex={1}>
         {header ? (
-          <Text textStyle="t10" textTransform="uppercase" pb="20px">
+          <Text textStyle="t10" textTransform="uppercase" pb="10px">
             {header}
           </Text>
         ) : null}
@@ -25,14 +25,17 @@ const PostParagraph = ({
             base: "t7",
             lg: "t5",
           }}
-          fontWeight="700 !important"
+          fontWeight={{
+            base: "600 !important",
+            lg: "700 !important"
+          }}
           display="block"
         >
           {title}
         </Text>
         {description ? (
           <>
-            <Spacer height="20px" />
+            <Spacer height="10px" />
             <Text
               textStyle={{
                 base: "t8",
