@@ -97,6 +97,13 @@ const MyHeader = () => {
         {...(isInDrawer
           ? {
               paddingInline: 0,
+              ...(x.isNewTab
+                ? {
+                    onClick: () => {
+                      onClose();
+                    },
+                  }
+                : null),
             }
           : null)}
       >
