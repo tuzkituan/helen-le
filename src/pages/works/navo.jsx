@@ -4,6 +4,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Flex,
+  Image,
   Spacer,
 } from "@chakra-ui/react";
 import PostBannerImage from "../../components/post_banner_image";
@@ -88,15 +89,30 @@ const Navo = () => {
         <PostParagraph
           title="Design"
           description="The design prioritizes simplicity and user-friendliness to help user find available parking spots quickly and easily, regardless of the type of vehicle they are using. Whether you are driving a car, riding a motorcycle, or cycling. The color scheme, based on calming blue tones, is chosen to convey a sense of safety."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qVQE73O4RCDnqMob-RvfFU70f930cfVGU6893umOQpXFIM5--fGSPsCRwO4YLyqkYM7IYYCwJyaH71keoxQtnkcOH85g=s1600"
-          maxW="100%"
-        />
+        >
+          <Box
+            marginInline={{
+              base: "-20px",
+              lg: 0,
+            }}
+          >
+            <Image src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qVQE73O4RCDnqMob-RvfFU70f930cfVGU6893umOQpXFIM5--fGSPsCRwO4YLyqkYM7IYYCwJyaH71keoxQtnkcOH85g=s1600" />
+          </Box>
+        </PostParagraph>
         <PostParagraph
           title="Typography & Color"
           description="The typography for this app need to be clear and legible, especially in potentially distracting or confusing environments such as busy streets or crowded parking lots. Work Sans' large x-height and generous spacing make it easy to read even at small sizes, which can be crucial in such situations. Additionally, I aim for harmony with the common color palette found in parking places."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81osyFaV2hPg5tzbz3sXmYMTt8M-7L5cKqe6lVY5-3U3RrZaMCdpGDCuSnkkGiTAjx21ww6l84_EHTBFgVUYLeAgl1ivRA=s1600"
-          maxW="100%"
-        />
+        >
+          <Box
+            marginInline={{
+              base: "-20px",
+              lg: 0,
+            }}
+          >
+            <Image src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81osyFaV2hPg5tzbz3sXmYMTt8M-7L5cKqe6lVY5-3U3RrZaMCdpGDCuSnkkGiTAjx21ww6l84_EHTBFgVUYLeAgl1ivRA=s1600" />
+          </Box>
+        </PostParagraph>
+
         <PostParagraph
           header="navo app walkthrough"
           title="Find parking nearby"

@@ -12,6 +12,10 @@ const PainPoints = ({ title = "PAIN POINTS", data = [] }) => {
         lg: "60px",
         base: 8,
       }}
+      boxShadow={{
+        base: "0px 4px 8px rgba(182, 182, 182, 0.15)",
+        lg: "none",
+      }}
     >
       <Box maxW={CONTENT_MAX_W} margin="0 auto" w="100%">
         <Box>
