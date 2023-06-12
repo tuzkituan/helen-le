@@ -138,7 +138,14 @@ const MyWork = () => {
 
   return (
     <Box w="100%">
-      <Flex w="100%" gap="32px" flexDirection="column">
+      <Flex
+        w="100%"
+        gap={{
+          base: "20px",
+          lg: "32px",
+        }}
+        flexDirection="column"
+      >
         {data.map((x) => _renderCard(x))}
       </Flex>
     </Box>

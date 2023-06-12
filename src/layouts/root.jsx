@@ -1,19 +1,16 @@
 import { Box, Flex } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { MAIN_MAX_W } from "../appConstants";
 import Loading from "../components/loading";
 import MyFooter from "../components/my_footer";
 import MyHeader from "../components/my_header";
-import { motion } from "framer-motion";
 import ScrollToTop from "../components/scroll_to_top";
-import { MAIN_MAX_W } from "../appConstants";
 
 export default function Root() {
   const [isMounting, setIsMounting] = React.useState(true);
   const { pathname } = useLocation();
-  const location = useLocation();
-  const current = location.pathname;
-  console.log("🚀  ~ current:", current);
 
   useEffect(() => {
     // Simulate a delay before loading the content
@@ -23,15 +20,9 @@ export default function Root() {
   }, []);
 
   const getPaddingBottom = () => {
-    if (current === "/about" || current.includes("/work")) {
-      return {
-        lg: "203px",
-        base: "80px",
-      };
-    }
     return {
       lg: "112px",
-      base: "48px",
+      base: "80px",
     };
   };
 

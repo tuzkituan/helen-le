@@ -12,7 +12,14 @@ const PostNavigator = ({ current }) => {
         ? "../icons/ic_chevron_left.svg"
         : "../icons/ic_chevron_right.svg";
     return (
-      <Flex justifyContent={justifyContent} w="100%">
+      <Flex
+        justifyContent={justifyContent}
+        w="100%"
+        marginTop={{
+          base: "calc(80px - 48px)",
+          lg: "calc(112px - 80px)",
+        }}
+      >
         <Box as={Link} to={item.link} w="fit-content">
           <Flex gap="30px" w="fit-content" flexDirection={order}>
             <Flex flexDirection="column">
