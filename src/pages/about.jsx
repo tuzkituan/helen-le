@@ -99,7 +99,9 @@ const About = () => {
             </Stack>
             <Box w="fit-content">
               <Button
-                iconSpacing={4}
+                iconSpacing="14px"
+                variant="solid"
+                size={{ base: "base", lg: "lg" }}
                 onClick={() => window.open(MY_DATA.RESUME)}
                 rightIcon={
                   <img

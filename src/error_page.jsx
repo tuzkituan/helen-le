@@ -36,7 +36,7 @@ export default function ErrorPage() {
           <AlertDescription maxWidth="sm">
             Sorry, an unexpected error has occurred.
           </AlertDescription>
-          <Button as={Link} to="/" mt={4}>
+          <Button size={{ base: "base", lg: "lg" }} as={Link} to="/" mt={4}>
             Home
           </Button>
         </Alert>

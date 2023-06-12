@@ -3,6 +3,7 @@ import {
   Button,
   Flex,
   Image,
+  Stack,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -22,11 +23,11 @@ const MyWork = () => {
         key={id}
         bgColor={useColorModeValue(color, "blackAlpha.600")}
         paddingInline={{
-          base: "24px",
+          base: "32px",
           lg: "144px",
         }}
         paddingBlock={{
-          base: "24px",
+          base: "32px",
           lg: "64px",
         }}
         borderRadius="8px"
@@ -66,41 +67,57 @@ const MyWork = () => {
               lg: 1,
             }}
           >
-            <Text
-              w="fit-content"
-              textStyle={{
-                base: "t6",
-                lg: "t5",
-              }}
-              fontWeight={{
-                base: "500 !important",
-                lg: "400 !important",
-              }}
-              _groupHover={{
-                textDecoration: "underline",
-                transition: "ease 0.5s",
-              }}
-              transition="ease 0.5s"
-            >
-              {description}
-            </Text>
-            <Text
-              w="fit-content"
-              textStyle={{
-                base: "t9",
-                lg: "t7",
-              }}
-              fontWeight="400 !important"
-            >
-              {title}
-            </Text>
+            <Stack spacing="6px">
+              <Text
+                w="fit-content"
+                textStyle={{
+                  base: "t6",
+                  lg: "t5",
+                }}
+                fontWeight={{
+                  base: "500 !important",
+                  lg: "400 !important",
+                }}
+                _groupHover={{
+                  textDecoration: "underline",
+                  transition: "ease 0.5s",
+                }}
+                transition="ease 0.5s"
+              >
+                {description}
+              </Text>
+              <Text
+                w="fit-content"
+                textStyle={{
+                  base: "t9",
+                  lg: "t7",
+                }}
+                fontWeight="400 !important"
+              >
+                {title}
+              </Text>
+            </Stack>
             <Button
               w="fit-content"
               variant="solid"
-              rightIcon={<img src={"icons/ic_arrow_right.svg"} alt="" />}
-              iconSpacing={4}
+              rightIcon={
+                <Image
+                  src={"icons/ic_arrow_right.svg"}
+                  alt=""
+                  w={{
+                    base: "16px",
+                    lg: "18px",
+                  }}
+                  h={{
+                    base: "16px",
+                    lg: "18px",
+                  }}
+                />
+              }
+              iconSpacing="14px"
               as={ReactRouterLink}
               to={link}
+              size={{ base: "base", lg: "lg" }}
             >
               Read more
             </Button>

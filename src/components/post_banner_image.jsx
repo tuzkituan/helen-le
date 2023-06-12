@@ -9,12 +9,16 @@ const PostBannerImage = ({ color, images = [], maxW, backgroundImage }) => {
       backgroundImage={backgroundImage}
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
-      p={{
-        base: 10,
+      paddingBlock={{
+        base: "20px",
+        lg: count > 1 ? "40px" : "142px",
+      }}
+      paddingInline={{
+        base: "50px",
         lg: count > 1 ? "40px" : "142px",
       }}
       marginInline={{
-        base: -8,
+        base: "-20px",
         lg: backgroundImage
           ? `calc(calc(${MAIN_MAX_W} - 100vw) / 2)`
           : "-100vw",
@@ -22,7 +26,7 @@ const PostBannerImage = ({ color, images = [], maxW, backgroundImage }) => {
     >
       <Flex
         gap={{
-          base: 6,
+          base: "20px",
           lg: 8,
         }}
         justifyContent="center"

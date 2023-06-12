@@ -118,9 +118,10 @@ const MyHeader = () => {
             }}
           />
         }
+        size={{ base: "base", lg: "lg" }}
         as={ReactRouterLink}
         to={`mailto:${MY_DATA.EMAIL}`}
-        iconSpacing={4}
+        iconSpacing="14px"
       >
         Email me
       </Button>
@@ -261,9 +262,10 @@ const MyHeader = () => {
                       }}
                     />
                   }
+                  size={{ base: "base", lg: "lg" }}
                   as={ReactRouterLink}
                   to={`mailto:${MY_DATA.EMAIL}`}
-                  iconSpacing={4}
+                  iconSpacing="14px"
                 >
                   Email me
                 </Button>

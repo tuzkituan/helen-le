@@ -9,7 +9,7 @@ const PostHeader = ({ title, description }) => {
           base: "t6",
           lg: "t4",
         }}
-        fontWeight="700 !important"
+        fontWeight="600 !important"
       >
         {title}
       </Text>

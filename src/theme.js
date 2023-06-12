@@ -25,17 +25,31 @@ const overrides = {
         fontWeight: 500, // Normally, it is "semibold"
         borderRadius: "8px",
       },
+      sizes: {
+        lg: {
+          h: '54px',
+          fontSize: '20px',
+         paddingInlineStart: '24px',
+          paddingInlineEnd: '24px',
+        },
+        base: {
+          h: '48px',
+          fontSize: '16px',
+          paddingInlineStart: '16px',
+          paddingInlineEnd: '16px',
+        }
+      },
       // 3. We can add a new visual variant
       variants: {
         // 4. We can override existing variants
         solid: () => ({
           bg: "#141414",
           borderColor: "#141414",
-          color:  "#fff",
+          color: "#fff",
           _hover: {
             bg: "#141414",
             color: "#fff",
-            borderColor: "#141414"
+            borderColor: "#141414",
           },
           _active: {
             bg: "#141414",
@@ -46,11 +60,13 @@ const overrides = {
         outline: () => ({
           bg: "#141414",
           borderColor: "#727272",
-          color:  "#fff",
+          color: "#fff",
+          height: "48px",
+          fontSize: "16px",
           _hover: {
             bg: "#141414",
             color: "#fff",
-            borderColor: "#fff"
+            borderColor: "#fff",
           },
           _active: {
             bg: "#141414",
@@ -68,9 +84,9 @@ const overrides = {
     },
     Divider: {
       baseStyle: {
-        borderColor: '#C7C7C7'
-      }
-    }
+        borderColor: "#C7C7C7",
+      },
+    },
   },
   config: {
     initialColorMode: "light",
@@ -79,69 +95,69 @@ const overrides = {
   styles: {
     global: (props) => ({
       body: {
-        fontFamily: 'body',
-        color: mode('#141414', 'whiteAlpha.900')(props),
-        bg: mode('white', 'gray.800')(props),
-        lineHeight: 'base',
+        fontFamily: "body",
+        color: mode("#141414", "whiteAlpha.900")(props),
+        bg: mode("white", "gray.800")(props),
+        lineHeight: "base",
       },
     }),
   },
   textStyles: {
     t1: {
       // you can also use responsive styles
-      fontSize: '72px',
-      fontWeight: '700',
-      lineHeight: '86.4px',
+      fontSize: "72px",
+      fontWeight: "700",
+      lineHeight: "86.4px",
     },
     t2: {
-      fontSize: '60px',
-      fontWeight: '700',
-      lineHeight: '72px',
+      fontSize: "60px",
+      fontWeight: "700",
+      lineHeight: "72px",
     },
     t3: {
-      fontSize: '48px',
-      fontWeight: '500',
-      lineHeight: '57.6px',
+      fontSize: "48px",
+      fontWeight: "500",
+      lineHeight: "57.6px",
     },
     t4: {
-      fontSize: '40px',
-      fontWeight: '400',
-      lineHeight: '60px',
+      fontSize: "40px",
+      fontWeight: "400",
+      lineHeight: "60px",
     },
     t5: {
-      fontSize: '32px',
-      fontWeight: '400',
-      lineHeight: '48px',
+      fontSize: "32px",
+      fontWeight: "400",
+      lineHeight: "48px",
     },
     t6: {
-      fontSize: '24px',
-      fontWeight: '400',
-      lineHeight: '36px',
+      fontSize: "24px",
+      fontWeight: "400",
+      lineHeight: "36px",
     },
     t7: {
-      fontSize: '20px',
-      fontWeight: '400',
-      lineHeight: '30px',
+      fontSize: "20px",
+      fontWeight: "400",
+      lineHeight: "30px",
     },
     t8: {
-      fontSize: '16px',
-      fontWeight: '400',
-      lineHeight: '24px',
+      fontSize: "16px",
+      fontWeight: "400",
+      lineHeight: "24px",
     },
     t9: {
-      fontSize: '14px',
-      fontWeight: '400',
-      lineHeight: '21px',
+      fontSize: "14px",
+      fontWeight: "400",
+      lineHeight: "21px",
     },
     t10: {
-      fontSize: '12px',
-      fontWeight: '400',
-      lineHeight: '18px',
+      fontSize: "12px",
+      fontWeight: "400",
+      lineHeight: "18px",
     },
     t11: {
-      fontSize: '10px',
-      fontWeight: '400',
-      lineHeight: '14px',
+      fontSize: "10px",
+      fontWeight: "400",
+      lineHeight: "14px",
     },
   },
 };

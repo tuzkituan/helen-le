@@ -28,7 +28,7 @@ const UserPersonas = ({
       position="relative"
       paddingBlock={{
         lg: "60px",
-        base: 8,
+        base: "20px",
       }}
       boxShadow={{
         base: "0px 4px 8px rgba(182, 182, 182, 0.15)",

@@ -80,6 +80,7 @@ const MyFooter = () => {
             <Spacer h="16px" />
             <Button
               variant="outline"
+              size={{ base: "base", lg: "lg" }}
               rightIcon={
                 <img
                   src="../icons/ic_link_arrow.svg"
@@ -89,7 +90,7 @@ const MyFooter = () => {
                   }}
                 />
               }
-              iconSpacing={4}
+              iconSpacing="14px"
               as={ReactRouterLink}
               to={`mailto:${MY_DATA.EMAIL}`}
             >
