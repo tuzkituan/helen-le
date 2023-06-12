@@ -10,103 +10,114 @@ const PATTERNS = [
 
 const UserResearch = ({ data = [] }) => {
   return (
-    <Flex
-      gap="32px"
-      overflowX="auto"
-      maxW={MAIN_MAX_W}
-      w="100%"
-      justifyContent={{
-        base: "unset",
-        lg: "space-between",
-      }}
-      paddingBottom={4}
-      css={{
-        "&::-webkit-scrollbar": {
-          display: "none",
-        },
-        "-ms-overflow-style": "none" /* IE and Edge */,
-        "scrollbar-width": "none",
+    <Box
+      marginInline={{
+        base: "-20px",
+        lg: 0,
       }}
     >
-      {data.map((x, i) => (
-        <Box
-          key={x.id}
-          position="relative"
-          borderRadius="24px"
-          overflow="hidden"
-          boxShadow="0px 8px 16px -4px rgba(9, 26, 47, 0.08)"
-          // h="390px"
-          h="400px"
-          minW={{
-            base: "280px",
-            lg: "unset",
-          }}
-          maxW={{
-            base: "280px",
-            lg: "unset",
-          }}
-          flex={{
-            base: "",
-            lg: 1,
-          }}
-        >
-          <Image
-            w="100%"
-            src={x.image}
-            position="absolute"
-            top={0}
-            left={0}
-            right={0}
-            display="block"
-            zIndex={1}
-          />
+      <Flex
+        gap="32px"
+        overflowX="auto"
+        maxW={MAIN_MAX_W}
+        w="100%"
+        justifyContent={{
+          base: "unset",
+          lg: "space-between",
+        }}
+        paddingBottom={4}
+        paddingInline={{
+          base: "20px",
+          lg: 0,
+        }}
+        css={{
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          "-ms-overflow-style": "none" /* IE and Edge */,
+          "scrollbar-width": "none",
+        }}
+      >
+        {data.map((x, i) => (
           <Box
-            position="absolute"
-            // right="-20px"
-            bottom="-36px"
-            zIndex={3}
-            h="49%"
+            key={x.id}
+            position="relative"
+            borderRadius="24px"
+            overflow="hidden"
+            boxShadow="0px 8px 16px -4px rgba(9, 26, 47, 0.08)"
+            // h="390px"
+            h="400px"
+            minW={{
+              base: "280px",
+              lg: "unset",
+            }}
+            maxW={{
+              base: "280px",
+              lg: "unset",
+            }}
+            flex={{
+              base: "",
+              lg: 1,
+            }}
           >
             <Image
               w="100%"
-              src={PATTERNS[i]}
-              display="block"
-              transform="scale(1.55)"
-            />
-            <Box
-              zIndex={10}
+              src={x.image}
               position="absolute"
               top={0}
               left={0}
               right={0}
-              paddingInline={{
-                base: "20px",
-                // lg: 8,
-              }}
-              paddingBlock={2}
+              display="block"
+              zIndex={1}
+            />
+            <Box
+              position="absolute"
+              // right="-20px"
+              bottom="-36px"
+              zIndex={3}
+              h="49%"
             >
-              <Text textStyle="t6" fontWeight="700 !important">
-                {x.name}
-              </Text>
-              <Spacer h="4px" />
-              <Text textStyle="t10">{x.position}</Text>
-              <Spacer h="4px" />
-              <Text
-                textStyle="t8"
-                style={{
-                  display: "-webkit-box",
-                  overflow: "hidden",
-                  "-webkit-line-clamp": 3,
-                  "-webkit-box-orient": "vertical",
+              <Image
+                w="100%"
+                src={PATTERNS[i]}
+                display="block"
+                transform="scale(1.55)"
+              />
+              <Box
+                zIndex={10}
+                position="absolute"
+                top={0}
+                left={0}
+                right={0}
+                paddingInline={{
+                  base: "20px",
+                  // lg: 8,
                 }}
+                paddingBlock={2}
               >
-                {x.content}
-              </Text>
+                <Text textStyle="t6" fontWeight="700 !important">
+                  {x.name}
+                </Text>
+                <Spacer h="4px" />
+                <Text textStyle="t10">{x.position}</Text>
+                <Spacer h="4px" />
+                <Text
+                  textStyle="t8"
+                  style={{
+                    display: "-webkit-box",
+                    overflow: "hidden",
+                    "-webkit-line-clamp": 3,
+                    "-webkit-box-orient": "vertical",
+                  }}
+                >
+                  {x.content}
+                </Text>
+              </Box>
             </Box>
           </Box>
-        </Box>
-      ))}
-    </Flex>
+        ))}
+      </Flex>
+    </Box>
   );
 };
 
