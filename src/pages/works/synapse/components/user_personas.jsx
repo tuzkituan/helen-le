@@ -249,6 +249,7 @@ const UserPersonas = () => {
               </Stack>
               <img
                 src={item.user.avatar}
+                loading="lazy"
                 style={{
                   width: avatarSize,
                   minWidth: avatarSize,

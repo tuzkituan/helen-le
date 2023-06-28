@@ -59,7 +59,7 @@ const Synapse = () => {
           header="SUMMARY"
           title="Objective"
           description={`To create a user-friendly platform and app that provides farmers with real-time data and insights to help them manage their farms more efficiently.`}
-          image="https://drive.google.com/uc?id=1l7z-OlPsaLxHkrkt7-p0NYZCTiYZGYGb"
+          image="https://drive.google.com/uc?id=12hjWIBk8l3sCV3NokWKfT9tcFEMhljo3"
           maxW="100%s"
         />
         <PostParagraph
@@ -77,12 +77,14 @@ const Synapse = () => {
                 width: "100%",
               }}
               src="https://drive.google.com/uc?id=1sRuGT-OdE8005bWu47KGM3x3kQqiWIkM"
+              loading="lazy"
               alt=""
             />
           </Box>
         </PostParagraph>
         <Box>
           <img
+            loading="lazy"
             src={
               isSmallerThanSm
                 ? "https://drive.google.com/uc?id=11ts4F1i_v2wbBwOH9DNpmD0NTzSvrTXR"
@@ -101,6 +103,7 @@ const Synapse = () => {
           }}
         >
           <img
+            loading="lazy"
             style={{
               width: "100%",
             }}
@@ -127,10 +130,12 @@ const Synapse = () => {
                 height: "auto",
                 width: "100%",
               }}
+              loading="lazy"
             />
             <img
-              src="https://drive.google.com/uc?id=1RaRYE4N_3o_-v8r5WE8pNA3FnQNnXyta"
+              src="https://drive.google.com/uc?id=1cqRi4oa_IJlono7jVBZkIod6twtYOD5N"
               alt=""
+              loading="lazy"
               style={{
                 position: "absolute",
                 bottom: 0,
@@ -191,6 +196,7 @@ const Synapse = () => {
               style={{
                 width: "100%",
               }}
+              loading="lazy"
               src="https://drive.google.com/uc?id=10WCUTZkK9eiVx75IYieqzwcv36Shdvfj"
               alt=""
             />
