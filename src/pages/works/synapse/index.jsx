@@ -59,7 +59,7 @@ const Synapse = () => {
           header="SUMMARY"
           title="Objective"
           description={`To create a user-friendly platform and app that provides farmers with real-time data and insights to help them manage their farms more efficiently.`}
-          image="https://drive.google.com/uc?id=12hjWIBk8l3sCV3NokWKfT9tcFEMhljo3"
+          image="https://lh3.googleusercontent.com/d/12hjWIBk8l3sCV3NokWKfT9tcFEMhljo3"
           maxW="100%s"
         />
         <PostParagraph
@@ -76,7 +76,7 @@ const Synapse = () => {
               style={{
                 width: "100%",
               }}
-              src="https://drive.google.com/uc?id=1sRuGT-OdE8005bWu47KGM3x3kQqiWIkM"
+              src="https://lh3.googleusercontent.com/d/1sRuGT-OdE8005bWu47KGM3x3kQqiWIkM"
               loading="lazy"
               alt=""
             />
@@ -87,8 +87,8 @@ const Synapse = () => {
             loading="lazy"
             src={
               isSmallerThanSm
-                ? "https://drive.google.com/uc?id=11ts4F1i_v2wbBwOH9DNpmD0NTzSvrTXR"
-                : "https://drive.google.com/uc?id=1sHfCwjLXLPioR0kC3DDq2IyYft3Tklve"
+                ? "https://lh3.googleusercontent.com/d/11ts4F1i_v2wbBwOH9DNpmD0NTzSvrTXR"
+                : "https://lh3.googleusercontent.com/d/1sHfCwjLXLPioR0kC3DDq2IyYft3Tklve"
             }
             alt=""
             style={{
@@ -107,7 +107,7 @@ const Synapse = () => {
             style={{
               width: "100%",
             }}
-            src="https://drive.google.com/uc?id=1wlkEOcI1QjdLUmIbenZdUpEcAHOMWJJe"
+            src="https://lh3.googleusercontent.com/d/1wlkEOcI1QjdLUmIbenZdUpEcAHOMWJJe"
             alt=""
           />
         </Box>
@@ -124,7 +124,7 @@ const Synapse = () => {
         >
           <Box position="relative">
             <img
-              src="https://drive.google.com/uc?id=1zPetK9I24tCkX2ALc8-pOJNkUTr6ltfw"
+              src="https://lh3.googleusercontent.com/d/1zPetK9I24tCkX2ALc8-pOJNkUTr6ltfw"
               alt=""
               style={{
                 height: "auto",
@@ -133,7 +133,7 @@ const Synapse = () => {
               loading="lazy"
             />
             <img
-              src="https://drive.google.com/uc?id=1cqRi4oa_IJlono7jVBZkIod6twtYOD5N"
+              src="https://lh3.googleusercontent.com/d/1cqRi4oa_IJlono7jVBZkIod6twtYOD5N"
               alt=""
               loading="lazy"
               style={{
@@ -149,40 +149,40 @@ const Synapse = () => {
         </PostParagraph>
         <PostParagraph
           description="Provide interactive elements for users to access detailed information or take immediate actions based on the alerts received."
-          image="https://drive.google.com/uc?id=1zPetK9I24tCkX2ALc8-pOJNkUTr6ltfw"
+          image="https://lh3.googleusercontent.com/d/1zPetK9I24tCkX2ALc8-pOJNkUTr6ltfw"
           maxW="100%"
         />
         <PostParagraph
           description="Enable users to make immediate decisions based on accurate and up-to-date information, ensuring effective crop monitoring and management."
-          image="https://drive.google.com/uc?id=1o9-XHYd3PaUYtUErsW4A-Cp6Nv2itMFj"
+          image="https://lh3.googleusercontent.com/d/1o9-XHYd3PaUYtUErsW4A-Cp6Nv2itMFj"
           maxW="100%"
         />
         <PostParagraph
           title="Crop performance insights: enhancing field productivity"
           description="Offer users a comprehensive analysis of crop performance, highlighting potential issues causing lower crop levels in the current season compared to previous seasons."
-          image="https://drive.google.com/uc?id=1FTN96AFmefYRuhhNSau_tldSG08lskF0"
+          image="https://lh3.googleusercontent.com/d/1FTN96AFmefYRuhhNSau_tldSG08lskF0"
           maxW="100%"
         />
         <PostParagraph
           title="Field recommendations for maximum crop performance"
           description="Simplify the field creation process with a step-by-step wizard, supplemented by an accessible help center for any assistance while adding new fields."
-          image="https://drive.google.com/uc?id=1cYrVOqTbpK672pCeeISFMWdG5DzCjtIx"
+          image="https://lh3.googleusercontent.com/d/1cYrVOqTbpK672pCeeISFMWdG5DzCjtIx"
           maxW="100%"
         />
         <PostParagraph
           description="Provide clear explanations for the recommendations, detailing the rationale behind each suggestion."
-          image="https://drive.google.com/uc?id=1V1EAG5Wwn0I7J9GHbAqRfqd5rcNCDne-"
+          image="https://lh3.googleusercontent.com/d/1V1EAG5Wwn0I7J9GHbAqRfqd5rcNCDne-"
           maxW="100%"
         />
         <PostParagraph
           title="Continuous guidance and support: accessing expert advice anytime"
           description="Enable in-app chat for seamless communication between users and support team members, as well as the ability to talk to experts for professional advice on topics such as pest management and fertilizer effectiveness."
-          image="https://drive.google.com/uc?id=1wx3KHnWgAURmkpxH2Sr0c_D6V2iotmML"
+          image="https://lh3.googleusercontent.com/d/1wx3KHnWgAURmkpxH2Sr0c_D6V2iotmML"
           maxW="100%"
         />
         <PostParagraph
           maxW="100%"
-          image="https://drive.google.com/uc?id=18ivphi3UAR9guELYVszWV636C0Rchd2g"
+          image="https://lh3.googleusercontent.com/d/18ivphi3UAR9guELYVszWV636C0Rchd2g"
           description="Enable users to add events for irrigation and fertilizer while having video chats with experts helps them maintain a comprehensive record of their farming activities."
         />
         <PostParagraph maxW="100%" title="Responsive design">
@@ -197,7 +197,7 @@ const Synapse = () => {
                 width: "100%",
               }}
               loading="lazy"
-              src="https://drive.google.com/uc?id=10WCUTZkK9eiVx75IYieqzwcv36Shdvfj"
+              src="https://lh3.googleusercontent.com/d/10WCUTZkK9eiVx75IYieqzwcv36Shdvfj"
               alt=""
             />
           </Box>

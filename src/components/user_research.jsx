@@ -62,7 +62,7 @@ const UserResearch = ({ data = [] }) => {
           >
             <Image
               w="100%"
-              src={`https://drive.google.com/uc?id=${x.image}`}
+              src={`https://lh3.googleusercontent.com/d/${x.image}`}
               position="absolute"
               top={0}
               left={0}

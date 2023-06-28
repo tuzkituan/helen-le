@@ -105,7 +105,7 @@ const Nurix = () => {
         <PostParagraph
           title="Design"
           description="The design should be clean, modern, and easy to navigate. The design should be focused on showcasing the healthy recipes and ingredients, making it easy for users to find and choose the recipes that meet their dietary preferences."
-          image="https://drive.google.com/uc?id=12MXVt5iKYx7tuYGJn-_-DtgU_vVV4pe0"
+          image="https://lh3.googleusercontent.com/d/12MXVt5iKYx7tuYGJn-_-DtgU_vVV4pe0"
           maxW={CONTENT_MAX_W}
         />
         <PostParagraph
@@ -121,7 +121,7 @@ const Nurix = () => {
           <PostFontPreview
             titleImg="../images/nourix_font_1.svg"
             descriptionImg="../images/nourix_font_2.svg"
-            mockup="https://drive.google.com/uc?id=1t2y_q0XVvC3NlQw1eLy5kx_QIG_Vzkbu"
+            mockup="https://lh3.googleusercontent.com/d/1t2y_q0XVvC3NlQw1eLy5kx_QIG_Vzkbu"
           />
         </Box>
         <PostParagraph
@@ -167,7 +167,7 @@ const Nurix = () => {
                 base: "340px",
               }}
               w="100%"
-              src="https://drive.google.com/uc?id=1pC4qpcpE_fXJrwsXRgVDRWh_U_zbLCx6"
+              src="https://lh3.googleusercontent.com/d/1pC4qpcpE_fXJrwsXRgVDRWh_U_zbLCx6"
             />
           </Box>
         </PostParagraph>
@@ -184,7 +184,7 @@ const Nurix = () => {
         <PostParagraph
           title="Quickly find recipes"
           description="Easier for users to find what they need and narrow down choices."
-          image="https://drive.google.com/uc?id=1kKg4K_64ALx3JIu8mEg9sS1VLAR2etkg"
+          image="https://lh3.googleusercontent.com/d/1kKg4K_64ALx3JIu8mEg9sS1VLAR2etkg"
           maxW={MAIN_MAX_W}
         />
         <PostParagraph

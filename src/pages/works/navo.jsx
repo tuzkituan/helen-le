@@ -93,7 +93,7 @@ const Navo = () => {
               lg: 0,
             }}
           >
-            <Image src="https://drive.google.com/uc?id=1qIiOk0i5C8sKevWKXDhdbgJhBXkLpcXn" />
+            <Image src="https://lh3.googleusercontent.com/d/1qIiOk0i5C8sKevWKXDhdbgJhBXkLpcXn" />
           </Box>
         </PostParagraph>
         <PostParagraph
@@ -106,7 +106,7 @@ const Navo = () => {
               lg: 0,
             }}
           >
-            <Image src="https://drive.google.com/uc?id=18htCOl6_6GbdBrQmWdn_yNLKkQPgIzRU" />
+            <Image src="https://lh3.googleusercontent.com/d/18htCOl6_6GbdBrQmWdn_yNLKkQPgIzRU" />
           </Box>
         </PostParagraph>
 
