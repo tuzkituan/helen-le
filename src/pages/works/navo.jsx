@@ -63,24 +63,21 @@ const Navo = () => {
                 position: "Developer | Photographer",
                 content:
                   "I often struggle to find parking in unfamiliar areas due to circling around blocks.",
-                image:
-                  "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qVgJwe_gmaSx_T0o_DhbdFLRA7cpRtLBax_gGHxAG3kYi9tIOWokRfq1UjzfeRysxfxbztj67YE9oTVfhJ3FPnq5y5=s1600",
+                image: "1tkRglgdb5lEkUtK4QQHx6XGL-r3a6di0",
               },
               {
                 name: "Minh Ha",
                 position: "Social Media Executive",
                 content:
                   "I frequently forget where I parked my motorbike, so time-consuming searches on foot.",
-                image:
-                  "https://lh3.googleusercontent.com/drive-viewer/AFGJ81o7r5F90iooFUw_Z6qzuK3KTrTagI0LK24Km4dXZTUWsJswmxNtyUIKBcuIvVOuuK0St2h6cr66KpL53ky0Du3seQp0Gw=s1600",
+                image: "1Y55eR2EpW8TuCKDJHib6MEoPVNj9ut8y",
               },
               {
                 name: "Lucy Nguyen",
                 position: "Event Planner",
                 content:
                   "I get frustrated when parking signs are not visible, even though they are available.",
-                image:
-                  "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pTjP5Sxfi5eLPpMQzMXtCEbADuoIJxM9W3lOsZfnucdf9tytB02pvCxrfdkmqk_E3Ew4yN1Zq4xsiGOJU4m2kfnJPJJQ=s1600",
+                image: "10VlMVjM470iFuL-73JzkEsiGiLBvihAQ",
               },
             ]}
           />
@@ -96,7 +93,7 @@ const Navo = () => {
               lg: 0,
             }}
           >
-            <Image src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qVQE73O4RCDnqMob-RvfFU70f930cfVGU6893umOQpXFIM5--fGSPsCRwO4YLyqkYM7IYYCwJyaH71keoxQtnkcOH85g=s1600" />
+            <Image src="https://drive.google.com/uc?id=1qIiOk0i5C8sKevWKXDhdbgJhBXkLpcXn" />
           </Box>
         </PostParagraph>
         <PostParagraph
@@ -109,7 +106,7 @@ const Navo = () => {
               lg: 0,
             }}
           >
-            <Image src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81osyFaV2hPg5tzbz3sXmYMTt8M-7L5cKqe6lVY5-3U3RrZaMCdpGDCuSnkkGiTAjx21ww6l84_EHTBFgVUYLeAgl1ivRA=s1600" />
+            <Image src="https://drive.google.com/uc?id=18htCOl6_6GbdBrQmWdn_yNLKkQPgIzRU" />
           </Box>
         </PostParagraph>
 

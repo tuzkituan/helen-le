@@ -62,7 +62,7 @@ const PainPoints = ({ title = "PAIN POINTS", data = [] }) => {
                 overflow="hidden"
               >
                 <Image
-                  src={x.image}
+                  src={`https://drive.google.com/uc?id=${x.image}`}
                   w="100%"
                   h="100%"
                   objectFit="cover"

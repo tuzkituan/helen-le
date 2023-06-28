@@ -23,7 +23,7 @@ const data = [
       title: "High school diploma",
       subTitle: "Small-scale organic farmer",
       avatar:
-        "https://lh3.googleusercontent.com/drive-viewer/AFGJ81rtDHT6kevzldyElDwjU8zlDwf2S1gKOz_0mgfMKo4gaZ72rfWGGITuv58nmkC3ZBeudbvmERIGKFop0rT9DPr4HSOd4g=s1600",
+        "https://drive.google.com/uc?id=1P7sm7p7hIjClcyTcq0O-A_--RSgA3Wem",
     },
     items: [
       {
@@ -64,7 +64,7 @@ const data = [
       title: "Some college education",
       subTitle: "The second-generation farmer",
       avatar:
-        "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pJMOVAXm34-N4A6yA0PSssbCRDEC0ePhUvyLFmzDPqHfUfeytXC69S8uNKdJvBIH8DhkMBb78howcwrlMw-WVtVXU1CA=s1600",
+        "https://drive.google.com/uc?id=1-YyGrzWDn2tqEgreKPb21K3KFtzFMpms",
     },
     items: [
       {

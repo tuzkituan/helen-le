@@ -89,18 +89,15 @@ const Nurix = () => {
         <PainPoints
           data={[
             {
-              image:
-                "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qG_dWPf9pWBBneyfXE6CqL9IOFtYvnpqjuB1xkbuUxfdzoXeaIfuvKi8QeWJWRBSICW91YnMr4p6v67-DuJYcofItQ=s1600",
+              image: "1O0IJXjloF94RFOMHjaOqLFpDJd3dI4A-",
               title: "Difficulty in manually planning recipes",
             },
             {
-              image:
-                "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qlExt3Uv2BgaX3t7Blhjns6uo9LFZqfgAAqRAstcmBqcqCllkg-oH_AF2819uWGQ-nr9BekpdsJUBjc6F4ZfVV34z9pA=s1600",
+              image: "1Tp9ad7Q6fCz2rPIU8_3SeDh-vBtzPrj0",
               title: "Lack of knowledge about nutritional needs",
             },
             {
-              image:
-                "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oQZxeOJUuj2kPcRGq3oe7AXZeDZwUihSmVEmWV4NxzQ-uzuK4Zj5FcIM0DNgOkQ4puE33RNSEuMkFBEh2G6yIQnCXC=s1600",
+              image: "1hEuS5iWfwv8h0Nxa5yAv3re4Lz97czZm",
               title: "Time and energy constraints in meal preparation",
             },
           ]}
@@ -108,7 +105,7 @@ const Nurix = () => {
         <PostParagraph
           title="Design"
           description="The design should be clean, modern, and easy to navigate. The design should be focused on showcasing the healthy recipes and ingredients, making it easy for users to find and choose the recipes that meet their dietary preferences."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oVoE2CgZE4pj6vq3f5Md5u0FACHkvNzxCAs1oaV5mXYS9H2gvAfTy9TM7KCMJ_jQS_TQKIOCza6dTjH9yHo2X0x2KiaA=s1600"
+          image="https://drive.google.com/uc?id=12MXVt5iKYx7tuYGJn-_-DtgU_vVV4pe0"
           maxW={CONTENT_MAX_W}
         />
         <PostParagraph
@@ -124,7 +121,7 @@ const Nurix = () => {
           <PostFontPreview
             titleImg="../images/nourix_font_1.svg"
             descriptionImg="../images/nourix_font_2.svg"
-            mockup="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pmeHpgW8ETRQDLs25wXPGYkgstj7cwgDwF4-nnornUNfrhd3qWltTM8lBuJxioxbCL6Bor0bGUmzJlBZEwWuhvvsgndA=s1600"
+            mockup="https://drive.google.com/uc?id=1t2y_q0XVvC3NlQw1eLy5kx_QIG_Vzkbu"
           />
         </Box>
         <PostParagraph
@@ -170,7 +167,7 @@ const Nurix = () => {
                 base: "340px",
               }}
               w="100%"
-              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pO_WRjgTdsTRAnVmU5eSr9CyinNR_Z7REg_AtTu2JJEFeKFyg-m0b7iTLgafVapUo5_uqLw-XxClcUtv8WrRP3SRLZag=s1600"
+              src="https://drive.google.com/uc?id=1pC4qpcpE_fXJrwsXRgVDRWh_U_zbLCx6"
             />
           </Box>
         </PostParagraph>
@@ -187,7 +184,7 @@ const Nurix = () => {
         <PostParagraph
           title="Quickly find recipes"
           description="Easier for users to find what they need and narrow down choices."
-          image="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oDFbNEdshiCSOjItLkVKvogFoKG9pLbEw2wess5fLaZRfz54BRY0ucwHXhx06wh49GGqmOZbB6aa6yUqdb6ZNzcGlk=s1600"
+          image="https://drive.google.com/uc?id=1kKg4K_64ALx3JIu8mEg9sS1VLAR2etkg"
           maxW={MAIN_MAX_W}
         />
         <PostParagraph
@@ -203,7 +200,7 @@ const Nurix = () => {
         <PostParagraph
           title="Full app walkthrough"
           description={`Full app walkthrough included Login & User personal preferences, Browse and Add to favorites, Buy ingredients. Checkout and Tracking order.`}
-          video="1iCR-bprJfj3XknOBvRil9dx1qKftrCcw"
+          video="1dvGDI0LsmPbrddYBwrtrs6gywRj_of7X"
         />
         <PostNavigator current={nurix.id} />
       </Flex>

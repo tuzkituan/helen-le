@@ -53,7 +53,7 @@ const About = () => {
             }}
           >
             <Image
-              src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qNMClxYGm2GwBU7v2fSCBhDEinMdrmSr6GMrMoGuctTchn_J4cuofci48iiqgTahdBli0heR4dhfoGACghJfvlQAmH=s1600"
+              src="https://drive.google.com/uc?id=13nQWzX0aImLMWX_EckG5QRpirBUlYMuz"
               w={{
                 base: "100%",
                 // lg: "25vw",
